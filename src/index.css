@@ -7,6 +7,9 @@
   src: url("fonts/neo-sans-pro-cyr-bold.otf") format("opentype");
   font-style: normal;
 }
+button:focus {
+  outline: none;
+}
 
 body {
   margin: 0;
