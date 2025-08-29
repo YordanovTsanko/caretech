@@ -1,15 +1,10 @@
 import React from "react";
-
+import Banner from "../components/home/Banner";
 const Home = () => {
   return (
-    <div className="flex flex-col items-center justify-center w-full my-20">
-      <img src="error-404.png" className="h-44 w-auto" alt="404Error" />
-      <h2 className="text-2xl font-bold text-primary text-center">
-        404 - Страницата не е намерена
-      </h2>
-      <p className="mt-1 text-gray-600 text-center">
-        Съжаляваме, страницата, която търсите, не съществува или е преместена.
-      </p>
+    <div className="flex flex-col items-center w-full ">
+      <Banner/>
+      <div className="my-20"> </div>
     </div>
   );
 };

@@ -344,74 +344,8 @@ const NavBar = () => {
                   ))}
                 </nav>
 
-                <div className="border-t border-white/10 my-4" />
+                <div className="border-t border-white my-4" />
 
-                {/* quick links */}
-                <div className="flex flex-col gap-2 text-sm">
-                  <Link
-                    to="/cart"
-                    onClick={() => setMobileOpen(false)}
-                    className="flex items-center gap-3 py-2 px-2 rounded hover:bg-white/5 transition"
-                  >
-                    <FaShoppingCart className="w-5 h-5 text-primary" />
-                    Количка
-                  </Link>
-
-                  <Link
-                    to="/contact"
-                    onClick={() => setMobileOpen(false)}
-                    className="flex items-center gap-3 py-2 px-2 rounded hover:bg-white/5 transition"
-                  >
-                    <FaPhone className="w-5 h-5 text-primary" />
-                    Контакти
-                  </Link>
-
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setProfileDropDown((p) => !p);
-                    }}
-                    className="flex items-center gap-3 py-2 px-2 rounded hover:bg-white/5 transition text-left"
-                  >
-                    <FaUserCircle className="w-5 h-5 text-primary" />
-                    Профил
-                  </button>
-
-                  {profileDropDown && (
-                    <div className="pl-8">
-                      <AuthDropDown />
-                    </div>
-                  )}
-                </div>
-
-                <div className="border-t border-white/10 my-4" />
-
-                <div className="text-xs text-white/80 space-y-2">
-                  <div className="flex items-center gap-2">
-                    <FaMapMarkerAlt className="w-4 h-4" />
-                    <span>Враца, България</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <FaPhone className="w-4 h-4" />
-                    <span>+359 899 850 777</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <MdEmail className="w-4 h-4" />
-                    <span>info@caretech.bg</span>
-                  </div>
-                </div>
-
-                <div className="mt-6 text-sm flex gap-4">
-                  <Link to="/for-us" onClick={() => setMobileOpen(false)}>
-                    За Нас
-                  </Link>
-                  <Link to="/shipping" onClick={() => setMobileOpen(false)}>
-                    Доставка
-                  </Link>
-                  <Link to="/payment" onClick={() => setMobileOpen(false)}>
-                    Плащане
-                  </Link>
-                </div>
               </div>
             </motion.aside>
           </>
