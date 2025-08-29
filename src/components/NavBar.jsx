@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Link, NavLink } from "react-router-dom";
+import React, { useState, useEffect, useRef } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   FaBars,
@@ -39,13 +39,54 @@ const NavBar = () => {
   const [query, setQuery] = useState("");
   const [openMenu, setOpenMenu] = useState(null);
   const [profileDropDown, setProfileDropDown] = useState(false);
+  const location = useLocation();
+  const scrollYRef = useRef(0);
 
+  // Improved scroll lock (works on iOS)
   useEffect(() => {
-    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    if (mobileOpen) {
+      scrollYRef.current = window.scrollY || window.pageYOffset || 0;
+      document.documentElement.style.overflow = "hidden";
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${scrollYRef.current}px`;
+      document.body.style.width = "100%";
+    } else {
+      document.documentElement.style.overflow = "";
+      document.body.style.position = "";
+      const top = document.body.style.top;
+      document.body.style.top = "";
+      document.body.style.width = "";
+      if (top) {
+        const restored = -parseInt(top || "0", 10);
+        window.scrollTo(0, restored);
+      }
+    }
+
     return () => {
-      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
     };
   }, [mobileOpen]);
+
+  // Close mobile on route change
+  useEffect(() => {
+    setMobileOpen(false);
+    setProfileDropDown(false);
+  }, [location]);
+
+  // Escape closes
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.key === "Escape") {
+        setMobileOpen(false);
+        setProfileDropDown(false);
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
@@ -58,7 +99,8 @@ const NavBar = () => {
   const MenuComponent = openMenu ? menuComponents[openMenu] : null;
 
   return (
-    <header className="w-full sticky top-0 z-50 bg-background/95 backdrop-blur-sm shadow-sm">
+    // header z lower than mobile backdrop/panel so they can sit on top
+    <header className="w-full sticky top-0 z-10 bg-background shadow-sm">
       <div className="max-w-[1280px] mx-auto px-4 md:px-8 lg:px-12">
         <div className="flex items-center justify-between">
           <div className="flex flex-col items-center flex-shrink-0 py-2">
@@ -145,7 +187,7 @@ const NavBar = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute top-[67px] right-20 shadow-lg z-50"
+                  className="absolute top-[67px] inset-x-0 sm:inset-x-auto sm:right-20 shadow-lg z-50"
                 >
                   <AuthDropDown />
                 </motion.div>
@@ -164,6 +206,7 @@ const NavBar = () => {
         </div>
       </div>
 
+      {/* Desktop dropdown area */}
       <AnimatePresence>
         {MenuComponent && (
           <motion.div
@@ -180,7 +223,8 @@ const NavBar = () => {
         )}
       </AnimatePresence>
 
-      <div className="bg-primary py-2">
+      {/* Top info bar */}
+      <div className="bg-primary py-2 hidden lg:block">
         <div className="max-w-[1280px] mx-auto px-4 md:px-8 lg:px-12 flex tems-center justify-between ">
           <div className="flex items-center gap-3">
             <div className="flex items-center gap-2 text-xs text-white/90">
@@ -212,6 +256,167 @@ const NavBar = () => {
           </div>
         </div>
       </div>
+
+      {/* Mobile menu (backdrop + slide panel) */}
+      <AnimatePresence>
+        {mobileOpen && (
+          <>
+            {/* Backdrop: must be above header */}
+            <motion.div
+              key="backdrop"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.6 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.18 }}
+              onClick={() => setMobileOpen(false)}
+              className="fixed inset-0 bg-black z-50"
+              aria-hidden="true"
+            />
+
+            {/* Sliding panel: use a solid (near-opaque) background inline to guarantee no transparency */}
+            <motion.aside
+              key="panel"
+              initial={{ x: "100%", opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: "100%", opacity: 0 }}
+              transition={{ type: "tween", duration: 0.25 }}
+              className="fixed top-0 right-0 h-full w-full sm:w-4/5 md:w-3/5 text-white z-[60] shadow-xl overflow-auto"
+              role="dialog"
+              aria-modal="true"
+              // inline style ensures a solid background color (no theme token opacity leaking through)
+              style={{ backgroundColor: "rgba(3,7,18,0.98)" }}
+            >
+              <div className="flex items-center justify-between p-4 relative z-10 border-b border-white/10">
+                <div className="flex items-center gap-3">
+                  <img
+                    src="/logo.png"
+                    alt="Care Tech"
+                    className="w-24 h-auto object-contain"
+                  />
+                </div>
+                <div className="flex items-center gap-2">
+                  <button
+                    className="p-2 rounded hover:bg-white/5 transition"
+                    onClick={() => setMobileOpen(false)}
+                    aria-label="Затвори меню"
+                  >
+                    ✕
+                  </button>
+                </div>
+              </div>
+
+              <div className="p-4">
+                {/* Mobile search */}
+                <form
+                  onSubmit={handleSearchSubmit}
+                  className="flex items-center bg-white/5 rounded-full px-3 py-2 mb-4"
+                >
+                  <button
+                    type="button"
+                    onClick={() => setSearchOpen((s) => !s)}
+                    className="p-1 rounded-full flex-shrink-0"
+                    aria-label="Търси"
+                  >
+                    <FaSearch className="w-4 h-4 text-primary" />
+                  </button>
+                  <input
+                    value={query}
+                    onChange={(e) => setQuery(e.target.value)}
+                    className="bg-transparent outline-none text-sm text-white ml-3 placeholder-white/60 w-full"
+                    placeholder="Търсене на продукти..."
+                    aria-label="Търсене на продукти"
+                  />
+                </form>
+
+                {/* Nav items */}
+                <nav className="flex flex-col gap-1">
+                  {navItems.map((item) => (
+                    <Link
+                      key={item.to}
+                      to={item.to}
+                      onClick={() => {
+                        setMobileOpen(false);
+                      }}
+                      className="block py-3 px-2 rounded hover:bg-white/5 transition text-base font-medium"
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </nav>
+
+                <div className="border-t border-white/10 my-4" />
+
+                {/* quick links */}
+                <div className="flex flex-col gap-2 text-sm">
+                  <Link
+                    to="/cart"
+                    onClick={() => setMobileOpen(false)}
+                    className="flex items-center gap-3 py-2 px-2 rounded hover:bg-white/5 transition"
+                  >
+                    <FaShoppingCart className="w-5 h-5 text-primary" />
+                    Количка
+                  </Link>
+
+                  <Link
+                    to="/contact"
+                    onClick={() => setMobileOpen(false)}
+                    className="flex items-center gap-3 py-2 px-2 rounded hover:bg-white/5 transition"
+                  >
+                    <FaPhone className="w-5 h-5 text-primary" />
+                    Контакти
+                  </Link>
+
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setProfileDropDown((p) => !p);
+                    }}
+                    className="flex items-center gap-3 py-2 px-2 rounded hover:bg-white/5 transition text-left"
+                  >
+                    <FaUserCircle className="w-5 h-5 text-primary" />
+                    Профил
+                  </button>
+
+                  {profileDropDown && (
+                    <div className="pl-8">
+                      <AuthDropDown />
+                    </div>
+                  )}
+                </div>
+
+                <div className="border-t border-white/10 my-4" />
+
+                <div className="text-xs text-white/80 space-y-2">
+                  <div className="flex items-center gap-2">
+                    <FaMapMarkerAlt className="w-4 h-4" />
+                    <span>Враца, България</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <FaPhone className="w-4 h-4" />
+                    <span>+359 899 850 777</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <MdEmail className="w-4 h-4" />
+                    <span>info@caretech.bg</span>
+                  </div>
+                </div>
+
+                <div className="mt-6 text-sm flex gap-4">
+                  <Link to="/for-us" onClick={() => setMobileOpen(false)}>
+                    За Нас
+                  </Link>
+                  <Link to="/shipping" onClick={() => setMobileOpen(false)}>
+                    Доставка
+                  </Link>
+                  <Link to="/payment" onClick={() => setMobileOpen(false)}>
+                    Плащане
+                  </Link>
+                </div>
+              </div>
+            </motion.aside>
+          </>
+        )}
+      </AnimatePresence>
     </header>
   );
 };

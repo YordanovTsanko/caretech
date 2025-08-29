@@ -115,11 +115,15 @@ const categoryLinks = [
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-background">
+    <footer className="w-full bg-background px-10 lg:px-0">
       <div className="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-4 px-2 pt-6 pb-12 lg:px-32 gap-6">
         {/* Logo + Contacts */}
         <div>
-          <img src="/logo.png" alt="caretech.bg logo" className="w-44 h-auto" />
+          <img
+            src="/logo.png"
+            alt="caretech.bg logo"
+            className="w-44 h-auto mx-auto md:mx-0"
+          />
           <h2 className="text-md text-white mt-1 mb-5 text-center md:text-start">
             СВЪРЖИ СЕ С НАС:
           </h2>
@@ -132,7 +136,7 @@ const Footer = () => {
           <p className="text-sm text-white mt-1 text-center md:text-start">
             📞 Телефон: +359 899 850 777
           </p>
-          <div className="flex items-center gap-3 mt-6">
+          <div className="flex items-center gap-3 mt-6 justify-center md: justify-start">
             <a
               href="https://www.facebook.com"
               target="_blank"
@@ -161,43 +165,55 @@ const Footer = () => {
         </div>
 
         {/* Info links */}
-        <div className="flex flex-col items-end">
-          <h2 className="text-md text-white self-center ms-3 mb-5">
-            ИНФОРМАЦИЯ:
-          </h2>
-          <ul className="space-y-2 text-sm text-white">
-            {infoLinks.map((link, i) => (
-              <li key={i} className="flex items-center gap-2">
-                {link.icon}
-                <a href={link.href} className="hover:text-primary transition">
-                  {link.name}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <div className="grid grid-cols-1 gap-4 sm:gap-0 sm:grid-cols-2 col-span-2">
+          <div className="flex flex-col items-center md:items-end">
+            <h2 className="text-md text-white md:self-center md:ms-3 mb-5">
+              ИНФОРМАЦИЯ:
+            </h2>
+            <ul className="space-y-2 text-sm text-white">
+              {infoLinks.map((link, i) => (
+                <li key={i} className="flex items-center gap-2">
+                  {link.icon}
+                  <a href={link.href} className="hover:text-primary transition">
+                    {link.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-        {/* Category links */}
-        <div className="flex flex-col items-end">
-          <h2 className="text-md text-white self-center ms-[70px] mb-5">КАТАЛОГ:</h2>
-          <ul className="space-y-2 text-sm text-white">
-            {categoryLinks.map((link, i) => (
-              <li key={i} className="flex items-center gap-2">
-                {link.icon}
-                <a href={link.href} className="hover:text-primary transition">
-                  {link.name}
-                </a>
-              </li>
-            ))}
-          </ul>
+          {/* Category links */}
+          <div className="flex flex-col items-center md:items-end">
+            <h2 className="text-md text-white self-center md:ms-[70px] mb-5">
+              КАТАЛОГ:
+            </h2>
+            <ul className="space-y-2 text-sm text-white">
+              {categoryLinks.map((link, i) => (
+                <li key={i} className="flex items-center gap-2">
+                  {link.icon}
+                  <a href={link.href} className="hover:text-primary transition">
+                    {link.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
         {/* Shippng */}
-        <div className="flex flex-col items-end">
-          <h2 className="text-md text-white me-10 mb-5">ДОСТАВКА:</h2>
-           <div className="gap-2 flex flex-col">
-            <img src="/econt-logo.png" alt="shipping" className="bg-white p-4 w-32 rounded-lg h-auto" />
-            <img src="/speedy-logo.jpg" alt="shipping" className="w-32 rounded-lg h-auto" />
-           </div>
+        <div className="flex flex-col items-center md:items-end">
+          <h2 className="text-md text-white md:me-10 mb-5">ДОСТАВКА:</h2>
+          <div className="gap-2 flex md:flex-col">
+            <img
+              src="/econt-logo.png"
+              alt="shipping"
+              className="bg-white p-4 w-32 rounded-lg h-auto"
+            />
+            <img
+              src="/speedy-logo.jpg"
+              alt="shipping"
+              className="w-32 rounded-lg h-auto"
+            />
+          </div>
         </div>
       </div>
 
