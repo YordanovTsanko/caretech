@@ -41,7 +41,7 @@ const AuthDropDown = () => {
         <button className="flex-1 flex items-center justify-center bg-blue-600 text-white py-1 rounded hover:bg-blue-700 transition">
          <FaFacebook className="mr-2" /> Facebook
         </button>
-        <button className="flex-1 flex items-center justify-center text-white bg-white py-1 bg-[#EA4335] rounded hover:bg-[#EA4335]/90 transition">
+        <button className="flex-1 flex items-center justify-center text-white py-1 bg-[#EA4335] rounded hover:bg-[#EA4335]/90 transition">
          <FaGoogle className="mr-2" /> Google
         </button>
       </div>

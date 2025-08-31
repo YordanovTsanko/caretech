@@ -189,6 +189,7 @@ export const newProducts = [
     image: "/products/pc2.jpg",
     code: 123459,
     stock: 15,
+    new: true,
     utils: {
       type: "PC",
       ram: "16 GB",
@@ -208,6 +209,7 @@ export const newProducts = [
     image: "/products/phone.jpg",
     code: 123460,
     stock: 50,
+    new: false,
     utils: {
       type: "Phone",
       ram: "8 GB",
@@ -229,6 +231,7 @@ export const newProducts = [
     image: "/products/phone2.jpg",
     code: 123461,
     stock: 40,
+    new: false,
     utils: {
       type: "Phone",
       ram: "6 GB",
@@ -250,6 +253,7 @@ export const newProducts = [
     image: "/products/printer.jpg",
     code: 123462,
     stock: 25,
+    new: true,
     utils: {
       type: "Printer",
       connectivity: "WIFI, USB",
@@ -266,6 +270,7 @@ export const newProducts = [
     image: "/products/monitor.jpg",
     code: 123463,
     stock: 18,
+    new: true,
     utils: {
       type: "Monitor",
       screen: '27"',
@@ -284,6 +289,7 @@ export const newProducts = [
     image: "/products/keyboard.jpg",
     code: 123464,
     stock: 60,
+    new: true,
     utils: {
       type: "Keyboard",
       connectivity: "WIRELESS, BLUETOOTH",

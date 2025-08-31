@@ -41,8 +41,10 @@ const Banner = () => {
     prevArrow: <PrevArrow />,
     nextArrow: <NextArrow />,
     appendDots: (dots) => (
-      <div className="absolute left-1/2 -translate-x-1/2 z-50 pointer-events-none">
-        <div className="pointer-events-auto px-3 py-1 rounded-full">{dots}</div>
+      <div className="relative w-full flex justify-center z-40 pointer-events-none">
+        <div className="absolute left-1/2 -translate-x-1/2 py-1 bottom-12">
+          {dots}
+        </div>
       </div>
     ),
   };
