@@ -5,8 +5,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const slides = [
-  { image: "https://placehold.co/1400x440" },
-  { image: "https://placehold.co/1400x440" },
+  { image: "https://placehold.co/1400x440?text=BannerImage+1" },
+  { image: "https://placehold.co/1400x440?text=BannerImage+2" },
 ];
 
 const PrevArrow = ({ onClick }) => (

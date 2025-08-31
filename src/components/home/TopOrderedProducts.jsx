@@ -1,5 +1,4 @@
-// TopOrderedProducts.jsx
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Slider from "react-slick";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { newProducts } from "../../utils/utils";
@@ -29,37 +28,30 @@ const NextArrow = ({ onClick }) => (
 const TopOrderedProducts = () => {
   const euroRate = 1.96;
   const sliderRef = useRef(null);
+  const [slidesToShow, setSlidesToShow] = useState(3);
 
-  const popularityKey =
-    newProducts.length && Object.prototype.hasOwnProperty.call(newProducts[0], "orders")
-      ? "orders"
-      : newProducts.length && Object.prototype.hasOwnProperty.call(newProducts[0], "sold")
-      ? "sold"
-      : newProducts.length && Object.prototype.hasOwnProperty.call(newProducts[0], "popularity")
-      ? "popularity"
-      : null;
+  const handleResize = () => {
+    const width = window.innerWidth;
+    if (width > 1280) setSlidesToShow(4);
+    else if (width >= 768) setSlidesToShow(3);
+    else if (width >= 640) setSlidesToShow(2);
+    else setSlidesToShow(1);
+  };
 
-  const sorted = [...newProducts].sort((a, b) => {
-    const ai = popularityKey ? a[popularityKey] ?? 0 : a.orders ?? a.sold ?? a.popularity ?? 0;
-    const bi = popularityKey ? b[popularityKey] ?? 0 : b.orders ?? b.sold ?? b.popularity ?? 0;
-    return bi - ai;
-  });
-
-  const topProducts = sorted.slice(0, 12);
+  useEffect(() => {
+    handleResize(); 
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const settings = {
-    dots: false,
+    dots: slidesToShow === 1,
     infinite: false,
     speed: 450,
-    slidesToShow: 4,
+    slidesToShow: slidesToShow,
     slidesToScroll: 1,
     prevArrow: <PrevArrow />,
     nextArrow: <NextArrow />,
-    responsive: [
-      { breakpoint: 1280, settings: { slidesToShow: 3 } },
-      { breakpoint: 1024, settings: { slidesToShow: 2 } },
-      { breakpoint: 640, settings: { slidesToShow: 1, arrows: false, dots: true } },
-    ],
   };
 
   return (
@@ -79,14 +71,16 @@ const TopOrderedProducts = () => {
       <h2 className="text-xl font-semibold mb-4">НАЙ-ПОРЪЧВАНИ ПРОДУКТИ</h2>
       <div className="relative pb-8 sm:pb-0">
         <Slider ref={sliderRef} {...settings}>
-          {topProducts.map((product) => {
+          {newProducts.map((product) => {
             const discounted = product.discount ?? 0;
             const price = Number(product.price ?? 0);
-            const finalPrice = discounted ? price * (1 - discounted / 100) : price;
+            const finalPrice = discounted
+              ? price * (1 - discounted / 100)
+              : price;
 
             return (
-              <div key={product.id} className="p-2 h-full">
-                <div className="relative p-4 bg-white/5 rounded-lg cursor-pointer hover:bg-primary/20 flex flex-col h-full">
+              <div key={product.id} className="p-2 h-full w-full">
+                <div className="relative p-4 bg-white/5 rounded-lg cursor-pointer hover:bg-primary/20 flex flex-col w-full h-full">
                   {product.new && (
                     <span className="absolute top-2 left-2 bg-blue-600 text-white text-xs px-2 py-1 rounded font-semibold">
                       НОВО

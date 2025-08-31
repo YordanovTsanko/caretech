@@ -4,9 +4,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const slides = [
-  { id: 1, src: "https://placehold.co/800x600?text=Promo+1" },
-  { id: 2, src: "https://placehold.co/800x600?text=Promo+2" },
-  { id: 3, src: "https://placehold.co/800x600?text=Promo+3" },
+  { id: 1, src: "https://placehold.co/800x600?text=FeaturesImage+1" },
+  { id: 2, src: "https://placehold.co/800x600?text=FeaturesImage+2" },
+  { id: 3, src: "https://placehold.co/800x600?text=FeaturesImage+3" },
 ];
 
 const AdImageSection = () => {
