@@ -245,7 +245,7 @@ const MarketsMenu = ({ onClose }) => {
         ))}
       </div>
 
-      <AnimatePresence>
+      <AnimatePresence className="w-full">
         {categories.map(
           (category) =>
             activeCategory === category.name && (
@@ -272,6 +272,11 @@ const MarketsMenu = ({ onClose }) => {
             )
         )}
       </AnimatePresence>
+<div className="flex w-full">
+  <h3 className="text-sm ms-auto mt-4 text-primary underline hover:text-primary/70 cursor-pointer">
+    Разширено търсене
+  </h3>
+</div>
     </motion.div>
   );
 };
