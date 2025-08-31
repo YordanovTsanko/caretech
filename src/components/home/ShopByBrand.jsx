@@ -4,31 +4,33 @@ import { motion } from "framer-motion";
 const ShopByBrand = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
-  const brands = [
-    { id: 1, name: "DELL", color: "#007DB8", logo: "DELL" },
-    { id: 2, name: "MSI", color: "gradient", logo: "MSI" },
-    { id: 3, name: "HP", color: "#0096D6", logo: "HP" },
-    {
-      id: 4,
-      name: "Lenovo",
-      color: "#E1140A",
-      logo: "Lenovo",
-      special: "lenovo",
-    },
-    { id: 5, name: "Intel", color: "#0071C5", logo: "Intel" },
-    { id: 6, name: "Samsung", color: "#1428A0", logo: "SAMSUNG" },
-    { id: 7, name: "ASUS", color: "#00539B", logo: "ASUS" },
-    { id: 8, name: "Acer", color: "#83B81A", logo: "Acer" },
-    { id: 9, name: "Logitech", color: "#000", logo: "Logitech" },
-    { id: 11, name: "AOC", color: "#000000", logo: "AOC" },
-    {
-      id: 12,
-      name: "Others",
-      color: "#ed1c24",
-      logo: "ДРУГИ",
-      fontSize: "1.5rem",
-    },
-  ];
+const brands = [
+  { id: 1, name: "DELL", color: "#007DB8", logo: "DELL" },
+  { id: 2, name: "MSI", color: "gradient", logo: "MSI" },
+  { id: 3, name: "HP", color: "#0096D6", logo: "HP" },
+  { id: 4, name: "Logitech", color: "#000", logo: "Logitech" },
+  {
+    id: 5,
+    name: "Lenovo",
+    color: "#E1140A",
+    logo: "Lenovo",
+    special: "lenovo",
+  },
+  { id: 6, name: "Intel", color: "#0071C5", logo: "Intel" },
+  { id: 7, name: "Samsung", color: "#1428A0", logo: "SAMSUNG" },
+  { id: 8, name: "ASUS", color: "#00539B", logo: "ASUS" },
+  { id: 9, name: "Acer", color: "#83B81A", logo: "Acer" },
+  { id: 10, name: "AOC", color: "#000000", logo: "AOC" },
+  { id: 11, name: "Apple", color: "#A3AAAE", logo: "APPLE" },
+  {
+    id: 12,
+    name: "Others",
+    color: "#ed1c24",
+    logo: "ДРУГИ",
+    fontSize: "1.5rem",
+  },
+];
+
 
   const handleBrandClick = (brand) => {
     if (brand.name === "See More") {
@@ -70,10 +72,10 @@ const ShopByBrand = () => {
   };
 
   return (
-    <section className="max-w-[1280px] w-full mx-auto px-2 sm:px-4 py-8">
+    <section className="max-w-[1280px] w-full mx-auto px-4 py-8">
       <h2 className="text-xl font-semibold mb-8">ПАЗАРУВАЙ ПО МАРКА</h2>
 
-      <div className="grid grid-cols-2 sm:flex sm:w-full sm:flex-wrap gap-2 sm:gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-none xl:grid-flow-col xl:grid-rows-2 gap-2 sm:gap-4">
         {brands.map((brand, index) => (
           <motion.div
             key={brand.id}
@@ -86,7 +88,7 @@ const ShopByBrand = () => {
             onMouseLeave={() => setHoveredIndex(null)}
             onClick={() => handleBrandClick(brand)}
           >
-            <p className="text-xs" style={brandLogoStyle(brand, hoveredIndex === index)}>
+            <p className="text-xs py-4" style={brandLogoStyle(brand, hoveredIndex === index)}>
               {brand.logo}
             </p>
           </motion.div>

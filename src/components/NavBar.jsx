@@ -99,7 +99,6 @@ const NavBar = () => {
   const MenuComponent = openMenu ? menuComponents[openMenu] : null;
 
   return (
-    // header z lower than mobile backdrop/panel so they can sit on top
     <header className="w-full sticky top-0 z-10 bg-background shadow-sm">
       <div className="max-w-[1280px] mx-auto px-4 md:px-8 lg:px-12">
         <div className="flex items-center justify-between">
@@ -187,7 +186,7 @@ const NavBar = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute top-[67px] inset-x-0 sm:inset-x-auto sm:right-20 shadow-lg z-50"
+                  className="absolute top-[67px] inset-x-0 sm:inset-x-auto sm:right-20 shadow-lg z-[99]"
                 >
                   <AuthDropDown />
                 </motion.div>

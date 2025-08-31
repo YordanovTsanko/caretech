@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import Slider from "react-slick";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import { newProducts } from "../../utils/utils";
+import { gamingProducts } from "../../utils/utils";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -25,7 +25,7 @@ const NextArrow = ({ onClick }) => (
   </button>
 );
 
-const TopOrderedProducts = () => {
+const GamingSection = () => {
   const euroRate = 1.96;
   const sliderRef = useRef(null);
   const [slidesToShow, setSlidesToShow] = useState(3);
@@ -68,10 +68,10 @@ const TopOrderedProducts = () => {
           color: rgba(0, 0, 0, 0.75);
         }
       `}</style>
-      <h2 className="text-xl font-semibold mb-4">НАЙ-ПОРЪЧВАНИ ПРОДУКТИ</h2>
+      <h2 className="text-xl font-semibold mb-4">ГЕЙМИНГ СРЕДА</h2>
       <div className="relative pb-8 sm:pb-0">
         <Slider ref={sliderRef} {...settings}>
-          {newProducts.map((product) => {
+          {gamingProducts.map((product) => {
             const discounted = product.discount ?? 0;
             const price = Number(product.price ?? 0);
             const finalPrice = discounted
@@ -139,4 +139,4 @@ const TopOrderedProducts = () => {
   );
 };
 
-export default TopOrderedProducts;
+export default GamingSection;
