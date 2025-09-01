@@ -16,7 +16,6 @@ import ConfiguratorMenu from "./navbar/ConfiguratorMenu";
 import ServicesMenu from "./navbar/ServicesMenu";
 import { MdEmail } from "react-icons/md";
 import AuthDropDown from "./profile/AuthDropDown";
-import { ThemeToggleDemo } from "./ThemeToggleDemo";
 
 const navItems = [
   { name: "Магазин", to: "/markets" },
@@ -179,8 +178,6 @@ const NavBar = () => {
                 Профил
               </span>
             </button>
- {/* <ThemeToggleDemo /> */}
-
             <AnimatePresence>
               {profileDropDown && (
                 <motion.div
