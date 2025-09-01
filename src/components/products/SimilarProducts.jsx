@@ -27,7 +27,7 @@ const NextArrow = ({ onClick }) => (
   </button>
 );
 
-const GamingSection = () => {
+const SimilarProducts = () => {
   const euroRate = 1.96;
   const sliderRef = useRef(null);
   const [slidesToShow, setSlidesToShow] = useState(3);
@@ -71,7 +71,7 @@ const GamingSection = () => {
           color: rgba(0, 0, 0, 0.75);
         }
       `}</style>
-      <h2 className="text-xl font-semibold mb-4">ГЕЙМИНГ СРЕДА</h2>
+      <h2 className="text-xl font-semibold mb-4">ПОДОБНИ ПРОДУКТИ</h2>
       <div className="relative pb-8 sm:pb-0">
         <Slider ref={sliderRef} {...settings}>
           {gamingProducts.map((product) => {
@@ -142,4 +142,4 @@ const GamingSection = () => {
   );
 };
 
-export default GamingSection;
+export default SimilarProducts;
