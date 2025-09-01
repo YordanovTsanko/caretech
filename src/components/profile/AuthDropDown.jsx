@@ -3,7 +3,7 @@ import { FaUser, FaLock, FaEnvelope, FaFacebook, FaGoogle } from "react-icons/fa
 
 const AuthDropDown = () => {
   return (
-    <div className="bg-background rounded-lg shadow-lg p-6 w-full max-w-md mx-auto">
+    <div className="bg-background rounded-b-lg shadow-lg p-6 w-full max-w-md mx-auto">
       {/* Login */}
       <h2 className="text-center text-primary text-lg font-semibold mb-4">Вход</h2>
       <div className="flex gap-2 mb-2">
