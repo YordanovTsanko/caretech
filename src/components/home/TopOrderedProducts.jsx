@@ -9,7 +9,7 @@ const PrevArrow = ({ onClick }) => (
   <button
     onClick={onClick}
     aria-label="Prev"
-    className="hidden sm:inline-flex absolute  left-2 top-1/2 -translate-y-1/2 z-10 p-2 bg-black/40 rounded-full text-white hover:bg-black/60"
+    className="hidden sm:inline-flex absolute  left-2 top-1/2 -translate-y-1/2 z-[1] p-2 bg-black/40 rounded-full text-white hover:bg-black/60"
   >
     <FaChevronLeft />
   </button>
