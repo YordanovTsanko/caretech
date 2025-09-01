@@ -4,11 +4,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const slides = [
-  { id: 1, src: "https://placehold.co/800x600?text=FeaturesImage+1" },
-  { id: 2, src: "https://placehold.co/800x600?text=FeaturesImage+2" },
-  { id: 3, src: "https://placehold.co/800x600?text=FeaturesImage+3" },
-  { id: 4, src: "https://placehold.co/800x600?text=FeaturesImage+4" },
-  { id: 5, src: "https://placehold.co/800x600?text=FeaturesImage+5" },
+  { id: 1, src: "/ads/f-1.jpg" },
+  { id: 2, src: "/ads/f-2.jpg" },
+  { id: 3, src: "/ads/f-3.jpg" },
+  { id: 4, src: "/ads/f-4.jpg" },
+  { id: 5, src: "/ads/f-5.jpg" },
 ];
 
 const AdImageSectionTwo = () => {
@@ -35,7 +35,7 @@ const AdImageSectionTwo = () => {
               <img
                 src={s.src}
                 alt={`promo-${s.id}`}
-                className="w-full h-[260px] md:h-[320px] lg:h-[360px] object-cover block"
+                className="w-full h-[260px] md:h-[320px] lg:h-[360px] object-fit-cover block"
                 draggable={false}
               />
             </div>

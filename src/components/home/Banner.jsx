@@ -5,8 +5,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const slides = [
-  { image: "https://placehold.co/1400x440?text=BannerImage+1" },
-  { image: "https://placehold.co/1400x440?text=BannerImage+2" },
+  { image: "/ads/h1-1.jpg" },
+  { image: "/ads/h-2.jpg" },
 ];
 
 const PrevArrow = ({ onClick }) => (
@@ -57,7 +57,7 @@ const Banner = () => {
             <img
               src={slide.image}
               alt={`slide-${i}`}
-              className="w-full h-[250px] sm:h-[350px] md:h-[450px] lg:h-[550px] object-cover"
+              className="w-full h-[250px] sm:h-[350px] md:h-[450px] lg:h-[530px] object-fit-cover"
             />
           </div>
         ))}
