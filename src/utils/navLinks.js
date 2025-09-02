@@ -1,6 +1,13 @@
+import { BsJoystick, BsLaptop, BsPc, BsPciCardSound } from "react-icons/bs";
+import { LuBatteryCharging, LuBox, LuCode, LuMonitor, LuPlug2, LuPrinter, LuRouter } from "react-icons/lu";
+import { PiBuildingOfficeBold } from "react-icons/pi";
+import { SiPcgamingwiki } from "react-icons/si";
+
+
 export const navLinks = [
   {
     title: "ГЕЙМИНГ ПРОДУКТИ",
+    Icon: SiPcgamingwiki,
     children: [
       {
         title: "Гейминг настолни компютри",
@@ -68,6 +75,7 @@ export const navLinks = [
 
   {
     title: "КОМПЮТРИ",
+    Icon: BsPc,
     children: [
       {
         title: "Настолни компютри",
@@ -121,6 +129,7 @@ export const navLinks = [
 
   {
     title: "КОМПОНЕНТИ",
+    Icon: BsPciCardSound,
     children: [
       {
         title: "Процесори (CPU)",
@@ -184,6 +193,7 @@ export const navLinks = [
 
   {
     title: "ПЕРИФЕРИЯ",
+    Icon: BsJoystick,
     children: [
       {
         title: "Клавиатури",
@@ -229,6 +239,7 @@ export const navLinks = [
 
   {
     title: "МОНИТОРИ",
+    Icon: LuMonitor,
     children: [
       {
         title: "Игрови монитори",
@@ -267,6 +278,7 @@ export const navLinks = [
 
   {
     title: "ЛАПТОПИ",
+    Icon: BsLaptop,
     children: [
       {
         title: "Ултрапреносими (Ultrabook)",
@@ -304,20 +316,12 @@ export const navLinks = [
           { title: "Зарядни и адаптери", link: "/laptops/accessories/chargers" }
         ]
       },
-      {
-        title: "КОНФИГУРАТОРИ",
-        link: "/laptops/configurators",
-        subItems: [
-          { subcategory: "До 1000 лева", link: "/products/configurator/under_1000" },
-          { subcategory: "До 2000 лева", link: "/products/configurator/over_1000" },
-          { subcategory: "Професионални конфигурации", link: "/products/configurator/pro" }
-        ]
-      }
     ]
   },
 
   {
     title: "ПРИНТЕРИ",
+    Icon: LuPrinter,
     children: [
       {
         title: "Лазерни принтери",
@@ -356,6 +360,7 @@ export const navLinks = [
 
   {
     title: "КАБЕЛИ И ПРЕХОДНИЦИ",
+    Icon: LuPlug2,
     children: [
       { title: "HDMI кабели", link: "/cables/hdmi" },
       { title: "DisplayPort кабели", link: "/cables/displayport" },
@@ -369,6 +374,7 @@ export const navLinks = [
 
   {
     title: "МРЕЖОВО ОБОРУДВАНЕ",
+    Icon: LuRouter,
     children: [
       {
         title: "Рутери",
@@ -412,6 +418,7 @@ export const navLinks = [
 
   {
     title: "UPS-И ЕЛ. ЗАЩИТА",
+    Icon: LuBatteryCharging,
     children: [
       {
         title: "UPS устройства",
@@ -430,6 +437,7 @@ export const navLinks = [
 
   {
     title: "СОФТУЕР И УСЛУГИ",
+    Icon: LuCode,
     children: [
       {
         title: "Операционни системи",
@@ -477,6 +485,7 @@ export const navLinks = [
 
   {
     title: "ОФИС ТЕХНИКА",
+    Icon: PiBuildingOfficeBold,
     children: [
       { title: "Факсове и мултифункционални устройства", link: "/office-equipment/mfu" },
       { title: "Скенери", link: "/office-equipment/scanners" },
@@ -489,6 +498,7 @@ export const navLinks = [
 
   {
     title: "КОНСУМАТИВИ",
+    Icon: LuBox,
     children: [
       { title: "Тонери и касети", link: "/consumables/toners" },
       { title: "Мастила и бутилки", link: "/consumables/inks" },

@@ -12,9 +12,11 @@ import {
 import { MdEmail } from "react-icons/md";
 import AuthDropDown from "./profile/AuthDropDown";
 import { BiMenuAltRight } from "react-icons/bi";
+import NavDropDown from "./navbar/NavDropDown";
 
 const NavBar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [profileDropDown, setProfileDropDown] = useState(false);
@@ -160,12 +162,18 @@ const NavBar = () => {
           className="absolute px-10 bg-primary py-2 left-0 md:clip-polygon-right xl:clip-polygon
   "
         >
-          <div className="text-md text-white hover:scale-105 cursor-pointer flex items-center gap-1 hover:underline transition-all duration-500">
+          <div
+            onClick={() => setMenuOpen((prev) => !prev)}
+            className="text-md text-white hover:scale-105 relative z-20 cursor-pointer flex items-center gap-1 hover:underline transition-all duration-500"
+          >
             <BiMenuAltRight size={24} />
             <button className="text-white/90">МЕНЮ</button>
           </div>
         </div>
-        <div className="absolute bg-background py-2 right-0 -top-1 ps-4 pe-12 md:clip-polygon-left xl:clip-polygon">
+
+        <NavDropDown isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
+        {/* Right Section */}
+        <div className="absolute bg-background py-2 right-0 -top-1 z-[66] ps-4 pe-12 md:clip-polygon-left xl:clip-polygon">
           <div className="flex items-center gap-3">
             <div className="flex items-center gap-2 text-xs text-white/90">
               <FaMapMarkerAlt className="text-background w-4 h-4" />

@@ -12,7 +12,7 @@ const slides = [
 const PrevArrow = ({ onClick }) => (
   <button
     onClick={onClick}
-    className="hidden sm:inline-flex absolute left-3 top-1/2 -translate-y-1/2 z-40 p-2 bg-black/40 rounded-full text-white hover:bg-primary transition"
+    className="hidden sm:inline-flex absolute left-3 top-1/2 -translate-y-1/2 z-[1] p-2 bg-black/40 rounded-full text-white hover:bg-primary transition"
     aria-label="Previous"
   >
     <FaChevronLeft size={18} />
@@ -22,7 +22,7 @@ const PrevArrow = ({ onClick }) => (
 const NextArrow = ({ onClick }) => (
   <button
     onClick={onClick}
-    className="hidden sm:inline-flex absolute right-3 top-1/2 -translate-y-1/2 z-40 p-2 bg-black/40 rounded-full text-white hover:bg-primary transition"
+    className="hidden sm:inline-flex absolute right-3 top-1/2 -translate-y-1/2 z-0 p-2 bg-black/40 rounded-full text-white hover:bg-primary transition"
     aria-label="Next"
   >
     <FaChevronRight size={18} />
