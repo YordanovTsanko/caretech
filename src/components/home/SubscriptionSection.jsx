@@ -1,5 +1,4 @@
 import React from "react";
-import { SiMinutemailer } from "react-icons/si";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { MdOutlineMailOutline } from "react-icons/md";
 
