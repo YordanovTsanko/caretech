@@ -8,11 +8,11 @@ module.exports = {
         // Base colors
         primary: {
           DEFAULT: "#ed1c24", // Light mode default
-          dark: "#b31217",    // Dark mode variant
+          dark: "#b31217", // Dark mode variant
         },
         secondary: {
           DEFAULT: "#929497", // Light mode default
-          dark: "#6c6e70",    // Dark mode variant
+          dark: "#6c6e70", // Dark mode variant
         },
         background: {
           DEFAULT: "#1a1a1a",
@@ -22,7 +22,7 @@ module.exports = {
         },
       },
       boxShadow: {
-        custom: "2px 2px 6px 0px rgba(0,0,0,0.8)",
+        bottom: "0px 17px 74px 30px rgba(0,0,0,0.95);",
       },
     },
   },

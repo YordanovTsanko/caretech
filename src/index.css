@@ -53,3 +53,20 @@ select:-moz-autofill {
   box-shadow: 0 0 0px 1000px white inset;
   -moz-text-fill-color: #000;
 }
+
+@layer utilities {
+  /* Angled both sides */
+  .clip-polygon {
+    clip-path: polygon(0 0, 100% 0, calc(100% - 40px) 100%, 40px 100%);
+  }
+
+  /* Angled only on LEFT side, straight right */
+  .clip-polygon-left {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 40px 100%);
+  }
+
+  /* Angled only on RIGHT side, straight left */
+  .clip-polygon-right {
+    clip-path: polygon(0 0, 100% 0, calc(100% - 40px) 100%, 0 100%);
+  }
+}

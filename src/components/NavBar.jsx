@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   FaBars,
@@ -9,35 +9,14 @@ import {
   FaMapMarkerAlt,
   FaPhone,
 } from "react-icons/fa";
-import MarketsMenu from "./navbar/MarketsMenu";
-import PromotionsMenu from "./navbar/PromotionsMenu";
-import NewProductsMenu from "./navbar/NewProductsMenu";
-import ConfiguratorMenu from "./navbar/ConfiguratorMenu";
-import ServicesMenu from "./navbar/ServicesMenu";
 import { MdEmail } from "react-icons/md";
 import AuthDropDown from "./profile/AuthDropDown";
-
-const navItems = [
-  { name: "Магазин", to: "/markets" },
-  { name: "Нови продукти", to: "/new" },
-  { name: "Конфигуратор", to: "/configurator" },
-  { name: "Сервизни услуги", to: "/services" },
-  { name: "Промоции", to: "/promotions" },
-];
-
-const menuComponents = {
-  "/markets": MarketsMenu,
-  "/promotions": PromotionsMenu,
-  "/new": NewProductsMenu,
-  "/configurator": ConfiguratorMenu,
-  "/services": ServicesMenu,
-};
+import { BiMenuAltRight } from "react-icons/bi";
 
 const NavBar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [query, setQuery] = useState("");
-  const [openMenu, setOpenMenu] = useState(null);
   const [profileDropDown, setProfileDropDown] = useState(false);
   const location = useLocation();
   const scrollYRef = useRef(0);
@@ -70,13 +49,11 @@ const NavBar = () => {
     };
   }, [mobileOpen]);
 
-  // Close mobile on route change
   useEffect(() => {
     setMobileOpen(false);
     setProfileDropDown(false);
   }, [location]);
 
-  // Escape closes
   useEffect(() => {
     const onKey = (e) => {
       if (e.key === "Escape") {
@@ -93,16 +70,11 @@ const NavBar = () => {
     console.log("Search:", query);
   };
 
-  const activeClass =
-    "text-primary border-b-2 border-primary pb-1 transition-colors";
-
-  const MenuComponent = openMenu ? menuComponents[openMenu] : null;
-
   return (
     <header className="w-full sticky top-0 z-10 bg-background shadow-sm">
-      <div className="max-w-[1280px] mx-auto px-4 md:px-8 lg:px-12">
-        <div className="flex items-center justify-between">
-          <div className="flex flex-col items-center flex-shrink-0 py-2">
+      <div className="max-w-[1280px] mx-auto px-4">
+        <div className="flex items-center justify-between md:justify-normal gap-10 py-2">
+          <div className="flex flex-col items-center flex-shrink-0">
             <Link to="/" className="flex items-center">
               <img
                 src="/logo.png"
@@ -112,30 +84,10 @@ const NavBar = () => {
             </Link>
           </div>
 
-          <nav className="hidden lg:flex items-center gap-6 px-4">
-            {navItems.map((item) => (
-              <NavLink
-                key={item.to}
-                to={item.to}
-                onClick={(e) => {
-                  e.preventDefault();
-                  setOpenMenu(openMenu === item.to ? null : item.to);
-                }}
-                className={({ isActive }) =>
-                  `text-xs xl:text-sm font-medium whitespace-nowrap ${
-                    isActive ? activeClass : "text-white/90 hover:text-white"
-                  }`
-                }
-              >
-                {item.name}
-              </NavLink>
-            ))}
-          </nav>
-
-          <div className="flex items-center gap-3">
+          <div className="flex items-center justify-end gap-3 w-full h-full">
             <form
               onSubmit={handleSearchSubmit}
-              className={`hidden md:flex items-center bg-white/5 rounded-full px-2 py-1 transition-all flex-shrink max-w-[200px] md:max-w-[250px] lg:max-w-[300px] ${
+              className={`hidden md:flex items-center bg-white/5  px-2 py-2 transition-all w-full h-full focus-within:bg-white/10 focus-within:ring rounded-sm focus-within:ring-primary/50 ${
                 searchOpen ? "ring-2 ring-primary/40" : ""
               }`}
             >
@@ -178,6 +130,14 @@ const NavBar = () => {
                 Профил
               </span>
             </button>
+            <button
+              className="md:hidden p-2 rounded hover:bg-white/5 transition"
+              onClick={() => setMobileOpen(true)}
+              aria-label="Отвори меню"
+              aria-expanded={mobileOpen}
+            >
+              <FaBars className="w-6 h-6 text-white" />
+            </button>
             <AnimatePresence>
               {profileDropDown && (
                 <motion.div
@@ -191,39 +151,21 @@ const NavBar = () => {
                 </motion.div>
               )}
             </AnimatePresence>
-
-            <button
-              className="lg:hidden p-2 rounded hover:bg-white/5 transition"
-              onClick={() => setMobileOpen(true)}
-              aria-label="Отвори меню"
-              aria-expanded={mobileOpen}
-            >
-              <FaBars className="w-6 h-6 text-white" />
-            </button>
           </div>
         </div>
       </div>
-
-      {/* Desktop dropdown area */}
-      <AnimatePresence>
-        {MenuComponent && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="overflow-hidden bg-background text-white"
-          >
-            <div className="max-w-[1280px] mx-auto px-6 relative">
-              <MenuComponent onClose={setOpenMenu} />
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
       {/* Top info bar */}
-      <div className="bg-primary py-2 hidden lg:block">
-        <div className="max-w-[1280px] mx-auto px-4 md:px-8 lg:px-12 flex tems-center justify-between ">
+      <div className="relative mx-auto max-w-[1280px] hidden md:block">
+        <div
+          className="absolute px-10 bg-primary py-2 left-0 md:clip-polygon-right xl:clip-polygon
+  "
+        >
+          <div className="text-md text-white hover:scale-105 cursor-pointer flex items-center gap-1 hover:underline transition-all duration-500">
+            <BiMenuAltRight size={24} />
+            <button className="text-white/90">МЕНЮ</button>
+          </div>
+        </div>
+        <div className="absolute bg-background py-2 right-0 -top-1 ps-4 pe-12 md:clip-polygon-left xl:clip-polygon">
           <div className="flex items-center gap-3">
             <div className="flex items-center gap-2 text-xs text-white/90">
               <FaMapMarkerAlt className="text-background w-4 h-4" />
@@ -238,23 +180,8 @@ const NavBar = () => {
               <span className="whitespace-nowrap">info@caretech.bg</span>
             </div>
           </div>
-          <div className="text-xs text-white flex items-center gap-4">
-            <Link to="/for-us" className="hover:text-white/90 transition">
-              За Нас
-            </Link>
-            <Link to="/contact" className="hover:text-white/90 transition">
-              Контакти
-            </Link>
-            <Link to="/shipping" className="hover:text-white/90 transition">
-              Доставка
-            </Link>
-            <Link to="/payment" className="hover:text-white/90 transition">
-              Плащане
-            </Link>
-          </div>
         </div>
       </div>
-
       {/* Mobile menu (backdrop + slide panel) */}
       <AnimatePresence>
         {mobileOpen && (
@@ -326,24 +253,7 @@ const NavBar = () => {
                   />
                 </form>
 
-                {/* Nav items */}
-                <nav className="flex flex-col gap-1">
-                  {navItems.map((item) => (
-                    <Link
-                      key={item.to}
-                      to={item.to}
-                      onClick={() => {
-                        setMobileOpen(false);
-                      }}
-                      className="block py-3 px-2 rounded hover:bg-white/5 transition text-base font-medium"
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
-                </nav>
-
                 <div className="border-t border-white my-4" />
-
               </div>
             </motion.aside>
           </>
