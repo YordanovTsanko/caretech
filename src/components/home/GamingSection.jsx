@@ -1,143 +1,189 @@
 import React, { useRef, useState, useEffect } from "react";
-import Slider from "react-slick";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { gamingProducts } from "../../utils/utils";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import { useNavigate } from "react-router-dom";
 
-const PrevArrow = ({ onClick }) => (
-  <button
-    onClick={onClick}
-    aria-label="Prev"
-    className="hidden sm:inline-flex absolute  left-2 top-1/2 -translate-y-1/2 z-[1] p-2 bg-black/40 rounded-full text-white hover:bg-black/60"
-  >
-    <FaChevronLeft />
-  </button>
-);
+const ProductCard = ({ p, euroRate, onBuy, onToggleCart, inCart }) => {
+  const discounted = p.discount ?? 0;
+  const price = Number(p.price ?? 0);
+  const finalPrice = discounted ? price * (1 - discounted / 100) : price;
+  return (
+    <article className="p-3 bg-white/5 rounded-lg hover:shadow-lg flex flex-col">
+      <div onClick={() => onBuy(p.id)} className="relative cursor-pointer">
+        {p.new && (
+          <span className="absolute top-2 left-2 bg-blue-600 text-white text-xs px-2 py-1 rounded font-semibold">
+            НОВО
+          </span>
+        )}
+        {discounted > 0 && (
+          <>
+            <span className="absolute top-2 right-2 bg-green-600 text-white text-xs px-2 py-1 rounded font-semibold">
+              -{discounted}%
+            </span>
+            <span
+              className={`absolute ${p.new ? "top-10" : "top-2"} left-2 bg-red-600 text-white text-xs px-2 py-1 rounded font-semibold`}
+            >
+              ПРОМО
+            </span>
+          </>
+        )}
+        <div className="w-full h-40 flex items-center justify-center mb-3">
+          {p.image ? (
+            <img
+              src={p.image}
+              alt={p.name}
+              className="max-h-40 object-contain"
+              draggable={false}
+            />
+          ) : (
+            <div className="w-full h-40 bg-gray-200 flex items-center justify-center text-gray-500 rounded">
+              No Image
+            </div>
+          )}
+        </div>
+      </div>
 
+      <h3
+        onClick={() => onBuy(p.id)}
+        className="text-sm font-semibold mb-2 line-clamp-3 min-h-[3.6rem] cursor-pointer"
+      >
+        {p.name}
+      </h3>
 
-const NextArrow = ({ onClick }) => (
-  <button
-    onClick={onClick}
-    aria-label="Next"
-    className="hidden sm:inline-flex absolute right-2 top-1/2 -translate-y-1/2 z-0 p-2 bg-black/40 rounded-full text-white hover:bg-black/60"
-  >
-    <FaChevronRight />
-  </button>
-);
+      <div className="mt-auto text-center">
+        {discounted > 0 ? (
+          <p className="text-black/60 line-through text-sm">
+            {price.toFixed(2)} лв. / {(price / euroRate).toFixed(2)} €
+          </p>
+        ) : (
+          <p className="text-transparent text-sm">–</p>
+        )}
+        <p className="text-black font-semibold mb-3">
+          {finalPrice.toFixed(2)} лв. / {(finalPrice / euroRate).toFixed(2)} €
+        </p>
+
+        <div className="flex flex-col gap-2 items-center">
+          <button
+            onClick={() => onBuy(p.id)}
+            className="w-full px-3 py-1 rounded-md bg-primary text-white text-sm hover:opacity-90"
+          >
+            КУПИ СЕГА
+          </button>
+          <button
+            onClick={() => onToggleCart(p.id)}
+            className={`w-full px-3 py-1 rounded-md border transition duration-500 text-sm ${
+              inCart
+                ? "bg-red-900 text-white border-red-900"
+                : "bg-white/10 text-black border-gray-300"
+            }`}
+          >
+            {inCart ? "ДОБАВЕНО" : "ДОБАВИ В КОШНИЦАТА"}
+          </button>
+        </div>
+      </div>
+    </article>
+  );
+};
 
 const GamingSection = () => {
   const euroRate = 1.96;
-  const sliderRef = useRef(null);
-  const [slidesToShow, setSlidesToShow] = useState(3);
-  const navigate = useNavigate()
-
-  const handleResize = () => {
-    const width = window.innerWidth;
-    if (width > 1280) setSlidesToShow(4);
-    else if (width >= 768) setSlidesToShow(3);
-    else if (width >= 640) setSlidesToShow(2);
-    else setSlidesToShow(1);
-  };
+  const navigate = useNavigate();
+  const defaultVisible = 10;
+  const products = gamingProducts || [];
+  const initialVisible = Math.min(defaultVisible, products.length);
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [addedIds, setAddedIds] = useState(new Set());
+  const extraRef = useRef(null);
+  const [extraMax, setExtraMax] = useState("0px");
 
   useEffect(() => {
-    handleResize(); 
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+    const el = extraRef.current;
+    if (!el) return;
+    if (isExpanded) {
+      setExtraMax(el.scrollHeight + "px");
+      const t = setTimeout(() => setExtraMax("none"), 420);
+      return () => clearTimeout(t);
+    } else {
+      setExtraMax(el.scrollHeight ? el.scrollHeight + "px" : "0px");
+      requestAnimationFrame(() =>
+        requestAnimationFrame(() => setExtraMax("0px"))
+      );
+    }
+  }, [isExpanded]);
 
-  const settings = {
-    dots: slidesToShow === 1,
-    infinite: false,
-    speed: 450,
-    slidesToShow: slidesToShow,
-    slidesToScroll: 1,
-    prevArrow: <PrevArrow />,
-    nextArrow: <NextArrow />,
+  const handleToggleCart = (id) => {
+    setAddedIds((prev) => {
+      const next = new Set(prev);
+      next.add(id); // show "ДОБАВЕНО"
+      return next;
+    });
+
+    // Remove after 4 seconds
+    setTimeout(() => {
+      setAddedIds((prev) => {
+        const next = new Set(prev);
+        next.delete(id);
+        return next;
+      });
+    }, 1000);
   };
 
-  return (
-    <section className="max-w-[1280px] w-full mx-auto px-4 py-8">
-      <style jsx global>{`
-        .slick-dots {
-          bottom: -30px;
-        }
-        .slick-dots li button:before {
-          font-size: 10px;
-          color: rgba(0, 0, 0, 0.3);
-        }
-        .slick-dots li.slick-active button:before {
-          color: rgba(0, 0, 0, 0.75);
-        }
-      `}</style>
-      <h2 className="text-xl font-semibold mb-4">ГЕЙМИНГ СРЕДА</h2>
-      <div className="relative pb-8 sm:pb-0">
-        <Slider ref={sliderRef} {...settings}>
-          {gamingProducts.map((product) => {
-            const discounted = product.discount ?? 0;
-            const price = Number(product.price ?? 0);
-            const finalPrice = discounted
-              ? price * (1 - discounted / 100)
-              : price;
+  const handleBuy = (id) => navigate(`/product/${id}?buyNow=1`);
 
-            return (
-              <div onClick={() => navigate(`/product/${product.id}`)} key={product.id} className="p-2 h-full w-full">
-                <div className="relative p-4 bg-white/5 rounded-lg cursor-pointer hover:bg-primary/20 flex flex-col w-full h-full">
-                  {product.new && (
-                    <span className="absolute top-2 left-2 bg-blue-600 text-white text-xs px-2 py-1 rounded font-semibold">
-                      НОВО
-                    </span>
-                  )}
-                  {discounted > 0 && (
-                    <>
-                      <span className="absolute top-2 right-2 bg-green-600 text-white text-xs px-2 py-1 rounded font-semibold">
-                        -{discounted}%
-                      </span>
-                      <span
-                        className={`absolute ${
-                          product.new ? "top-10" : "top-2"
-                        } left-2 bg-red-600 text-white text-xs px-2 py-1 rounded font-semibold`}
-                      >
-                        ПРОМО
-                      </span>
-                    </>
-                  )}
-                  <div className="w-32 h-32 mx-auto mb-2 flex items-center justify-center">
-                    {product.image ? (
-                      <img
-                        src={product.image}
-                        alt={product.name}
-                        className="w-full h-full object-fit-contain"
-                        draggable={false}
-                      />
-                    ) : (
-                      <div className="w-32 h-32 bg-gray-200 flex items-center justify-center text-gray-500 rounded">
-                        No Image
-                      </div>
-                    )}
-                  </div>
-                  <h3 className="text-sm font-semibold mb-2 min-h-[3.6rem] line-clamp-3 text-center">
-                    {product.name}
-                  </h3>
-                  <div className="text-center mt-auto">
-                    {discounted > 0 ? (
-                      <p className="text-black/60 line-through text-sm">
-                        {price.toFixed(2)} лв. / {(price / euroRate).toFixed(2)} €
-                      </p>
-                    ) : (
-                      <p className="text-transparent text-sm">–</p>
-                    )}
-                    <p className="text-black font-semibold">
-                      {finalPrice.toFixed(2)} лв. / {(finalPrice / euroRate).toFixed(2)} €
-                    </p>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-        </Slider>
+  const visible = products.slice(0, initialVisible);
+  const extras = products.slice(initialVisible);
+
+  return (
+    <section className="max-w-[1280px] flex flex-col w-full mx-auto px-4 py-8 relative">
+      <h2 className="text-xl font-semibold mb-4">ГЕЙМИНГ СРЕДА</h2>
+
+      <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 lg:grid-rows-2">
+        {visible.map((p) => (
+          <ProductCard
+            key={p.id}
+            p={p}
+            euroRate={euroRate}
+            onBuy={handleBuy}
+            onToggleCart={handleToggleCart}
+            inCart={addedIds.has(p.id)}
+          />
+        ))}
       </div>
+
+      {extras.length > 0 && (
+        <div
+          style={{ maxHeight: extraMax }}
+          className="overflow-hidden transition-[max-height,opacity] duration-400 ease-[cubic-bezier(.2,.9,.2,1)] mt-4"
+          aria-hidden={!isExpanded}
+        >
+          <div
+            ref={extraRef}
+            className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 mt-4"
+          >
+            {extras.map((p) => (
+              <ProductCard
+                key={p.id}
+                p={p}
+                euroRate={euroRate}
+                onBuy={handleBuy}
+                onToggleCart={handleToggleCart}
+                inCart={addedIds.has(p.id)}
+              />
+            ))}
+          </div>
+        </div>
+      )}
+
+      {extras.length > 0 && (
+        <div className="relative mt-0 self-end">
+          <button
+            onClick={() => setIsExpanded((s) => !s)}
+            className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-primary text-white shadow hover:opacity-95 transition"
+            aria-expanded={isExpanded}
+          >
+            {isExpanded ? "Затвори" : "Зареди още"}
+          </button>
+        </div>
+      )}
     </section>
   );
 };

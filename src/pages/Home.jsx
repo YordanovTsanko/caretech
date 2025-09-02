@@ -15,6 +15,7 @@ const Home = () => {
       <FeaturesSection />
       <AdImageSection />
       <TopOrderedProducts />
+      <AdImageSection />
       <GamingSection />
       <AdImageSectionTwo />
       <ShopByBrand />

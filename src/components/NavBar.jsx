@@ -159,7 +159,7 @@ const NavBar = () => {
       {/* Top info bar */}
       <div className="relative mx-auto max-w-[1280px] hidden md:block">
         <div
-          className="absolute px-10 bg-primary py-2 left-0 md:clip-polygon-right xl:clip-polygon
+          className="absolute px-10 bg-primary shadow-lg py-2 left-0 md:clip-polygon-right xl:clip-polygon
   "
         >
           <div
@@ -173,7 +173,7 @@ const NavBar = () => {
 
         <NavDropDown isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
         {/* Right Section */}
-        <div className="absolute bg-background py-2 right-0 -top-1 z-[66] ps-4 pe-12 md:clip-polygon-left xl:clip-polygon">
+        <div className="absolute shadow-lg bg-background py-2 right-0 -top-1 z-[66] ps-4 pe-12 md:clip-polygon-left xl:clip-polygon">
           <div className="flex items-center gap-3">
             <div className="flex items-center gap-2 text-xs text-white/90">
               <FaMapMarkerAlt className="text-background w-4 h-4" />
