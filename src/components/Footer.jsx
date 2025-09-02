@@ -202,16 +202,22 @@ const Footer = () => {
         {/* Shippng */}
         <div className="flex flex-col items-center md:items-end">
           <h2 className="text-md text-white md:me-10 mb-5">ДОСТАВКА:</h2>
-          <div className="gap-2 flex md:flex-col">
+          <img
+            src="/speedy-logo.jpg"
+            alt="shipping"
+            className="w-32 rounded-lg h-auto"
+          />
+          <h2 className="text-md text-white md:me-[25px] my-5">ПЛАЩАНИЯ :</h2>
+          <div className="flex gap-2 flex-col md:me-[48px]">
             <img
-              src="/econt-logo.png"
-              alt="shipping"
-              className="bg-white p-4 w-32 rounded-lg h-auto"
+              src="https://logos-world.net/wp-content/uploads/2020/05/Visa-Logo.png"
+              alt="visa"
+              className="w-20 object-fit p-2 rounded-lg h-12 bg-white"
             />
             <img
-              src="/speedy-logo.jpg"
-              alt="shipping"
-              className="w-32 rounded-lg h-auto"
+              src="https://bcassetcdn.com/public/blog/wp-content/uploads/2025/04/17172559/mastercard-2016-1024x683.webp"
+              alt="mastercard"
+              className="w-20 object-fit p-2 rounded-lg h-12 bg-white"
             />
           </div>
         </div>
