@@ -170,10 +170,10 @@ const NavBar = () => {
       {/* Top info bar */}
       <div className="relative mx-auto max-w-[1280px] hidden md:block">
         <div
-          className={`absolute z-[66] transition-all duration-500 cursor-pointer bg-primary shadow-lg py-2 left-0 md:clip-polygon-right ${
+          className={`absolute z-[66] transition-all duration-500 cursor-pointer shadow-lg py-2 left-0 md:clip-polygon-right ${
             menuOpen
-              ? "xl:clip-polygon-right ps-3 pe-8"
-              : " xl:clip-polygon px-10"
+              ? "xl:clip-polygon-right ps-3 pe-[66px] bg-background"
+              : " xl:clip-polygon px-10 bg-primary"
           }`}
           onClick={(e) => {
             e.stopPropagation();
