@@ -8,6 +8,7 @@ import {
   FaUserCircle,
   FaMapMarkerAlt,
   FaPhone,
+  FaHeart,
 } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import AuthDropDown from "./profile/AuthDropDown";
@@ -115,6 +116,16 @@ const NavBar = () => {
               className="flex items-center gap-2 px-2 py-1 rounded hover:bg-white/5 transition"
               aria-label="Количка"
             >
+              <FaHeart className="w-5 h-5 text-primary" />
+              <span className="hidden md:inline text-sm text-white/90">
+                Любими
+              </span>
+            </Link>
+            <Link
+              to="/cart"
+              className="flex items-center gap-2 px-2 py-1 rounded hover:bg-white/5 transition"
+              aria-label="Количка"
+            >
               <FaShoppingCart className="w-5 h-5 text-primary" />
               <span className="hidden md:inline text-sm text-white/90">
                 Количка
@@ -127,7 +138,7 @@ const NavBar = () => {
               className="flex items-center gap-2 px-2 py-1 rounded hover:bg-white/5 transition"
               aria-label="Профил"
             >
-              <FaUserCircle className="w-6 h-6 text-primary" />
+              <FaUserCircle className="w-5 h-5 text-primary" />
               <span className="hidden md:inline text-sm text-white/90">
                 Профил
               </span>
@@ -159,15 +170,21 @@ const NavBar = () => {
       {/* Top info bar */}
       <div className="relative mx-auto max-w-[1280px] hidden md:block">
         <div
-          className="absolute px-10 bg-primary shadow-lg py-2 left-0 md:clip-polygon-right xl:clip-polygon
-  "
+          className={`absolute z-[66] transition-all duration-500 cursor-pointer bg-primary shadow-lg py-2 left-0 md:clip-polygon-right ${
+            menuOpen
+              ? "xl:clip-polygon-right ps-3 pe-8"
+              : " xl:clip-polygon px-10"
+          }`}
+          onClick={(e) => {
+            e.stopPropagation();
+            setMenuOpen((prev) => !prev);
+          }}
         >
-          <div
-            onClick={() => setMenuOpen((prev) => !prev)}
-            className="text-md text-white hover:scale-105 relative z-20 cursor-pointer flex items-center gap-1 hover:underline transition-all duration-500"
-          >
+          <div className="text-md text-white hover:scale-105 relative flex items-center gap-1 hover:underline transition-all duration-500">
             <BiMenuAltRight size={24} />
-            <button className="text-white/90">МЕНЮ</button>
+            <button className="text-white/90" type="button">
+              МЕНЮ
+            </button>
           </div>
         </div>
 

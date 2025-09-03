@@ -46,22 +46,6 @@ const NavDropDown = ({ isOpen, onClose }) => {
     if (!isOpen) setActiveIdx(0);
   }, [isOpen]);
 
-  useEffect(() => {
-    const onDoc = (e) => {
-      if (!isOpen) return;
-      if (ref.current && !ref.current.contains(e.target)) onClose();
-    };
-    const onKey = (e) => {
-      if (isOpen && e.key === "Escape") onClose();
-    };
-    document.addEventListener("mousedown", onDoc);
-    window.addEventListener("keydown", onKey);
-    return () => {
-      document.removeEventListener("mousedown", onDoc);
-      window.removeEventListener("keydown", onKey);
-    };
-  }, [isOpen, onClose]);
-
   return (
     <AnimatePresence>
       {isOpen && (
@@ -77,8 +61,8 @@ const NavDropDown = ({ isOpen, onClose }) => {
           }}
         >
           <div className="bg-white shadow-xl grid grid-cols-[280px_1fr]">
-            <motion.nav variants={container} className="bg-primary text-white">
-              <motion.ul className="divide-y" variants={container}>
+            <motion.nav variants={container} className="bg-primary pt-10 text-white">
+              <motion.ul className="divide-y border-t border-gray-200" variants={container}>
                 {navLinks.map((section, i) => (
                   <motion.li
                     key={section.title + i}
