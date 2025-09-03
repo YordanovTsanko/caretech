@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { navLinks } from "../../utils/navLinks";
 import { Link } from "react-router-dom";
 import { BsDot } from "react-icons/bs";
-import { FaArrowAltCircleUp } from "react-icons/fa";
 
 const container = {
   hidden: {
@@ -149,16 +148,14 @@ const NavDropDown = ({ isOpen, onClose }) => {
                 ))}
               </motion.div>
             </motion.div>
-            <h2 className="absolute bottom-12 cursor-pointer hover:text-red-700 transition duration-500 right-3 text-sm underline text-primary">
+            <h2 className="absolute bottom-6 cursor-pointer hover:text-red-700 transition duration-500 right-3 text-sm underline text-primary">
               Разширено търсене
             </h2>
           </div>
 
           <div
-            className="py-2 bg-primary border-t border-gray-200 flex justify-center cursor-pointer hover:bg-red-700 transition duration-500"
-            onClick={onClose}
+            className="py-2 bg-primary border-t border-gray-200 "
           >
-            <FaArrowAltCircleUp className="text-white" size={25} />
           </div>
         </motion.div>
       )}

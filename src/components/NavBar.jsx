@@ -12,8 +12,9 @@ import {
 } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import AuthDropDown from "./profile/AuthDropDown";
-import { BiMenuAltRight } from "react-icons/bi";
 import NavDropDown from "./navbar/NavDropDown";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { CgClose } from "react-icons/cg";
 
 const NavBar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -75,7 +76,7 @@ const NavBar = () => {
 
   return (
     <header className="w-full sticky top-0 z-10 bg-background shadow-sm">
-      <div className="max-w-[1280px] mx-auto px-4">
+      <div className="max-w-[1280px] px-4 xl:px-0 mx-auto">
         <div className="flex items-center justify-between md:justify-normal gap-10 py-2">
           <div className="flex flex-col items-center flex-shrink-0">
             <Link to="/" className="flex items-center">
@@ -151,6 +152,7 @@ const NavBar = () => {
             >
               <FaBars className="w-6 h-6 text-white" />
             </button>
+            {/* AuthForms and ProfileDropDown */}
             <AnimatePresence>
               {profileDropDown && (
                 <motion.div
@@ -167,45 +169,54 @@ const NavBar = () => {
           </div>
         </div>
       </div>
-      {/* Top info bar */}
+      {/* Right Bottom Section */}
+      <div className=" shadow-lg cursor-default hidden sm:flex items-center justify-end px-5 xl:px-2 gap-3 pb-3 w-full max-w-[1280px] mx-auto">
+        <div className="flex items-center gap-2 text-xs text-white/90">
+          <FaMapMarkerAlt className="text-primary w-4 h-4" />
+          <span className="whitespace-nowrap">Враца, България</span>
+        </div>
+        <div className="flex items-center gap-2 text-xs text-white/90">
+          <FaPhone className="text-primary w-4 h-4" />
+          <span className="whitespace-nowrap">+359 899 850 777</span>
+        </div>
+        <div className="flex items-center gap-2 text-xs text-white/90">
+          <MdEmail className="text-primary w-4 h-4" />
+          <span className="whitespace-nowrap">info@caretech.bg</span>
+        </div>
+      </div>
+      {/* Menu */}
       <div className="relative mx-auto max-w-[1280px] hidden md:block">
         <div
-          className={`absolute z-[66] transition-all duration-500 cursor-pointer shadow-lg py-2 left-0 md:clip-polygon-right ${
-            menuOpen
-              ? "xl:clip-polygon-right ps-3 pe-[66px] bg-background"
-              : " xl:clip-polygon px-10 bg-primary"
+          className={`absolute left-6 -top-7 z-[66] transition-all duration-500 flex flex-col items-center justify-center w-[63px] h-[63px] overflow-hidden rounded-full cursor-pointer shadow-lg ${
+            menuOpen ? "bg-background" : "bg-primary"
           }`}
           onClick={(e) => {
             e.stopPropagation();
             setMenuOpen((prev) => !prev);
           }}
         >
-          <div className="text-md text-white hover:scale-105 relative flex items-center gap-1 hover:underline transition-all duration-500">
-            <BiMenuAltRight size={24} />
-            <button className="text-white/90" type="button">
-              МЕНЮ
-            </button>
+          <div className="relative h-6 w-6">
+            <div
+              className={`absolute inset-0 transition-opacity duration-300 ease-in-out ${
+                menuOpen ? "opacity-0" : "opacity-100"
+              }`}
+            >
+              <RxHamburgerMenu size={24} className="text-white" />
+            </div>
+            <div
+              className={`absolute inset-0 transition-opacity duration-300 ease-in-out ${
+                menuOpen ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              <CgClose size={24} className="text-white" />
+            </div>
           </div>
+          <button className="text-white text-xs" type="button">
+            МЕНЮ
+          </button>
         </div>
 
         <NavDropDown isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
-        {/* Right Section */}
-        <div className="absolute shadow-lg bg-background py-2 right-0 -top-1 z-[66] px-10 md:clip-polygon-left xl:clip-polygon">
-          <div className="flex items-center gap-3">
-            <div className="flex items-center gap-2 text-xs text-white/90">
-              <FaMapMarkerAlt className="text-primary w-4 h-4" />
-              <span className="whitespace-nowrap">Враца, България</span>
-            </div>
-            <div className="flex items-center gap-2 text-xs text-white/90">
-              <FaPhone className="text-primary w-4 h-4" />
-              <span className="whitespace-nowrap">+359 899 850 777</span>
-            </div>
-            <div className="flex items-center gap-2 text-xs text-white/90">
-              <MdEmail className="text-primary w-4 h-4" />
-              <span className="whitespace-nowrap">info@caretech.bg</span>
-            </div>
-          </div>
-        </div>
       </div>
       {/* Mobile menu (backdrop + slide panel) */}
       <AnimatePresence>
