@@ -77,7 +77,7 @@ const NavBar = () => {
             <img
               src="/logo.png"
               alt="Care Tech"
-              className="w-30 xl:w-36 h-auto object-contain"
+              className="w-44 xl:w-52 h-auto object-contain"
             />
           </Link>
 
@@ -247,7 +247,7 @@ const NavBar = () => {
                 >
                   ✕
                 </button>
-              </div>
+              </div>  
 
               <div className="p-4">
                 {/* Mobile search */}
