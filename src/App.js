@@ -7,7 +7,7 @@ import ProductsPage from "./pages/ProductsPage";
 
 const AppContent = () => {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen w-full">
       <NavBar />
       <main className="flex-grow flex">
         <Routes>

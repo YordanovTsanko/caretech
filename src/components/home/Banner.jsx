@@ -50,7 +50,7 @@ const Banner = () => {
   };
 
   return (
-    <div className="banner relative w-full max-w-[1280px] mx-auto">
+    <div className="banner relative w-full">
       <Slider {...settings}>
         {slides.map((slide, i) => (
           <div key={i} className="relative">

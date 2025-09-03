@@ -10,7 +10,7 @@ import SubscriptionSection from "../components/home/SubscriptionSection";
 
 const Home = () => {
   return (
-    <div className="flex flex-col items-center w-full ">
+    <div className="flex flex-col items-center w-full md:px-20 max-w-[2000px] mx-auto">
       <Banner />
       <FeaturesSection />
       <AdImageSection />

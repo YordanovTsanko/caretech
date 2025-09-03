@@ -11,8 +11,8 @@ import {
   FaHeart,
 } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import AuthDropDown from "./profile/AuthDropDown";
 import { BiMenuAltRight } from "react-icons/bi";
+import AuthDropDown from "./profile/AuthDropDown";
 import NavDropDown from "./navbar/NavDropDown";
 
 const NavBar = () => {
@@ -23,11 +23,12 @@ const NavBar = () => {
   const [profileDropDown, setProfileDropDown] = useState(false);
   const location = useLocation();
   const scrollYRef = useRef(0);
+  const menuButtonRef = useRef(null);
 
-  // Improved scroll lock (works on iOS)
+  // Prevent background scroll for mobile menu
   useEffect(() => {
     if (mobileOpen) {
-      scrollYRef.current = window.scrollY || window.pageYOffset || 0;
+      scrollYRef.current = window.scrollY || 0;
       document.documentElement.style.overflow = "hidden";
       document.body.style.position = "fixed";
       document.body.style.top = `-${scrollYRef.current}px`;
@@ -38,30 +39,24 @@ const NavBar = () => {
       const top = document.body.style.top;
       document.body.style.top = "";
       document.body.style.width = "";
-      if (top) {
-        const restored = -parseInt(top || "0", 10);
-        window.scrollTo(0, restored);
-      }
+      if (top) window.scrollTo(0, -parseInt(top || "0", 10));
     }
-
-    return () => {
-      document.documentElement.style.overflow = "";
-      document.body.style.position = "";
-      document.body.style.top = "";
-      document.body.style.width = "";
-    };
   }, [mobileOpen]);
 
+  // Close menus on route change
   useEffect(() => {
     setMobileOpen(false);
     setProfileDropDown(false);
+    setMenuOpen(false);
   }, [location]);
 
+  // Close on Escape
   useEffect(() => {
     const onKey = (e) => {
       if (e.key === "Escape") {
         setMobileOpen(false);
         setProfileDropDown(false);
+        setMenuOpen(false);
       }
     };
     window.addEventListener("keydown", onKey);
@@ -75,22 +70,23 @@ const NavBar = () => {
 
   return (
     <header className="w-full sticky top-0 z-10 bg-background shadow-sm">
-      <div className="max-w-[1280px] mx-auto px-4">
-        <div className="flex items-center justify-between md:justify-normal gap-10 py-2">
-          <div className="flex flex-col items-center flex-shrink-0">
-            <Link to="/" className="flex items-center">
-              <img
-                src="/logo.png"
-                alt="Care Tech"
-                className="w-24 xl:w-28 h-auto object-contain"
-              />
-            </Link>
-          </div>
+      <div className="px-4 md:px-20 mx-auto">
+        <div className="flex items-center justify-between md:justify-normal gap-10 py-4">
+          {/* Logo */}
+          <Link to="/" className="flex items-center">
+            <img
+              src="/logo.png"
+              alt="Care Tech"
+              className="w-30 xl:w-36 h-auto object-contain"
+            />
+          </Link>
 
+          {/* Right side */}
           <div className="flex items-center justify-end gap-3 w-full h-full">
+            {/* Desktop search */}
             <form
               onSubmit={handleSearchSubmit}
-              className={`hidden md:flex items-center bg-white/5  px-2 py-2 transition-all w-full h-full focus-within:bg-white/10 focus-within:ring rounded-sm focus-within:ring-primary/50 ${
+              className={`hidden md:flex items-center bg-white/5 px-2 py-2 transition-all w-full h-full focus-within:bg-white/10 focus-within:ring rounded-sm focus-within:ring-primary/50 ${
                 searchOpen ? "ring-2 ring-primary/40" : ""
               }`}
             >
@@ -98,7 +94,6 @@ const NavBar = () => {
                 type="button"
                 onClick={() => setSearchOpen((s) => !s)}
                 className="p-1 rounded-full flex-shrink-0"
-                aria-label="Търси"
               >
                 <FaSearch className="w-4 h-4 text-primary" />
               </button>
@@ -107,24 +102,24 @@ const NavBar = () => {
                 onChange={(e) => setQuery(e.target.value)}
                 className="bg-transparent outline-none text-sm text-white ml-2 placeholder-white/60 w-full min-w-0"
                 placeholder="Търсене на продукти..."
-                aria-label="Търсене на продукти"
               />
             </form>
 
+            {/* Favorites */}
             <Link
               to="/cart"
               className="flex items-center gap-2 px-2 py-1 rounded hover:bg-white/5 transition"
-              aria-label="Количка"
             >
               <FaHeart className="w-5 h-5 text-primary" />
               <span className="hidden md:inline text-sm text-white/90">
                 Любими
               </span>
             </Link>
+
+            {/* Cart */}
             <Link
               to="/cart"
               className="flex items-center gap-2 px-2 py-1 rounded hover:bg-white/5 transition"
-              aria-label="Количка"
             >
               <FaShoppingCart className="w-5 h-5 text-primary" />
               <span className="hidden md:inline text-sm text-white/90">
@@ -132,25 +127,27 @@ const NavBar = () => {
               </span>
             </Link>
 
+            {/* Profile */}
             <button
               type="button"
               onClick={() => setProfileDropDown(!profileDropDown)}
               className="flex items-center gap-2 px-2 py-1 rounded hover:bg-white/5 transition"
-              aria-label="Профил"
             >
               <FaUserCircle className="w-5 h-5 text-primary" />
               <span className="hidden md:inline text-sm text-white/90">
                 Профил
               </span>
             </button>
+
+            {/* Mobile menu button */}
             <button
               className="md:hidden p-2 rounded hover:bg-white/5 transition"
               onClick={() => setMobileOpen(true)}
-              aria-label="Отвори меню"
-              aria-expanded={mobileOpen}
             >
               <FaBars className="w-6 h-6 text-white" />
             </button>
+
+            {/* Profile dropdown */}
             <AnimatePresence>
               {profileDropDown && (
                 <motion.div
@@ -167,51 +164,57 @@ const NavBar = () => {
           </div>
         </div>
       </div>
+
       {/* Top info bar */}
-      <div className="relative mx-auto hidden md:block">
-        <div className="max-w-[1280px] relative mx-auto">
-          <div
-            className={`absolute z-[66] transition-all duration-500 -top-[1px] cursor-pointer shadow-lg py-2 ps-3 pe-[65px] left-0 clip-polygon-right ${
-              menuOpen ? "bg-background" : " bg-primary"
-            }`}
-            onClick={(e) => {
-              e.stopPropagation();
-              setMenuOpen((prev) => !prev);
-            }}
-          >
-            <div className="text-md text-white hover:scale-105 relative flex items-center gap-1 hover:underline transition-all duration-500">
-              <BiMenuAltRight size={24} />
-              <button className="text-white/90" type="button">
-                МЕНЮ
-              </button>
-            </div>
+      <div className="relative mx-auto px-4 md:px-20 hidden md:block">
+        <div className="relative mx-auto flex justify-between items-start">
+          {/* Menu button + dropdown */}
+          <div className="relative inline-block w-full">
+            <button
+              ref={menuButtonRef}
+              className={`absolute z-[66] transition-all duration-500 -top-[1px] cursor-pointer shadow-lg py-2 ps-3 pe-[65px] left-0 clip-polygon-right ${
+                menuOpen ? "bg-background" : "bg-primary"
+              }`}
+              onClick={() => setMenuOpen((prev) => !prev)}
+            >
+              <div className="text-md text-white hover:scale-105 relative flex items-center gap-1 hover:underline transition-all duration-500">
+                <BiMenuAltRight size={24} />
+                <span className="text-white/90">МЕНЮ</span>
+              </div>
+            </button>
+
+            <NavDropDown
+              isOpen={menuOpen}
+              onClose={() => setMenuOpen(false)}
+              buttonRef={menuButtonRef}
+            />
           </div>
 
-          <NavDropDown isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
-          {/* Right Section */}
+          {/* Right info */}
           <div className="absolute shadow-lg bg-background py-2 right-0 -top-1 z-[66] ps-10 pe-4 clip-polygon-left">
             <div className="flex items-center gap-3">
               <div className="flex items-center gap-2 text-xs text-white/90">
                 <FaMapMarkerAlt className="text-primary w-4 h-4" />
-                <span className="whitespace-nowrap">Враца, България</span>
+                <span>Враца, България</span>
               </div>
               <div className="flex items-center gap-2 text-xs text-white/90">
                 <FaPhone className="text-primary w-4 h-4" />
-                <span className="whitespace-nowrap">+359 899 850 777</span>
+                <span>+359 899 850 777</span>
               </div>
               <div className="flex items-center gap-2 text-xs text-white/90">
                 <MdEmail className="text-primary w-4 h-4" />
-                <span className="whitespace-nowrap">info@caretech.bg</span>
+                <span>info@caretech.bg</span>
               </div>
             </div>
           </div>
         </div>
       </div>
-      {/* Mobile menu (backdrop + slide panel) */}
+
+      {/* Mobile menu */}
       <AnimatePresence>
         {mobileOpen && (
           <>
-            {/* Backdrop: must be above header */}
+            {/* Backdrop */}
             <motion.div
               key="backdrop"
               initial={{ opacity: 0 }}
@@ -220,10 +223,9 @@ const NavBar = () => {
               transition={{ duration: 0.18 }}
               onClick={() => setMobileOpen(false)}
               className="fixed inset-0 bg-black z-50"
-              aria-hidden="true"
             />
 
-            {/* Sliding panel: use a solid (near-opaque) background inline to guarantee no transparency */}
+            {/* Slide panel */}
             <motion.aside
               key="panel"
               initial={{ x: "100%", opacity: 0 }}
@@ -231,28 +233,20 @@ const NavBar = () => {
               exit={{ x: "100%", opacity: 0 }}
               transition={{ type: "tween", duration: 0.25 }}
               className="fixed top-0 right-0 h-full w-full sm:w-4/5 md:w-3/5 text-white z-[60] shadow-xl overflow-auto"
-              role="dialog"
-              aria-modal="true"
-              // inline style ensures a solid background color (no theme token opacity leaking through)
               style={{ backgroundColor: "rgba(3,7,18,0.98)" }}
             >
               <div className="flex items-center justify-between p-4 relative z-10 border-b border-white/10">
-                <div className="flex items-center gap-3">
-                  <img
-                    src="/logo.png"
-                    alt="Care Tech"
-                    className="w-24 h-auto object-contain"
-                  />
-                </div>
-                <div className="flex items-center gap-2">
-                  <button
-                    className="p-2 rounded hover:bg-white/5 transition"
-                    onClick={() => setMobileOpen(false)}
-                    aria-label="Затвори меню"
-                  >
-                    ✕
-                  </button>
-                </div>
+                <img
+                  src="/logo.png"
+                  alt="Care Tech"
+                  className="w-24 h-auto object-contain"
+                />
+                <button
+                  className="p-2 rounded hover:bg-white/5 transition"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  ✕
+                </button>
               </div>
 
               <div className="p-4">

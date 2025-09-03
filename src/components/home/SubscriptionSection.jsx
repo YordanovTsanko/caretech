@@ -12,9 +12,8 @@ const SubscriptionSection = () => {
   };
 
   return (
-    <div className="bg-primary w-full mx-auto">
-      <div className="pb-8 mx-auto">
-        <div className="bg-white px-6 pb-4 flex flex-col lg:flex-row items-center gap-4 justify-center shadow-md mx-auto">
+    <div className="w-full mx-auto pb-4">
+        <div className="bg-white flex flex-col lg:flex-row items-center gap-4 justify-center mx-auto">
           <div className="flex items-center gap-2">
           <MdOutlineMailOutline className="w-20 h-20 text-primary" />
 
@@ -49,7 +48,6 @@ const SubscriptionSection = () => {
             )}
           </Formik>
         </div>
-      </div>
     </div>
   );
 };

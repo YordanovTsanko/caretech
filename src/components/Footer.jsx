@@ -116,7 +116,8 @@ const categoryLinks = [
 const Footer = () => {
   return (
     <footer className="w-full bg-background px-10 lg:px-0">
-      <div className="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-4 px-2 pt-6 pb-12 lg:px-32 gap-6">
+      <div className="py-2 bg-primary"></div>
+      <div className="grid grid-cols-1 md:grid-cols-4 px-2 pt-6 pb-12 lg:px-32 gap-6">
         {/* Logo + Contacts */}
         <div>
           <img
@@ -136,7 +137,7 @@ const Footer = () => {
           <p className="text-sm text-white mt-1 text-center md:text-start">
             📞 Телефон: +359 899 850 777
           </p>
-          <div className="flex items-center gap-3 mt-6 justify-center md: justify-start">
+          <div className="flex items-center gap-3 mt-6 justify-center md:justify-start">
             <a
               href="https://www.facebook.com"
               target="_blank"
@@ -167,7 +168,7 @@ const Footer = () => {
         {/* Info links */}
         <div className="grid grid-cols-1 gap-4 sm:gap-0 sm:grid-cols-2 col-span-2">
           <div className="flex flex-col items-center md:items-end">
-            <h2 className="text-md text-white md:self-center md:ms-3 mb-5">
+            <h2 className="text-md text-white md:self-center md:ps-20 mb-5">
               ИНФОРМАЦИЯ:
             </h2>
             <ul className="space-y-2 text-sm text-white">
@@ -184,7 +185,7 @@ const Footer = () => {
 
           {/* Category links */}
           <div className="flex flex-col items-center md:items-end">
-            <h2 className="text-md text-white self-center md:ms-[70px] mb-5">
+            <h2 className="text-md text-white self-center md:ps-[140px] mb-5">
               КАТАЛОГ:
             </h2>
             <ul className="space-y-2 text-sm text-white">
@@ -207,19 +208,6 @@ const Footer = () => {
             alt="shipping"
             className="w-32 rounded-lg h-auto"
           />
-          <h2 className="text-md text-white md:me-[25px] my-5">ПЛАЩАНИЯ :</h2>
-          <div className="flex gap-2 flex-col md:me-[48px]">
-            <img
-              src="https://logos-world.net/wp-content/uploads/2020/05/Visa-Logo.png"
-              alt="visa"
-              className="w-20 object-fit p-2 rounded-lg h-12 bg-white"
-            />
-            <img
-              src="https://bcassetcdn.com/public/blog/wp-content/uploads/2025/04/17172559/mastercard-2016-1024x683.webp"
-              alt="mastercard"
-              className="w-20 object-fit p-2 rounded-lg h-12 bg-white"
-            />
-          </div>
         </div>
       </div>
 
