@@ -71,7 +71,7 @@ const NavBar = () => {
   return (
     <header className="w-full sticky top-0 z-10 bg-background shadow-sm">
       <div className="px-4 md:px-20 mx-auto">
-        <div className="flex items-center justify-between md:justify-normal gap-10 py-4">
+        <div className="flex items-center justify-between gap-10 py-4">
           {/* Logo */}
           <Link to="/" className="flex items-center flex-shrink-0">
             <img
@@ -80,7 +80,21 @@ const NavBar = () => {
               className="w-32 lg:w-44 xl:w-52 h-auto object-contain"
             />
           </Link>
-
+          {/* Center side  */}
+          <div className="flex items-center gap-3">
+            <Link
+              to="/customers"
+              className="hidden md:flex items-center gap-2 px-2 py-1 rounded text-white hover:bg-white/5 transition"
+            >
+              Нашите клиенти
+            </Link>
+            <Link
+              to="/customers"
+              className="hidden md:flex items-center gap-2 px-2 py-1 rounded text-white hover:bg-white/5 transition"
+            >
+              Сервизни услуги
+            </Link>
+          </div>
           {/* Right side */}
           <div className="flex items-center justify-end gap-3 w-full h-full">
             <div className="hidden lg:flex items-center gap-3">
@@ -261,6 +275,7 @@ const NavBar = () => {
                 >
                   ✕
                 </button>
+              </div>
               </div>
 
               <div className="p-4">
