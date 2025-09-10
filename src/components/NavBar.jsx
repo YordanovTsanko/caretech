@@ -73,16 +73,30 @@ const NavBar = () => {
       <div className="px-4 md:px-20 mx-auto">
         <div className="flex items-center justify-between md:justify-normal gap-10 py-4">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center flex-shrink-0">
             <img
               src="/logo.png"
               alt="Care Tech"
-              className="w-44 xl:w-52 h-auto object-contain"
+              className="w-32 lg:w-44 xl:w-52 h-auto object-contain"
             />
           </Link>
 
           {/* Right side */}
           <div className="flex items-center justify-end gap-3 w-full h-full">
+            <div className="hidden lg:flex items-center gap-3">
+              <Link
+                to="/customers"
+                className="text-white hover:text-gray-300 transition text-xs xl:text-sm whitespace-nowrap"
+              >
+                Нашите клиенти
+              </Link>
+              <Link
+                to="/customers"
+                className="text-white hover:text-gray-300 transition text-xs xl:text-sm whitespace-nowrap"
+              >
+                Сервизни услуги
+              </Link>
+            </div>
             {/* Desktop search */}
             <form
               onSubmit={handleSearchSubmit}
@@ -111,7 +125,7 @@ const NavBar = () => {
               className="flex items-center gap-2 px-2 py-1 rounded hover:bg-white/5 transition"
             >
               <FaHeart className="w-5 h-5 text-primary" />
-              <span className="hidden md:inline text-sm text-white/90">
+              <span className="hidden md:inline text-xs xl:text-sm text-white/90">
                 Любими
               </span>
             </Link>
@@ -122,7 +136,7 @@ const NavBar = () => {
               className="flex items-center gap-2 px-2 py-1 rounded hover:bg-white/5 transition"
             >
               <FaShoppingCart className="w-5 h-5 text-primary" />
-              <span className="hidden md:inline text-sm text-white/90">
+              <span className="hidden md:inline text-xs xl:text-sm text-white/90">
                 Количка
               </span>
             </Link>
@@ -134,7 +148,7 @@ const NavBar = () => {
               className="flex items-center gap-2 px-2 py-1 rounded hover:bg-white/5 transition"
             >
               <FaUserCircle className="w-5 h-5 text-primary" />
-              <span className="hidden md:inline text-sm text-white/90">
+              <span className="hidden md:inline text-xs xl:text-sm text-white/90">
                 Профил
               </span>
             </button>
@@ -247,7 +261,7 @@ const NavBar = () => {
                 >
                   ✕
                 </button>
-              </div>  
+              </div>
 
               <div className="p-4">
                 {/* Mobile search */}
