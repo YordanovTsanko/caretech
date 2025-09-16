@@ -1,8 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { navLinks } from "../../utils/navLinks";
 import { Link } from "react-router-dom";
 import { BsDot } from "react-icons/bs";
+import categories from "../../utils/categories.json";
+import { iconCategories } from "../../utils/navIcons";
+import { FaRegFolder } from "react-icons/fa";
 
 const container = {
   hidden: { opacity: 0, scaleY: 0, y: -6, transition: { when: "afterChildren", duration: 0.18 } },
@@ -18,17 +20,48 @@ const NavDropDown = ({ isOpen, onClose, buttonRef }) => {
   const ref = useRef(null);
   const [activeIdx, setActiveIdx] = useState(0);
 
+  const parentCategories = useMemo(
+    () =>
+      categories
+        .filter((c) => c.isParentCategory)
+        .map((c) => ({
+          ...c,
+          Icon: iconCategories[c.slug] || FaRegFolder,
+        })),
+    []
+  );
+
+  const navLinks = useMemo(() => {
+    const subs = categories.filter((c) => !c.isParentCategory && c.parent && c.parent.id);
+    const subsByParent = subs.reduce((acc, s) => {
+      const pid = s.parent.id;
+      if (!acc[pid]) acc[pid] = [];
+      acc[pid].push(s);
+      return acc;
+    }, {});
+
+    return parentCategories.map((p) => ({
+      id: p.id,
+      title: p.nameBg || p.nameEn || "No title",
+      slug: p.slug,
+      Icon: p.Icon,
+      subItems: (subsByParent[p.id] || []).map((si) => ({
+        title: si.nameBg || si.nameEn || "No name",
+        link: si.slug ? `/category/${si.slug}` : `/category/id/${si.id}`,
+      })),
+    }));
+  }, [parentCategories]);
+
   useEffect(() => {
     if (!isOpen) setActiveIdx(0);
   }, [isOpen]);
 
-  // Close on click outside (dropdown + button)
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
         ref.current &&
         !ref.current.contains(event.target) &&
-        buttonRef.current &&
+        buttonRef?.current &&
         !buttonRef.current.contains(event.target)
       ) {
         onClose();
@@ -38,6 +71,8 @@ const NavDropDown = ({ isOpen, onClose, buttonRef }) => {
     if (isOpen) document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [isOpen, onClose, buttonRef]);
+
+  const safeActiveIdx = Math.max(0, Math.min(activeIdx, navLinks.length - 1));
 
   return (
     <AnimatePresence>
@@ -51,21 +86,26 @@ const NavDropDown = ({ isOpen, onClose, buttonRef }) => {
           className="absolute left-0 -top-2 mt-2 w-full z-[40] shadow-2xl overflow-hidden"
           style={{ transformOrigin: "top center" }}
         >
-          <div className="bg-white shadow-xl grid grid-cols-[280px_1fr]">
-            <motion.nav variants={container} className="bg-primary pt-10 text-white">
+          <div className="bg-white shadow-xl grid grid-cols-[280px_1fr] max-h-[496px]">
+            <motion.nav variants={container} className="bg-primary overflow-auto max-h-[496px] pt-10 text-white scrollbar-hide">
               <motion.ul className="divide-y border-t border-gray-200" variants={container}>
-                {navLinks.map((section, i) => (
+                {parentCategories.map((section, i) => (
                   <motion.li
-                    key={section.title + i}
+                    key={section.id}
                     variants={leftItem}
-                    className={`flex items-center justify-between px-4 py-2 cursor-pointer hover:bg-red-700 ${i === activeIdx ? "bg-red-700" : ""}`}
+                    className={`flex items-center justify-between px-4 py-2 cursor-pointer hover:bg-red-700 ${i === safeActiveIdx ? "bg-red-700" : ""}`}
                     onMouseEnter={() => setActiveIdx(i)}
                     onFocus={() => setActiveIdx(i)}
                     onClick={() => setActiveIdx(i)}
+                    tabIndex={0}
                   >
                     <div className="flex items-center gap-3">
-                      <section.Icon className="w-4 h-4" aria-hidden="true" />
-                      <span className="text-[14px] font-medium">{section.title}</span>
+                      {section.Icon ? (
+                        <section.Icon className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
+                      ) : (
+                        <FaRegFolder className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
+                      )}
+                      <span className="text-[14px] font-medium">{section.nameBg}</span>
                     </div>
                     <svg className="w-4 h-4 opacity-80" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                       <path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
@@ -75,33 +115,39 @@ const NavDropDown = ({ isOpen, onClose, buttonRef }) => {
               </motion.ul>
             </motion.nav>
 
-            <motion.div variants={rightPanel} className="p-6 bg-white">
-              <motion.h3 variants={rightItem} className="text-lg font-semibold text-gray-800 mb-3">
-                {navLinks[activeIdx]?.title}
-              </motion.h3>
+        <motion.div variants={rightPanel} className="p-6 bg-white max-h-[496px] overflow-auto">
+  <motion.h3 variants={rightItem} className="text-lg font-semibold text-gray-800 mb-3">
+    {navLinks[safeActiveIdx]?.title}
+  </motion.h3>
 
-              <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-4" initial="hidden" animate="show" exit="exit" variants={rightPanel}>
-                {(navLinks[activeIdx]?.children || []).map((child) => (
-                  <motion.div key={child.title} variants={rightItem} className="space-y-2">
-                    <Link to={child.link || "#"} onClick={onClose} className="text-sm font-medium text-gray-900 hover:underline block">
-                      {child.title}
-                    </Link>
-                    {Array.isArray(child.subItems) && (
-                      <ul className="mt-1 space-y-1">
-                        {child.subItems.map((si) => (
-                          <li key={si.title}>
-                            <Link to={si.link || "#"} onClick={onClose} className="flex items-center text-xs text-gray-600 hover:text-gray-800">
-                              <BsDot className="w-5 h-5 text-primary flex-shrink-0" aria-hidden="true" />
-                              <span>{si.title}</span>
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </motion.div>
-                ))}
-              </motion.div>
-            </motion.div>
+  <motion.div
+    className="flex flex-col gap-4"
+    initial="hidden"
+    animate="show"
+    exit="exit"
+    variants={rightPanel}
+  >
+    <motion.div variants={rightItem} className="space-y-2">
+      {Array.isArray(navLinks[safeActiveIdx]?.subItems) && navLinks[safeActiveIdx].subItems.length > 0 && (
+        <ul className="mt-1 flex flex-wrap -mx-2">
+          {navLinks[safeActiveIdx].subItems.map((si) => (
+            <li key={si.title + si.link} className="px-2 w-1/2">
+              <Link
+                to={si.link}
+                onClick={onClose}
+                className="flex items-center text-xs text-gray-600 hover:text-gray-800 py-1"
+              >
+                <BsDot className="w-5 h-5 text-primary flex-shrink-0 mr-1" aria-hidden="true" />
+                <span>{si.title}</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )}
+    </motion.div>
+  </motion.div>
+</motion.div>
+
 
             <h2 className="absolute bottom-6 cursor-pointer hover:text-red-700 transition duration-500 right-3 text-sm underline text-primary">
               Разширено търсене
