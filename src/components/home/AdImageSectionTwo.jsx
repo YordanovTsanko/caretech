@@ -28,7 +28,7 @@ const AdImageSectionTwo = () => {
 
   if (!isMobile) {
     return (
-      <div className="max-w-[1280px] mx-auto px-4">
+      <div className="max-w-[1280px] mx-auto px-4 py-4">
         <div className="grid grid-cols-3 gap-4">
           {slides.slice(0, 3).map((s) => (
             <div key={s.id} className="overflow-hidden bg-gray-100">

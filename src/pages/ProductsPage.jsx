@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { gamingProducts } from "../utils/utils";
+import { newProducts } from "../utils/utils";
 import SimilarProducts from "../components/products/SimilarProducts";
 
 const ProductsPage = () => {
@@ -8,7 +8,7 @@ const ProductsPage = () => {
   const euroRate = 1.96;
 
   const currentProduct = id
-    ? gamingProducts.find((product) => product.id === parseInt(id, 10))
+    ? newProducts.find((product) => product.id === parseInt(id, 10))
     : null;
 
   const translateKey = (key) => {

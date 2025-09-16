@@ -12,8 +12,8 @@ import {
 } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { BiMenuAltRight } from "react-icons/bi";
-import AuthDropDown from "./profile/AuthDropDown";
-import NavDropDown from "./navbar/NavDropDown";
+import AuthDropDown from "../profile/AuthDropDown";
+import NavDropDown from "./NavDropDown";
 
 const NavBar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -71,7 +71,7 @@ const NavBar = () => {
   return (
     <header className="w-full sticky top-0 z-10 bg-background shadow-sm">
       <div className="px-4 md:px-20 mx-auto">
-        <div className="flex items-center justify-between md:justify-normal gap-10 py-4">
+        <div className="flex items-center justify-between md:justify-normal gap-10">
           {/* Logo */}
           <Link to="/" className="flex items-center flex-shrink-0">
             <img

@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import Slider from "react-slick";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import { gamingProducts } from "../../utils/utils";
+import { newProducts } from "../../utils/utils";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useNavigate } from "react-router-dom";
@@ -74,7 +74,7 @@ const SimilarProducts = () => {
       <h2 className="text-xl font-semibold mb-4">ПОДОБНИ ПРОДУКТИ</h2>
       <div className="relative pb-8 sm:pb-0">
         <Slider ref={sliderRef} {...settings}>
-          {gamingProducts.map((product) => {
+          {newProducts.map((product) => {
             const discounted = product.discount ?? 0;
             const price = Number(product.price ?? 0);
             const finalPrice = discounted

@@ -1,0 +1,4718 @@
+[
+    {
+        "id": 1,
+        "externalId": 373,
+        "nameBg": "Компютърни компоненти",
+        "nameEn": "Computer components",
+        "slug": "computer-components",
+        "sortOrder": 1,
+        "parent": null,
+        "createdAt": "2025-09-16T09:34:04.244351",
+        "updatedAt": "2025-09-16T09:34:04.244351",
+        "isParentCategory": true,
+        "show": true
+    },
+    {
+        "id": 2,
+        "externalId": 500,
+        "nameBg": "Дънни платки",
+        "nameEn": "Motherboards ",
+        "slug": "motherboards",
+        "sortOrder": 2,
+        "parent": {
+            "id": 1,
+            "nameEn": "Computer components",
+            "nameBg": "Компютърни компоненти",
+            "slug": "computer-components",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.282466",
+        "updatedAt": "2025-09-16T09:34:05.358161",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 3,
+        "externalId": 379,
+        "nameBg": "Процесори",
+        "nameEn": "CPU",
+        "slug": "cpu",
+        "sortOrder": 3,
+        "parent": {
+            "id": 1,
+            "nameEn": "Computer components",
+            "nameBg": "Компютърни компоненти",
+            "slug": "computer-components",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.289958",
+        "updatedAt": "2025-09-16T09:34:05.358442",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 4,
+        "externalId": 386,
+        "nameBg": "Охладители за процесори",
+        "nameEn": "Coolers for CPU",
+        "slug": "coolers-for-cpu",
+        "sortOrder": 4,
+        "parent": {
+            "id": 1,
+            "nameEn": "Computer components",
+            "nameBg": "Компютърни компоненти",
+            "slug": "computer-components",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.294731",
+        "updatedAt": "2025-09-16T09:34:05.359041",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 5,
+        "externalId": 623,
+        "nameBg": "Охладители за видео карти",
+        "nameEn": "Graphics Cards Cooler",
+        "slug": "graphics-cards-cooler",
+        "sortOrder": 5,
+        "parent": {
+            "id": 1,
+            "nameEn": "Computer components",
+            "nameBg": "Компютърни компоненти",
+            "slug": "computer-components",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.299978",
+        "updatedAt": "2025-09-16T09:34:05.359357",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 6,
+        "externalId": 389,
+        "nameBg": "Памети",
+        "nameEn": "Memory",
+        "slug": "memory",
+        "sortOrder": 6,
+        "parent": {
+            "id": 1,
+            "nameEn": "Computer components",
+            "nameBg": "Компютърни компоненти",
+            "slug": "computer-components",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.30733",
+        "updatedAt": "2025-09-16T09:34:05.359623",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 7,
+        "externalId": 615,
+        "nameBg": "Памети за лаптоп",
+        "nameEn": "Memory SODIMM",
+        "slug": "memory-sodimm",
+        "sortOrder": 7,
+        "parent": {
+            "id": 1,
+            "nameEn": "Computer components",
+            "nameBg": "Компютърни компоненти",
+            "slug": "computer-components",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.314597",
+        "updatedAt": "2025-09-16T09:34:05.359804",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 8,
+        "externalId": 388,
+        "nameBg": "Видео карти",
+        "nameEn": "Graphic Cards",
+        "slug": "graphic-cards",
+        "sortOrder": 8,
+        "parent": {
+            "id": 1,
+            "nameEn": "Computer components",
+            "nameBg": "Компютърни компоненти",
+            "slug": "computer-components",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.320468",
+        "updatedAt": "2025-09-16T09:34:05.359961",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 9,
+        "externalId": 376,
+        "nameBg": "Захранвания",
+        "nameEn": "Power Supplies",
+        "slug": "power-supplies",
+        "sortOrder": 9,
+        "parent": {
+            "id": 1,
+            "nameEn": "Computer components",
+            "nameBg": "Компютърни компоненти",
+            "slug": "computer-components",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.326231",
+        "updatedAt": "2025-09-16T09:34:05.360255",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 10,
+        "externalId": 391,
+        "nameBg": "Звукови карти",
+        "nameEn": "Sound Cards",
+        "slug": "sound-cards",
+        "sortOrder": 10,
+        "parent": {
+            "id": 1,
+            "nameEn": "Computer components",
+            "nameBg": "Компютърни компоненти",
+            "slug": "computer-components",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.331284",
+        "updatedAt": "2025-09-16T09:34:05.36058",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 11,
+        "externalId": 382,
+        "nameBg": "Кутии за компютри",
+        "nameEn": "Computer Cases",
+        "slug": "computer-cases",
+        "sortOrder": 11,
+        "parent": {
+            "id": 1,
+            "nameEn": "Computer components",
+            "nameBg": "Компютърни компоненти",
+            "slug": "computer-components",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.336644",
+        "updatedAt": "2025-09-16T09:34:05.361202",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 12,
+        "externalId": 384,
+        "nameBg": "Вентилатори",
+        "nameEn": "Fans",
+        "slug": "fans",
+        "sortOrder": 12,
+        "parent": {
+            "id": 1,
+            "nameEn": "Computer components",
+            "nameBg": "Компютърни компоненти",
+            "slug": "computer-components",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.341104",
+        "updatedAt": "2025-09-16T09:34:05.361621",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 13,
+        "externalId": 614,
+        "nameBg": "Контролери за вентилатори",
+        "nameEn": "Fan Controller",
+        "slug": "fan-controller",
+        "sortOrder": 13,
+        "parent": {
+            "id": 1,
+            "nameEn": "Computer components",
+            "nameBg": "Компютърни компоненти",
+            "slug": "computer-components",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.34625",
+        "updatedAt": "2025-09-16T09:34:05.361965",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 14,
+        "externalId": 530,
+        "nameBg": "Термо пасти и подложки",
+        "nameEn": "Thermal paste",
+        "slug": "thermal-paste",
+        "sortOrder": 14,
+        "parent": {
+            "id": 1,
+            "nameEn": "Computer components",
+            "nameBg": "Компютърни компоненти",
+            "slug": "computer-components",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.354242",
+        "updatedAt": "2025-09-16T09:34:05.36238",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 15,
+        "externalId": 512,
+        "nameBg": "Хард дискове - 2.5\"",
+        "nameEn": "HDD 2.5\"",
+        "slug": "hdd-2-5",
+        "sortOrder": 15,
+        "parent": {
+            "id": 1,
+            "nameEn": "Computer components",
+            "nameBg": "Компютърни компоненти",
+            "slug": "computer-components",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.361373",
+        "updatedAt": "2025-09-16T09:34:05.362803",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 16,
+        "externalId": 496,
+        "nameBg": "Хард дискове - 3.5\"",
+        "nameEn": "HDD - 3.5\"",
+        "slug": "hdd-3-5",
+        "sortOrder": 16,
+        "parent": {
+            "id": 1,
+            "nameEn": "Computer components",
+            "nameBg": "Компютърни компоненти",
+            "slug": "computer-components",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.365522",
+        "updatedAt": "2025-09-16T09:34:05.363592",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 17,
+        "externalId": 377,
+        "nameBg": "Solid State Drive (SSD) дискове",
+        "nameEn": "Solid State Drive (SSD)",
+        "slug": "solid-state-drive-ssd",
+        "sortOrder": 17,
+        "parent": {
+            "id": 1,
+            "nameEn": "Computer components",
+            "nameBg": "Компютърни компоненти",
+            "slug": "computer-components",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.37075",
+        "updatedAt": "2025-09-16T09:34:05.363925",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 18,
+        "externalId": 640,
+        "nameBg": "Чекмеджета за дискове",
+        "nameEn": "Enclosures for HDD",
+        "slug": "enclosures-for-hdd",
+        "sortOrder": 18,
+        "parent": {
+            "id": 1,
+            "nameEn": "Computer components",
+            "nameBg": "Компютърни компоненти",
+            "slug": "computer-components",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.375195",
+        "updatedAt": "2025-09-16T09:34:05.364118",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 19,
+        "externalId": 381,
+        "nameBg": "Оптични устройства",
+        "nameEn": "CD, DVD, Blue ray",
+        "slug": "cd-dvd-blue-ray",
+        "sortOrder": 20,
+        "parent": {
+            "id": 1,
+            "nameEn": "Computer components",
+            "nameBg": "Компютърни компоненти",
+            "slug": "computer-components",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.37896",
+        "updatedAt": "2025-09-16T09:34:05.364439",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 20,
+        "externalId": 387,
+        "nameBg": "TV Тунери и Видео устройства",
+        "nameEn": "TV Tuners & Video Devices",
+        "slug": "tv-tuners-video-devices",
+        "sortOrder": 21,
+        "parent": {
+            "id": 1,
+            "nameEn": "Computer components",
+            "nameBg": "Компютърни компоненти",
+            "slug": "computer-components",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.383048",
+        "updatedAt": "2025-09-16T09:34:05.364636",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 21,
+        "externalId": 392,
+        "nameBg": "Контролери / RAID Контролери",
+        "nameEn": "Controllers / RAID Cards",
+        "slug": "controllers-raid-cards",
+        "sortOrder": 22,
+        "parent": {
+            "id": 1,
+            "nameEn": "Computer components",
+            "nameBg": "Компютърни компоненти",
+            "slug": "computer-components",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.38807",
+        "updatedAt": "2025-09-16T09:34:05.365083",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 22,
+        "externalId": 393,
+        "nameBg": "Входно-изходни контролери",
+        "nameEn": "Input & Output Controllers",
+        "slug": "input-output-controllers",
+        "sortOrder": 23,
+        "parent": {
+            "id": 1,
+            "nameEn": "Computer components",
+            "nameBg": "Компютърни компоненти",
+            "slug": "computer-components",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.392495",
+        "updatedAt": "2025-09-16T09:34:05.365285",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 23,
+        "externalId": 686,
+        "nameBg": "Водно охлаждане",
+        "nameEn": "Water / Liquid Cooling",
+        "slug": "water-liquid-cooling",
+        "sortOrder": 24,
+        "parent": null,
+        "createdAt": "2025-09-16T09:34:04.396807",
+        "updatedAt": "2025-09-16T09:34:04.396807",
+        "isParentCategory": true,
+        "show": true
+    },
+    {
+        "id": 24,
+        "externalId": 687,
+        "nameBg": "Блокове за процесори",
+        "nameEn": "CPU blocks",
+        "slug": "cpu-blocks",
+        "sortOrder": 25,
+        "parent": {
+            "id": 23,
+            "nameEn": "Water / Liquid Cooling",
+            "nameBg": "Водно охлаждане",
+            "slug": "water-liquid-cooling",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.401919",
+        "updatedAt": "2025-09-16T09:34:05.365776",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 25,
+        "externalId": 688,
+        "nameBg": "Блокове за видеокарти",
+        "nameEn": "GPU blocks",
+        "slug": "gpu-blocks",
+        "sortOrder": 26,
+        "parent": {
+            "id": 23,
+            "nameEn": "Water / Liquid Cooling",
+            "nameBg": "Водно охлаждане",
+            "slug": "water-liquid-cooling",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.406709",
+        "updatedAt": "2025-09-16T09:34:05.365987",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 26,
+        "externalId": 689,
+        "nameBg": "Радиатори",
+        "nameEn": "Radiators",
+        "slug": "radiators",
+        "sortOrder": 27,
+        "parent": {
+            "id": 23,
+            "nameEn": "Water / Liquid Cooling",
+            "nameBg": "Водно охлаждане",
+            "slug": "water-liquid-cooling",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.411153",
+        "updatedAt": "2025-09-16T09:34:05.366123",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 27,
+        "externalId": 690,
+        "nameBg": "Помпи и резервоари",
+        "nameEn": "Pump and reservoir",
+        "slug": "pump-and-reservoir",
+        "sortOrder": 28,
+        "parent": {
+            "id": 23,
+            "nameEn": "Water / Liquid Cooling",
+            "nameBg": "Водно охлаждане",
+            "slug": "water-liquid-cooling",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.415793",
+        "updatedAt": "2025-09-16T09:34:05.36688",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 28,
+        "externalId": 691,
+        "nameBg": "Фитинги",
+        "nameEn": "Fittings",
+        "slug": "fittings",
+        "sortOrder": 29,
+        "parent": {
+            "id": 23,
+            "nameEn": "Water / Liquid Cooling",
+            "nameBg": "Водно охлаждане",
+            "slug": "water-liquid-cooling",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.420926",
+        "updatedAt": "2025-09-16T09:34:05.367455",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 29,
+        "externalId": 692,
+        "nameBg": "Тръби",
+        "nameEn": "Tubing",
+        "slug": "tubing",
+        "sortOrder": 30,
+        "parent": {
+            "id": 23,
+            "nameEn": "Water / Liquid Cooling",
+            "nameBg": "Водно охлаждане",
+            "slug": "water-liquid-cooling",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.425072",
+        "updatedAt": "2025-09-16T09:34:05.368301",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 30,
+        "externalId": 693,
+        "nameBg": "Течности",
+        "nameEn": "Coolant",
+        "slug": "coolant",
+        "sortOrder": 31,
+        "parent": {
+            "id": 23,
+            "nameEn": "Water / Liquid Cooling",
+            "nameBg": "Водно охлаждане",
+            "slug": "water-liquid-cooling",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.429961",
+        "updatedAt": "2025-09-16T09:34:05.369026",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 31,
+        "externalId": 549,
+        "nameBg": "Компютърни системи",
+        "nameEn": "Computer Systems",
+        "slug": "computer-systems",
+        "sortOrder": 33,
+        "parent": null,
+        "createdAt": "2025-09-16T09:34:04.434657",
+        "updatedAt": "2025-09-16T09:34:04.434657",
+        "isParentCategory": true,
+        "show": true
+    },
+    {
+        "id": 32,
+        "externalId": 550,
+        "nameBg": "PC системи ",
+        "nameEn": "PC Systems",
+        "slug": "pc-systems",
+        "sortOrder": 34,
+        "parent": {
+            "id": 31,
+            "nameEn": "Computer Systems",
+            "nameBg": "Компютърни системи",
+            "slug": "computer-systems",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.439521",
+        "updatedAt": "2025-09-16T09:34:05.369675",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 33,
+        "externalId": 576,
+        "nameBg": "Сървърни системи",
+        "nameEn": "Servers",
+        "slug": "servers",
+        "sortOrder": 35,
+        "parent": {
+            "id": 31,
+            "nameEn": "Computer Systems",
+            "nameBg": "Компютърни системи",
+            "slug": "computer-systems",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.44423",
+        "updatedAt": "2025-09-16T09:34:05.370053",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 34,
+        "externalId": 617,
+        "nameBg": "Тънки клиенти",
+        "nameEn": "Тhin clients",
+        "slug": "hin-clients",
+        "sortOrder": 36,
+        "parent": {
+            "id": 31,
+            "nameEn": "Computer Systems",
+            "nameBg": "Компютърни системи",
+            "slug": "computer-systems",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.448812",
+        "updatedAt": "2025-09-16T09:34:05.370254",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 35,
+        "externalId": 583,
+        "nameBg": "Аксесоари за компютри",
+        "nameEn": "Computer accessories",
+        "slug": "computer-accessories",
+        "sortOrder": 38,
+        "parent": {
+            "id": 31,
+            "nameEn": "Computer Systems",
+            "nameBg": "Компютърни системи",
+            "slug": "computer-systems",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.45439",
+        "updatedAt": "2025-09-16T09:34:05.370387",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 36,
+        "externalId": 482,
+        "nameBg": "Лаптопи, таблети и аксесоари",
+        "nameEn": "Laptops, tablets and accessories",
+        "slug": "laptops-tablets-and-accessories",
+        "sortOrder": 39,
+        "parent": null,
+        "createdAt": "2025-09-16T09:34:04.459239",
+        "updatedAt": "2025-09-16T09:34:04.459239",
+        "isParentCategory": true,
+        "show": true
+    },
+    {
+        "id": 37,
+        "externalId": 543,
+        "nameBg": "Лаптопи",
+        "nameEn": "Laptops",
+        "slug": "laptops",
+        "sortOrder": 40,
+        "parent": {
+            "id": 36,
+            "nameEn": "Laptops, tablets and accessories",
+            "nameBg": "Лаптопи, таблети и аксесоари",
+            "slug": "laptops-tablets-and-accessories",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.465936",
+        "updatedAt": "2025-09-16T09:34:05.370551",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 38,
+        "externalId": 483,
+        "nameBg": "Таблети",
+        "nameEn": "Tablets",
+        "slug": "tablets",
+        "sortOrder": 41,
+        "parent": {
+            "id": 36,
+            "nameEn": "Laptops, tablets and accessories",
+            "nameBg": "Лаптопи, таблети и аксесоари",
+            "slug": "laptops-tablets-and-accessories",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.472491",
+        "updatedAt": "2025-09-16T09:34:05.37068",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 39,
+        "externalId": 605,
+        "nameBg": "Графични таблети",
+        "nameEn": "Pen Tablets",
+        "slug": "pen-tablets",
+        "sortOrder": 42,
+        "parent": {
+            "id": 36,
+            "nameEn": "Laptops, tablets and accessories",
+            "nameBg": "Лаптопи, таблети и аксесоари",
+            "slug": "laptops-tablets-and-accessories",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.476927",
+        "updatedAt": "2025-09-16T09:34:05.370808",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 40,
+        "externalId": 508,
+        "nameBg": "Чанти за лаптопи",
+        "nameEn": "Laptop bags",
+        "slug": "laptop-bags",
+        "sortOrder": 43,
+        "parent": {
+            "id": 36,
+            "nameEn": "Laptops, tablets and accessories",
+            "nameBg": "Лаптопи, таблети и аксесоари",
+            "slug": "laptops-tablets-and-accessories",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.48089",
+        "updatedAt": "2025-09-16T09:34:05.370959",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 41,
+        "externalId": 509,
+        "nameBg": "Калъфи за таблети",
+        "nameEn": "Sleeve for Tablet",
+        "slug": "sleeve-for-tablet",
+        "sortOrder": 44,
+        "parent": {
+            "id": 36,
+            "nameEn": "Laptops, tablets and accessories",
+            "nameBg": "Лаптопи, таблети и аксесоари",
+            "slug": "laptops-tablets-and-accessories",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.485502",
+        "updatedAt": "2025-09-16T09:34:05.371475",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 42,
+        "externalId": 536,
+        "nameBg": "Захранвания за лаптопи",
+        "nameEn": "Power supplies for laptops",
+        "slug": "power-supplies-for-laptops",
+        "sortOrder": 45,
+        "parent": {
+            "id": 36,
+            "nameEn": "Laptops, tablets and accessories",
+            "nameBg": "Лаптопи, таблети и аксесоари",
+            "slug": "laptops-tablets-and-accessories",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.490209",
+        "updatedAt": "2025-09-16T09:34:05.37166",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 43,
+        "externalId": 525,
+        "nameBg": "Охлаждащи поставки за лаптопи",
+        "nameEn": "Coolers for notebooks",
+        "slug": "coolers-for-notebooks",
+        "sortOrder": 47,
+        "parent": {
+            "id": 36,
+            "nameEn": "Laptops, tablets and accessories",
+            "nameBg": "Лаптопи, таблети и аксесоари",
+            "slug": "laptops-tablets-and-accessories",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.494653",
+        "updatedAt": "2025-09-16T09:34:05.371787",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 44,
+        "externalId": 541,
+        "nameBg": "Заключващи устройства за лаптоп",
+        "nameEn": "Lockung devices",
+        "slug": "lockung-devices",
+        "sortOrder": 48,
+        "parent": {
+            "id": 36,
+            "nameEn": "Laptops, tablets and accessories",
+            "nameBg": "Лаптопи, таблети и аксесоари",
+            "slug": "laptops-tablets-and-accessories",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.499112",
+        "updatedAt": "2025-09-16T09:34:05.371911",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 45,
+        "externalId": 634,
+        "nameBg": "Колички и шкафове за зареждане",
+        "nameEn": "Charging carts & trolleys",
+        "slug": "charging-carts-trolleys",
+        "sortOrder": 49,
+        "parent": {
+            "id": 36,
+            "nameEn": "Laptops, tablets and accessories",
+            "nameBg": "Лаптопи, таблети и аксесоари",
+            "slug": "laptops-tablets-and-accessories",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.50434",
+        "updatedAt": "2025-09-16T09:34:05.372138",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 46,
+        "externalId": 544,
+        "nameBg": "Поставки за таблет",
+        "nameEn": "Holder",
+        "slug": "holder",
+        "sortOrder": 50,
+        "parent": {
+            "id": 36,
+            "nameEn": "Laptops, tablets and accessories",
+            "nameBg": "Лаптопи, таблети и аксесоари",
+            "slug": "laptops-tablets-and-accessories",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.508463",
+        "updatedAt": "2025-09-16T09:34:05.372407",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 47,
+        "externalId": 577,
+        "nameBg": "Аксесоари за лаптопи/таблети",
+        "nameEn": "Accessories for laptops/tablets",
+        "slug": "accessories-for-laptops-tablets",
+        "sortOrder": 51,
+        "parent": {
+            "id": 36,
+            "nameEn": "Laptops, tablets and accessories",
+            "nameBg": "Лаптопи, таблети и аксесоари",
+            "slug": "laptops-tablets-and-accessories",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.5128",
+        "updatedAt": "2025-09-16T09:34:05.372546",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 48,
+        "externalId": 685,
+        "nameBg": "Аксесоари за графични таблети",
+        "nameEn": "Accessories for graphics tablets",
+        "slug": "accessories-for-graphics-tablets",
+        "sortOrder": 52,
+        "parent": {
+            "id": 36,
+            "nameEn": "Laptops, tablets and accessories",
+            "nameBg": "Лаптопи, таблети и аксесоари",
+            "slug": "laptops-tablets-and-accessories",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.518762",
+        "updatedAt": "2025-09-16T09:34:05.372669",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 49,
+        "externalId": 631,
+        "nameBg": "Монитори и дисплеи",
+        "nameEn": "Monitors and displays",
+        "slug": "monitors-and-displays",
+        "sortOrder": 53,
+        "parent": null,
+        "createdAt": "2025-09-16T09:34:04.52373",
+        "updatedAt": "2025-09-16T09:34:04.52373",
+        "isParentCategory": true,
+        "show": true
+    },
+    {
+        "id": 50,
+        "externalId": 394,
+        "nameBg": "Монитори и публични дисплеи",
+        "nameEn": "Monitors  and public displays",
+        "slug": "monitors-and-public-displays",
+        "sortOrder": 54,
+        "parent": {
+            "id": 49,
+            "nameEn": "Monitors and displays",
+            "nameBg": "Монитори и дисплеи",
+            "slug": "monitors-and-displays",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.528328",
+        "updatedAt": "2025-09-16T09:34:05.372854",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 51,
+        "externalId": 697,
+        "nameBg": "Стойки за монитори",
+        "nameEn": "",
+        "slug": "",
+        "sortOrder": 55,
+        "parent": {
+            "id": 49,
+            "nameEn": "Monitors and displays",
+            "nameBg": "Монитори и дисплеи",
+            "slug": "monitors-and-displays",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.532512",
+        "updatedAt": "2025-09-16T09:34:05.372984",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 52,
+        "externalId": 630,
+        "nameBg": "Интерактивни дисплеи",
+        "nameEn": "Interactive Displays",
+        "slug": "interactive-displays",
+        "sortOrder": 56,
+        "parent": {
+            "id": 49,
+            "nameEn": "Monitors and displays",
+            "nameBg": "Монитори и дисплеи",
+            "slug": "monitors-and-displays",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.537541",
+        "updatedAt": "2025-09-16T09:34:05.373157",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 53,
+        "externalId": 637,
+        "nameBg": "Системи за монтаж",
+        "nameEn": "Height adjustable mounts",
+        "slug": "height-adjustable-mounts",
+        "sortOrder": 57,
+        "parent": {
+            "id": 49,
+            "nameEn": "Monitors and displays",
+            "nameBg": "Монитори и дисплеи",
+            "slug": "monitors-and-displays",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.541352",
+        "updatedAt": "2025-09-16T09:34:05.373292",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 54,
+        "externalId": 398,
+        "nameBg": "Компютърна периферия",
+        "nameEn": "Computer peripherals",
+        "slug": "computer-peripherals",
+        "sortOrder": 58,
+        "parent": null,
+        "createdAt": "2025-09-16T09:34:04.544962",
+        "updatedAt": "2025-09-16T09:34:04.544962",
+        "isParentCategory": true,
+        "show": true
+    },
+    {
+        "id": 55,
+        "externalId": 490,
+        "nameBg": "Външни дискове",
+        "nameEn": "External HDD",
+        "slug": "external-hdd",
+        "sortOrder": 59,
+        "parent": {
+            "id": 54,
+            "nameEn": "Computer peripherals",
+            "nameBg": "Компютърна периферия",
+            "slug": "computer-peripherals",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.548759",
+        "updatedAt": "2025-09-16T09:34:05.373452",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 56,
+        "externalId": 641,
+        "nameBg": "Външни SSD",
+        "nameEn": "External SSD",
+        "slug": "external-ssd",
+        "sortOrder": 60,
+        "parent": {
+            "id": 54,
+            "nameEn": "Computer peripherals",
+            "nameBg": "Компютърна периферия",
+            "slug": "computer-peripherals",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.55392",
+        "updatedAt": "2025-09-16T09:34:05.373575",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 57,
+        "externalId": 399,
+        "nameBg": "USB памети",
+        "nameEn": "USB sticks",
+        "slug": "usb-sticks",
+        "sortOrder": 61,
+        "parent": {
+            "id": 54,
+            "nameEn": "Computer peripherals",
+            "nameBg": "Компютърна периферия",
+            "slug": "computer-peripherals",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.558768",
+        "updatedAt": "2025-09-16T09:34:05.373701",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 58,
+        "externalId": 400,
+        "nameBg": "USB хъбове",
+        "nameEn": "USB Hubs",
+        "slug": "usb-hubs",
+        "sortOrder": 62,
+        "parent": {
+            "id": 54,
+            "nameEn": "Computer peripherals",
+            "nameBg": "Компютърна периферия",
+            "slug": "computer-peripherals",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.562638",
+        "updatedAt": "2025-09-16T09:34:05.373821",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 59,
+        "externalId": 401,
+        "nameBg": "Звукови системи и тонколони",
+        "nameEn": "Sound Systems & Loudspeakers",
+        "slug": "sound-systems-loudspeakers",
+        "sortOrder": 63,
+        "parent": {
+            "id": 54,
+            "nameEn": "Computer peripherals",
+            "nameBg": "Компютърна периферия",
+            "slug": "computer-peripherals",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.566411",
+        "updatedAt": "2025-09-16T09:34:05.374031",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 60,
+        "externalId": 402,
+        "nameBg": "Уеб камери",
+        "nameEn": "Web Cams",
+        "slug": "web-cams",
+        "sortOrder": 64,
+        "parent": {
+            "id": 54,
+            "nameEn": "Computer peripherals",
+            "nameBg": "Компютърна периферия",
+            "slug": "computer-peripherals",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.571472",
+        "updatedAt": "2025-09-16T09:34:05.374765",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 61,
+        "externalId": 504,
+        "nameBg": "Клавиатури",
+        "nameEn": "Keyboards",
+        "slug": "keyboards",
+        "sortOrder": 65,
+        "parent": {
+            "id": 54,
+            "nameEn": "Computer peripherals",
+            "nameBg": "Компютърна периферия",
+            "slug": "computer-peripherals",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.575803",
+        "updatedAt": "2025-09-16T09:34:05.375231",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 62,
+        "externalId": 407,
+        "nameBg": "Мишки",
+        "nameEn": "Mice",
+        "slug": "mice",
+        "sortOrder": 66,
+        "parent": {
+            "id": 54,
+            "nameEn": "Computer peripherals",
+            "nameBg": "Компютърна периферия",
+            "slug": "computer-peripherals",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.58014",
+        "updatedAt": "2025-09-16T09:34:05.375565",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 63,
+        "externalId": 411,
+        "nameBg": "Четци за карти ",
+        "nameEn": "Card readers",
+        "slug": "card-readers",
+        "sortOrder": 67,
+        "parent": {
+            "id": 54,
+            "nameEn": "Computer peripherals",
+            "nameBg": "Компютърна периферия",
+            "slug": "computer-peripherals",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.584572",
+        "updatedAt": "2025-09-16T09:34:05.375805",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 64,
+        "externalId": 408,
+        "nameBg": "Падове за мишки ",
+        "nameEn": "Mouse pads",
+        "slug": "mouse-pads",
+        "sortOrder": 68,
+        "parent": {
+            "id": 54,
+            "nameEn": "Computer peripherals",
+            "nameBg": "Компютърна периферия",
+            "slug": "computer-peripherals",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.59036",
+        "updatedAt": "2025-09-16T09:34:05.376081",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 65,
+        "externalId": 406,
+        "nameBg": "Микрофони",
+        "nameEn": "Microphones",
+        "slug": "microphones",
+        "sortOrder": 69,
+        "parent": {
+            "id": 54,
+            "nameEn": "Computer peripherals",
+            "nameBg": "Компютърна периферия",
+            "slug": "computer-peripherals",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.595193",
+        "updatedAt": "2025-09-16T09:34:05.37675",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 66,
+        "externalId": 410,
+        "nameBg": "Слушалки",
+        "nameEn": "Earphones",
+        "slug": "earphones",
+        "sortOrder": 70,
+        "parent": {
+            "id": 54,
+            "nameEn": "Computer peripherals",
+            "nameBg": "Компютърна периферия",
+            "slug": "computer-peripherals",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.598798",
+        "updatedAt": "2025-09-16T09:34:05.377458",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 67,
+        "externalId": 506,
+        "nameBg": "Слушалки (тапи)",
+        "nameEn": "Headsets",
+        "slug": "headsets",
+        "sortOrder": 71,
+        "parent": {
+            "id": 54,
+            "nameEn": "Computer peripherals",
+            "nameBg": "Компютърна периферия",
+            "slug": "computer-peripherals",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.604374",
+        "updatedAt": "2025-09-16T09:34:05.377705",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 68,
+        "externalId": 609,
+        "nameBg": "VR - Виртуална реалност",
+        "nameEn": "VR ( Virtual Reality)",
+        "slug": "vr-virtual-reality",
+        "sortOrder": 72,
+        "parent": null,
+        "createdAt": "2025-09-16T09:34:04.608027",
+        "updatedAt": "2025-09-16T09:34:04.608027",
+        "isParentCategory": true,
+        "show": true
+    },
+    {
+        "id": 69,
+        "externalId": 610,
+        "nameBg": "VR очила",
+        "nameEn": "Virtual Reality Glasses",
+        "slug": "virtual-reality-glasses",
+        "sortOrder": 73,
+        "parent": {
+            "id": 68,
+            "nameEn": "VR ( Virtual Reality)",
+            "nameBg": "VR - Виртуална реалност",
+            "slug": "vr-virtual-reality",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.611608",
+        "updatedAt": "2025-09-16T09:34:05.377884",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 70,
+        "externalId": 613,
+        "nameBg": "VR Ready PC",
+        "nameEn": "VR Ready PC",
+        "slug": "vr-ready-pc",
+        "sortOrder": 76,
+        "parent": {
+            "id": 68,
+            "nameEn": "VR ( Virtual Reality)",
+            "nameBg": "VR - Виртуална реалност",
+            "slug": "vr-virtual-reality",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.615188",
+        "updatedAt": "2025-09-16T09:34:05.378013",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 71,
+        "externalId": 568,
+        "nameBg": "Сторидж у-ва и консумативи",
+        "nameEn": "Storage devices and consumables",
+        "slug": "storage-devices-and-consumables",
+        "sortOrder": 77,
+        "parent": null,
+        "createdAt": "2025-09-16T09:34:04.621822",
+        "updatedAt": "2025-09-16T09:34:04.621822",
+        "isParentCategory": true,
+        "show": true
+    },
+    {
+        "id": 72,
+        "externalId": 395,
+        "nameBg": "Непрекъсваеми токозахранващи устройства",
+        "nameEn": "Power Protection",
+        "slug": "power-protection",
+        "sortOrder": 78,
+        "parent": null,
+        "createdAt": "2025-09-16T09:34:04.625901",
+        "updatedAt": "2025-09-16T09:34:04.625901",
+        "isParentCategory": true,
+        "show": true
+    },
+    {
+        "id": 73,
+        "externalId": 503,
+        "nameBg": "Управляеми UPS-и",
+        "nameEn": "UPS",
+        "slug": "ups",
+        "sortOrder": 79,
+        "parent": {
+            "id": 72,
+            "nameEn": "Power Protection",
+            "nameBg": "Непрекъсваеми токозахранващи устройства",
+            "slug": "power-protection",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.630096",
+        "updatedAt": "2025-09-16T09:34:05.378203",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 74,
+        "externalId": 396,
+        "nameBg": "Неуправляеми UPS-и",
+        "nameEn": "UPS",
+        "slug": "ups",
+        "sortOrder": 80,
+        "parent": {
+            "id": 72,
+            "nameEn": "Power Protection",
+            "nameBg": "Непрекъсваеми токозахранващи устройства",
+            "slug": "power-protection",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.634962",
+        "updatedAt": "2025-09-16T09:34:05.37833",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 75,
+        "externalId": 573,
+        "nameBg": "Аксесоари UPS",
+        "nameEn": "UPS accessories",
+        "slug": "ups-accessories",
+        "sortOrder": 81,
+        "parent": {
+            "id": 72,
+            "nameEn": "Power Protection",
+            "nameBg": "Непрекъсваеми токозахранващи устройства",
+            "slug": "power-protection",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.639933",
+        "updatedAt": "2025-09-16T09:34:05.378517",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 76,
+        "externalId": 397,
+        "nameBg": "Стабилизатори",
+        "nameEn": "Voltage Regulators",
+        "slug": "voltage-regulators",
+        "sortOrder": 82,
+        "parent": {
+            "id": 72,
+            "nameEn": "Power Protection",
+            "nameBg": "Непрекъсваеми токозахранващи устройства",
+            "slug": "power-protection",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.643797",
+        "updatedAt": "2025-09-16T09:34:05.378651",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 77,
+        "externalId": 571,
+        "nameBg": "Инвертори",
+        "nameEn": "Inverters",
+        "slug": "inverters",
+        "sortOrder": 83,
+        "parent": {
+            "id": 72,
+            "nameEn": "Power Protection",
+            "nameBg": "Непрекъсваеми токозахранващи устройства",
+            "slug": "power-protection",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.647622",
+        "updatedAt": "2025-09-16T09:34:05.37877",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 78,
+        "externalId": 436,
+        "nameBg": "Принтери, скенери и консумативи",
+        "nameEn": "Printers, scanners and consumables",
+        "slug": "printers-scanners-and-consumables",
+        "sortOrder": 84,
+        "parent": null,
+        "createdAt": "2025-09-16T09:34:04.652379",
+        "updatedAt": "2025-09-16T09:34:04.652379",
+        "isParentCategory": true,
+        "show": true
+    },
+    {
+        "id": 79,
+        "externalId": 671,
+        "nameBg": "Лазерни принтери",
+        "nameEn": "Printers",
+        "slug": "printers",
+        "sortOrder": 85,
+        "parent": {
+            "id": 78,
+            "nameEn": "Printers, scanners and consumables",
+            "nameBg": "Принтери, скенери и консумативи",
+            "slug": "printers-scanners-and-consumables",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.657096",
+        "updatedAt": "2025-09-16T09:34:05.378922",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 80,
+        "externalId": 437,
+        "nameBg": "Мултифункционални устройства",
+        "nameEn": "Laser multifunctional devices",
+        "slug": "laser-multifunctional-devices",
+        "sortOrder": 87,
+        "parent": {
+            "id": 78,
+            "nameEn": "Printers, scanners and consumables",
+            "nameBg": "Принтери, скенери и консумативи",
+            "slug": "printers-scanners-and-consumables",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.660658",
+        "updatedAt": "2025-09-16T09:34:05.37905",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 81,
+        "externalId": 673,
+        "nameBg": "Принтери и МФУ устройства под наем",
+        "nameEn": "",
+        "slug": "",
+        "sortOrder": 88,
+        "parent": {
+            "id": 78,
+            "nameEn": "Printers, scanners and consumables",
+            "nameBg": "Принтери, скенери и консумативи",
+            "slug": "printers-scanners-and-consumables",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.663995",
+        "updatedAt": "2025-09-16T09:34:05.37917",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 82,
+        "externalId": 706,
+        "nameBg": "Принтери за текстил",
+        "nameEn": "Garment Printer",
+        "slug": "garment-printer",
+        "sortOrder": 89,
+        "parent": {
+            "id": 78,
+            "nameEn": "Printers, scanners and consumables",
+            "nameBg": "Принтери, скенери и консумативи",
+            "slug": "printers-scanners-and-consumables",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.668122",
+        "updatedAt": "2025-09-16T09:34:05.379292",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 83,
+        "externalId": 409,
+        "nameBg": "Скенери",
+        "nameEn": "Scanners",
+        "slug": "scanners",
+        "sortOrder": 91,
+        "parent": {
+            "id": 78,
+            "nameEn": "Printers, scanners and consumables",
+            "nameBg": "Принтери, скенери и консумативи",
+            "slug": "printers-scanners-and-consumables",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.672569",
+        "updatedAt": "2025-09-16T09:34:05.37949",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 84,
+        "externalId": 683,
+        "nameBg": "Аксесоари за принтери",
+        "nameEn": "Printer accessories",
+        "slug": "printer-accessories",
+        "sortOrder": 92,
+        "parent": {
+            "id": 78,
+            "nameEn": "Printers, scanners and consumables",
+            "nameBg": "Принтери, скенери и консумативи",
+            "slug": "printers-scanners-and-consumables",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.676105",
+        "updatedAt": "2025-09-16T09:34:05.379763",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 85,
+        "externalId": 709,
+        "nameBg": "Аксесоари за скенери",
+        "nameEn": "Scanner accessories",
+        "slug": "scanner-accessories",
+        "sortOrder": 93,
+        "parent": {
+            "id": 78,
+            "nameEn": "Printers, scanners and consumables",
+            "nameBg": "Принтери, скенери и консумативи",
+            "slug": "printers-scanners-and-consumables",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.679593",
+        "updatedAt": "2025-09-16T09:34:05.379906",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 86,
+        "externalId": 486,
+        "nameBg": "Консумативи за лазерни принтери и копири",
+        "nameEn": "Consumables for laser printers",
+        "slug": "consumables-for-laser-printers",
+        "sortOrder": 94,
+        "parent": {
+            "id": 78,
+            "nameEn": "Printers, scanners and consumables",
+            "nameBg": "Принтери, скенери и консумативи",
+            "slug": "printers-scanners-and-consumables",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.683633",
+        "updatedAt": "2025-09-16T09:34:05.380108",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 87,
+        "externalId": 449,
+        "nameBg": "Касети за струйни принтери",
+        "nameEn": "Cartridges for inkjet printers",
+        "slug": "cartridges-for-inkjet-printers",
+        "sortOrder": 95,
+        "parent": {
+            "id": 78,
+            "nameEn": "Printers, scanners and consumables",
+            "nameBg": "Принтери, скенери и консумативи",
+            "slug": "printers-scanners-and-consumables",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.688363",
+        "updatedAt": "2025-09-16T09:34:05.380434",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 88,
+        "externalId": 448,
+        "nameBg": "Касети за матрични принтери ",
+        "nameEn": "Cartridges for dot matrix printers",
+        "slug": "cartridges-for-dot-matrix-printers",
+        "sortOrder": 97,
+        "parent": {
+            "id": 78,
+            "nameEn": "Printers, scanners and consumables",
+            "nameBg": "Принтери, скенери и консумативи",
+            "slug": "printers-scanners-and-consumables",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.692179",
+        "updatedAt": "2025-09-16T09:34:05.38074",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 89,
+        "externalId": 447,
+        "nameBg": "Бутилки с тонер ",
+        "nameEn": "Toner bottles",
+        "slug": "toner-bottles",
+        "sortOrder": 98,
+        "parent": {
+            "id": 78,
+            "nameEn": "Printers, scanners and consumables",
+            "nameBg": "Принтери, скенери и консумативи",
+            "slug": "printers-scanners-and-consumables",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.695727",
+        "updatedAt": "2025-09-16T09:34:05.380898",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 90,
+        "externalId": 450,
+        "nameBg": "Рефили и наливни мастила за принтери",
+        "nameEn": "Refili and liquid inks for printers",
+        "slug": "refili-and-liquid-inks-for-printers",
+        "sortOrder": 99,
+        "parent": {
+            "id": 78,
+            "nameEn": "Printers, scanners and consumables",
+            "nameBg": "Принтери, скенери и консумативи",
+            "slug": "printers-scanners-and-consumables",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.699999",
+        "updatedAt": "2025-09-16T09:34:05.381091",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 91,
+        "externalId": 451,
+        "nameBg": "Хартия за струйни принтери",
+        "nameEn": "Paper for inkjet printers",
+        "slug": "paper-for-inkjet-printers",
+        "sortOrder": 100,
+        "parent": {
+            "id": 78,
+            "nameEn": "Printers, scanners and consumables",
+            "nameBg": "Принтери, скенери и консумативи",
+            "slug": "printers-scanners-and-consumables",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.704387",
+        "updatedAt": "2025-09-16T09:34:05.381223",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 92,
+        "externalId": 548,
+        "nameBg": "3D Принтери и скенери",
+        "nameEn": "3D Printers and scanners",
+        "slug": "3d-printers-and-scanners",
+        "sortOrder": 101,
+        "parent": {
+            "id": 78,
+            "nameEn": "Printers, scanners and consumables",
+            "nameBg": "Принтери, скенери и консумативи",
+            "slug": "printers-scanners-and-consumables",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.707803",
+        "updatedAt": "2025-09-16T09:34:05.381349",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 93,
+        "externalId": 563,
+        "nameBg": "Консумативи за 3D принтери",
+        "nameEn": "3D printer consumables",
+        "slug": "3d-printer-consumables",
+        "sortOrder": 102,
+        "parent": {
+            "id": 78,
+            "nameEn": "Printers, scanners and consumables",
+            "nameBg": "Принтери, скенери и консумативи",
+            "slug": "printers-scanners-and-consumables",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.711403",
+        "updatedAt": "2025-09-16T09:34:05.381466",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 94,
+        "externalId": 684,
+        "nameBg": "Аксесоари за 3D принтери",
+        "nameEn": "3D printer accessories",
+        "slug": "3d-printer-accessories",
+        "sortOrder": 103,
+        "parent": {
+            "id": 78,
+            "nameEn": "Printers, scanners and consumables",
+            "nameBg": "Принтери, скенери и консумативи",
+            "slug": "printers-scanners-and-consumables",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.716065",
+        "updatedAt": "2025-09-16T09:34:05.381582",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 95,
+        "externalId": 718,
+        "nameBg": "Лазерни гравиращи машини",
+        "nameEn": "Laser engraving machines",
+        "slug": "laser-engraving-machines",
+        "sortOrder": 104,
+        "parent": {
+            "id": 78,
+            "nameEn": "Printers, scanners and consumables",
+            "nameBg": "Принтери, скенери и консумативи",
+            "slug": "printers-scanners-and-consumables",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.721594",
+        "updatedAt": "2025-09-16T09:34:05.381694",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 96,
+        "externalId": 713,
+        "nameBg": "Преносими принтери",
+        "nameEn": "Portable printers",
+        "slug": "portable-printers",
+        "sortOrder": 105,
+        "parent": {
+            "id": 78,
+            "nameEn": "Printers, scanners and consumables",
+            "nameBg": "Принтери, скенери и консумативи",
+            "slug": "printers-scanners-and-consumables",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.726595",
+        "updatedAt": "2025-09-16T09:34:05.381808",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 97,
+        "externalId": 714,
+        "nameBg": "Консумативи за преносими принтери",
+        "nameEn": "Supplies for portable printers",
+        "slug": "supplies-for-portable-printers",
+        "sortOrder": 106,
+        "parent": {
+            "id": 78,
+            "nameEn": "Printers, scanners and consumables",
+            "nameBg": "Принтери, скенери и консумативи",
+            "slug": "printers-scanners-and-consumables",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.730405",
+        "updatedAt": "2025-09-16T09:34:05.38192",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 98,
+        "externalId": 412,
+        "nameBg": "Мрежово оборудване",
+        "nameEn": "Network equipment",
+        "slug": "network-equipment",
+        "sortOrder": 107,
+        "parent": null,
+        "createdAt": "2025-09-16T09:34:04.734669",
+        "updatedAt": "2025-09-16T09:34:04.734669",
+        "isParentCategory": true,
+        "show": true
+    },
+    {
+        "id": 99,
+        "externalId": 413,
+        "nameBg": "IP Камери",
+        "nameEn": "IP Cameras",
+        "slug": "ip-cameras",
+        "sortOrder": 110,
+        "parent": {
+            "id": 98,
+            "nameEn": "Network equipment",
+            "nameBg": "Мрежово оборудване",
+            "slug": "network-equipment",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.738503",
+        "updatedAt": "2025-09-16T09:34:05.382131",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 100,
+        "externalId": 414,
+        "nameBg": "KVM Суичове",
+        "nameEn": "KVM Switches",
+        "slug": "kvm-switches",
+        "sortOrder": 111,
+        "parent": {
+            "id": 98,
+            "nameEn": "Network equipment",
+            "nameBg": "Мрежово оборудване",
+            "slug": "network-equipment",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.741981",
+        "updatedAt": "2025-09-16T09:34:05.382345",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 101,
+        "externalId": 415,
+        "nameBg": "Access Point",
+        "nameEn": "Access Point",
+        "slug": "access-point",
+        "sortOrder": 112,
+        "parent": {
+            "id": 98,
+            "nameEn": "Network equipment",
+            "nameBg": "Мрежово оборудване",
+            "slug": "network-equipment",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.746113",
+        "updatedAt": "2025-09-16T09:34:05.382483",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 102,
+        "externalId": 416,
+        "nameBg": "Блутут адаптери",
+        "nameEn": "Bluetooth Adapters",
+        "slug": "bluetooth-adapters",
+        "sortOrder": 113,
+        "parent": {
+            "id": 98,
+            "nameEn": "Network equipment",
+            "nameBg": "Мрежово оборудване",
+            "slug": "network-equipment",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.749733",
+        "updatedAt": "2025-09-16T09:34:05.382616",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 103,
+        "externalId": 557,
+        "nameBg": "Безжични адаптери",
+        "nameEn": "Wireless Adapters",
+        "slug": "wireless-adapters",
+        "sortOrder": 114,
+        "parent": {
+            "id": 98,
+            "nameEn": "Network equipment",
+            "nameBg": "Мрежово оборудване",
+            "slug": "network-equipment",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.754533",
+        "updatedAt": "2025-09-16T09:34:05.382797",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 104,
+        "externalId": 417,
+        "nameBg": "Powerline адаптери",
+        "nameEn": "Powerline Adapters",
+        "slug": "powerline-adapters",
+        "sortOrder": 115,
+        "parent": {
+            "id": 98,
+            "nameEn": "Network equipment",
+            "nameBg": "Мрежово оборудване",
+            "slug": "network-equipment",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.758502",
+        "updatedAt": "2025-09-16T09:34:05.38293",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 105,
+        "externalId": 418,
+        "nameBg": "Комуникационен шкаф",
+        "nameEn": "Rack",
+        "slug": "rack",
+        "sortOrder": 116,
+        "parent": {
+            "id": 98,
+            "nameEn": "Network equipment",
+            "nameBg": "Мрежово оборудване",
+            "slug": "network-equipment",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.762423",
+        "updatedAt": "2025-09-16T09:34:05.383139",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 106,
+        "externalId": 419,
+        "nameBg": "Безжични рутери",
+        "nameEn": "Wireless routers",
+        "slug": "wireless-routers",
+        "sortOrder": 117,
+        "parent": {
+            "id": 98,
+            "nameEn": "Network equipment",
+            "nameBg": "Мрежово оборудване",
+            "slug": "network-equipment",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.76599",
+        "updatedAt": "2025-09-16T09:34:05.383373",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 107,
+        "externalId": 629,
+        "nameBg": "Рутери",
+        "nameEn": "Routers ",
+        "slug": "routers",
+        "sortOrder": 118,
+        "parent": {
+            "id": 98,
+            "nameEn": "Network equipment",
+            "nameBg": "Мрежово оборудване",
+            "slug": "network-equipment",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.771479",
+        "updatedAt": "2025-09-16T09:34:05.38413",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 108,
+        "externalId": 420,
+        "nameBg": "Суичове - без контрол",
+        "nameEn": "Unmanaged switches",
+        "slug": "unmanaged-switches",
+        "sortOrder": 119,
+        "parent": {
+            "id": 98,
+            "nameEn": "Network equipment",
+            "nameBg": "Мрежово оборудване",
+            "slug": "network-equipment",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.775425",
+        "updatedAt": "2025-09-16T09:34:05.38487",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 109,
+        "externalId": 523,
+        "nameBg": "Суичове - с контрол",
+        "nameEn": "Manageable switches",
+        "slug": "manageable-switches",
+        "sortOrder": 120,
+        "parent": {
+            "id": 98,
+            "nameEn": "Network equipment",
+            "nameBg": "Мрежово оборудване",
+            "slug": "network-equipment",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.778631",
+        "updatedAt": "2025-09-16T09:34:05.385483",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 110,
+        "externalId": 422,
+        "nameBg": "Мрежови карти ",
+        "nameEn": "Network Cards",
+        "slug": "network-cards",
+        "sortOrder": 122,
+        "parent": {
+            "id": 98,
+            "nameEn": "Network equipment",
+            "nameBg": "Мрежово оборудване",
+            "slug": "network-equipment",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.781788",
+        "updatedAt": "2025-09-16T09:34:05.386075",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 111,
+        "externalId": 579,
+        "nameBg": "Кабелни канали и шлаух спирали",
+        "nameEn": "Cable duct and cable bundle tube",
+        "slug": "cable-duct-and-cable-bundle-tube",
+        "sortOrder": 123,
+        "parent": {
+            "id": 98,
+            "nameEn": "Network equipment",
+            "nameBg": "Мрежово оборудване",
+            "slug": "network-equipment",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.78604",
+        "updatedAt": "2025-09-16T09:34:05.386605",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 112,
+        "externalId": 580,
+        "nameBg": "Защитни стени",
+        "nameEn": "Firewall",
+        "slug": "firewall",
+        "sortOrder": 124,
+        "parent": {
+            "id": 98,
+            "nameEn": "Network equipment",
+            "nameBg": "Мрежово оборудване",
+            "slug": "network-equipment",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.789664",
+        "updatedAt": "2025-09-16T09:34:05.387004",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 113,
+        "externalId": 424,
+        "nameBg": "Проектори, интерактивен под, стойки",
+        "nameEn": "Projectors, interactive floor, accessories",
+        "slug": "projectors-interactive-floor-accessories",
+        "sortOrder": 125,
+        "parent": null,
+        "createdAt": "2025-09-16T09:34:04.793887",
+        "updatedAt": "2025-09-16T09:34:04.793887",
+        "isParentCategory": true,
+        "show": true
+    },
+    {
+        "id": 114,
+        "externalId": 425,
+        "nameBg": "Проектори",
+        "nameEn": "Projectors",
+        "slug": "projectors",
+        "sortOrder": 126,
+        "parent": {
+            "id": 113,
+            "nameEn": "Projectors, interactive floor, accessories",
+            "nameBg": "Проектори, интерактивен под, стойки",
+            "slug": "projectors-interactive-floor-accessories",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.797796",
+        "updatedAt": "2025-09-16T09:34:05.387345",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 115,
+        "externalId": 636,
+        "nameBg": "Интерактивен под",
+        "nameEn": "Interactive floor",
+        "slug": "interactive-floor",
+        "sortOrder": 128,
+        "parent": {
+            "id": 113,
+            "nameEn": "Projectors, interactive floor, accessories",
+            "nameBg": "Проектори, интерактивен под, стойки",
+            "slug": "projectors-interactive-floor-accessories",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.801956",
+        "updatedAt": "2025-09-16T09:34:05.387617",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 116,
+        "externalId": 427,
+        "nameBg": "Екрани",
+        "nameEn": "Screens",
+        "slug": "screens",
+        "sortOrder": 129,
+        "parent": {
+            "id": 113,
+            "nameEn": "Projectors, interactive floor, accessories",
+            "nameBg": "Проектори, интерактивен под, стойки",
+            "slug": "projectors-interactive-floor-accessories",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.806316",
+        "updatedAt": "2025-09-16T09:34:05.387814",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 117,
+        "externalId": 428,
+        "nameBg": "Стойки и аксесоари",
+        "nameEn": "Stands",
+        "slug": "stands",
+        "sortOrder": 130,
+        "parent": {
+            "id": 113,
+            "nameEn": "Projectors, interactive floor, accessories",
+            "nameBg": "Проектори, интерактивен под, стойки",
+            "slug": "projectors-interactive-floor-accessories",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.809635",
+        "updatedAt": "2025-09-16T09:34:05.387935",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 118,
+        "externalId": 625,
+        "nameBg": "Електроника и роботика",
+        "nameEn": "Electronics",
+        "slug": "electronics",
+        "sortOrder": 132,
+        "parent": null,
+        "createdAt": "2025-09-16T09:34:04.812496",
+        "updatedAt": "2025-09-16T09:34:04.812496",
+        "isParentCategory": true,
+        "show": true
+    },
+    {
+        "id": 119,
+        "externalId": 464,
+        "nameBg": "Преносими тонколони",
+        "nameEn": "Portable Speakers",
+        "slug": "portable-speakers",
+        "sortOrder": 133,
+        "parent": {
+            "id": 118,
+            "nameEn": "Electronics",
+            "nameBg": "Електроника и роботика",
+            "slug": "electronics",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.815283",
+        "updatedAt": "2025-09-16T09:34:05.388432",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 120,
+        "externalId": 521,
+        "nameBg": "Аудио микрофони",
+        "nameEn": "Audio microphone",
+        "slug": "audio-microphone",
+        "sortOrder": 134,
+        "parent": {
+            "id": 118,
+            "nameEn": "Electronics",
+            "nameBg": "Електроника и роботика",
+            "slug": "electronics",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.819647",
+        "updatedAt": "2025-09-16T09:34:05.388919",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 121,
+        "externalId": 432,
+        "nameBg": "Мултимедийни плейъри",
+        "nameEn": "Media players",
+        "slug": "media-players",
+        "sortOrder": 135,
+        "parent": {
+            "id": 118,
+            "nameEn": "Electronics",
+            "nameBg": "Електроника и роботика",
+            "slug": "electronics",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.823162",
+        "updatedAt": "2025-09-16T09:34:05.389177",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 122,
+        "externalId": 633,
+        "nameBg": "Радиа",
+        "nameEn": "Radio",
+        "slug": "radio",
+        "sortOrder": 136,
+        "parent": {
+            "id": 118,
+            "nameEn": "Electronics",
+            "nameBg": "Електроника и роботика",
+            "slug": "electronics",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.826293",
+        "updatedAt": "2025-09-16T09:34:05.389307",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 123,
+        "externalId": 433,
+        "nameBg": "eBook четци",
+        "nameEn": "eBooks Readers",
+        "slug": "ebooks-readers",
+        "sortOrder": 137,
+        "parent": {
+            "id": 118,
+            "nameEn": "Electronics",
+            "nameBg": "Електроника и роботика",
+            "slug": "electronics",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.829081",
+        "updatedAt": "2025-09-16T09:34:05.389421",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 124,
+        "externalId": 434,
+        "nameBg": "eBook аксесоари",
+        "nameEn": "eBook Accessories ",
+        "slug": "ebook-accessories",
+        "sortOrder": 138,
+        "parent": {
+            "id": 118,
+            "nameEn": "Electronics",
+            "nameBg": "Електроника и роботика",
+            "slug": "electronics",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.832284",
+        "updatedAt": "2025-09-16T09:34:05.389553",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 125,
+        "externalId": 632,
+        "nameBg": "Роботика",
+        "nameEn": "Robotics",
+        "slug": "robotics",
+        "sortOrder": 139,
+        "parent": {
+            "id": 118,
+            "nameEn": "Electronics",
+            "nameBg": "Електроника и роботика",
+            "slug": "electronics",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.83675",
+        "updatedAt": "2025-09-16T09:34:05.389671",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 126,
+        "externalId": 674,
+        "nameBg": "Кабели",
+        "nameEn": "Cables",
+        "slug": "cables",
+        "sortOrder": 140,
+        "parent": null,
+        "createdAt": "2025-09-16T09:34:04.841681",
+        "updatedAt": "2025-09-16T09:34:04.841681",
+        "isParentCategory": true,
+        "show": true
+    },
+    {
+        "id": 127,
+        "externalId": 442,
+        "nameBg": "Адаптери, конвертори",
+        "nameEn": "Adapters, converters",
+        "slug": "adapters-converters",
+        "sortOrder": 141,
+        "parent": {
+            "id": 126,
+            "nameEn": "Cables",
+            "nameBg": "Кабели",
+            "slug": "cables",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.845507",
+        "updatedAt": "2025-09-16T09:34:05.389936",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 128,
+        "externalId": 495,
+        "nameBg": "Кабели за мобилни устройства",
+        "nameEn": "Cables, adapters",
+        "slug": "cables-adapters",
+        "sortOrder": 142,
+        "parent": {
+            "id": 126,
+            "nameEn": "Cables",
+            "nameBg": "Кабели",
+            "slug": "cables",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.856456",
+        "updatedAt": "2025-09-16T09:34:05.390682",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 129,
+        "externalId": 676,
+        "nameBg": "Аудио кабели",
+        "nameEn": "Audio cables",
+        "slug": "audio-cables",
+        "sortOrder": 143,
+        "parent": {
+            "id": 126,
+            "nameEn": "Cables",
+            "nameBg": "Кабели",
+            "slug": "cables",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.860425",
+        "updatedAt": "2025-09-16T09:34:05.391202",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 130,
+        "externalId": 677,
+        "nameBg": "Видео кабели",
+        "nameEn": "Video cables",
+        "slug": "video-cables",
+        "sortOrder": 144,
+        "parent": {
+            "id": 126,
+            "nameEn": "Cables",
+            "nameBg": "Кабели",
+            "slug": "cables",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.863274",
+        "updatedAt": "2025-09-16T09:34:05.391373",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 131,
+        "externalId": 535,
+        "nameBg": "Захранващи кабели",
+        "nameEn": "Power cables",
+        "slug": "power-cables",
+        "sortOrder": 145,
+        "parent": {
+            "id": 126,
+            "nameEn": "Cables",
+            "nameBg": "Кабели",
+            "slug": "cables",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.865912",
+        "updatedAt": "2025-09-16T09:34:05.391485",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 132,
+        "externalId": 679,
+        "nameBg": "PC кабели",
+        "nameEn": "PC cables",
+        "slug": "pc-cables",
+        "sortOrder": 146,
+        "parent": {
+            "id": 126,
+            "nameEn": "Cables",
+            "nameBg": "Кабели",
+            "slug": "cables",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.869621",
+        "updatedAt": "2025-09-16T09:34:05.391599",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 133,
+        "externalId": 675,
+        "nameBg": "Кабели за принтери",
+        "nameEn": "Printer cables",
+        "slug": "printer-cables",
+        "sortOrder": 147,
+        "parent": {
+            "id": 126,
+            "nameEn": "Cables",
+            "nameBg": "Кабели",
+            "slug": "cables",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.873113",
+        "updatedAt": "2025-09-16T09:34:05.391708",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 134,
+        "externalId": 423,
+        "nameBg": "Мрежови кабели",
+        "nameEn": "Network Cables",
+        "slug": "network-cables",
+        "sortOrder": 148,
+        "parent": {
+            "id": 126,
+            "nameEn": "Cables",
+            "nameBg": "Кабели",
+            "slug": "cables",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.876249",
+        "updatedAt": "2025-09-16T09:34:05.391927",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 135,
+        "externalId": 678,
+        "nameBg": "Антенни кабели",
+        "nameEn": "Antenna Cable",
+        "slug": "antenna-cable",
+        "sortOrder": 149,
+        "parent": {
+            "id": 126,
+            "nameEn": "Cables",
+            "nameBg": "Кабели",
+            "slug": "cables",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.879287",
+        "updatedAt": "2025-09-16T09:34:05.392451",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 136,
+        "externalId": 680,
+        "nameBg": "Оптични кабели",
+        "nameEn": "Optical cables",
+        "slug": "optical-cables",
+        "sortOrder": 150,
+        "parent": {
+            "id": 126,
+            "nameEn": "Cables",
+            "nameBg": "Кабели",
+            "slug": "cables",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.88183",
+        "updatedAt": "2025-09-16T09:34:05.392724",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 137,
+        "externalId": 553,
+        "nameBg": "TV, Видео и аксесоари",
+        "nameEn": "TV, Video and accessories",
+        "slug": "tv-video-and-accessories",
+        "sortOrder": 151,
+        "parent": null,
+        "createdAt": "2025-09-16T09:34:04.885461",
+        "updatedAt": "2025-09-16T09:34:04.885461",
+        "isParentCategory": true,
+        "show": true
+    },
+    {
+        "id": 138,
+        "externalId": 527,
+        "nameBg": "Телевизори",
+        "nameEn": "TV",
+        "slug": "tv",
+        "sortOrder": 152,
+        "parent": {
+            "id": 137,
+            "nameEn": "TV, Video and accessories",
+            "nameBg": "TV, Видео и аксесоари",
+            "slug": "tv-video-and-accessories",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.889357",
+        "updatedAt": "2025-09-16T09:34:05.392963",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 139,
+        "externalId": 440,
+        "nameBg": "Стойки за TV и високоговорители ",
+        "nameEn": "TV stand and speakers",
+        "slug": "tv-stand-and-speakers",
+        "sortOrder": 154,
+        "parent": {
+            "id": 137,
+            "nameEn": "TV, Video and accessories",
+            "nameBg": "TV, Видео и аксесоари",
+            "slug": "tv-video-and-accessories",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.892476",
+        "updatedAt": "2025-09-16T09:34:05.393159",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 140,
+        "externalId": 565,
+        "nameBg": "Дистанционни",
+        "nameEn": "Remote Control",
+        "slug": "remote-control",
+        "sortOrder": 155,
+        "parent": {
+            "id": 137,
+            "nameEn": "TV, Video and accessories",
+            "nameBg": "TV, Видео и аксесоари",
+            "slug": "tv-video-and-accessories",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.895481",
+        "updatedAt": "2025-09-16T09:34:05.393295",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 141,
+        "externalId": 584,
+        "nameBg": "Антени",
+        "nameEn": "Antennas",
+        "slug": "antennas",
+        "sortOrder": 156,
+        "parent": {
+            "id": 137,
+            "nameEn": "TV, Video and accessories",
+            "nameBg": "TV, Видео и аксесоари",
+            "slug": "tv-video-and-accessories",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.898294",
+        "updatedAt": "2025-09-16T09:34:05.393412",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 142,
+        "externalId": 604,
+        "nameBg": "Аксесоари за TV",
+        "nameEn": "Accessories ",
+        "slug": "accessories",
+        "sortOrder": 157,
+        "parent": {
+            "id": 137,
+            "nameEn": "TV, Video and accessories",
+            "nameBg": "TV, Видео и аксесоари",
+            "slug": "tv-video-and-accessories",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.902031",
+        "updatedAt": "2025-09-16T09:34:05.393591",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 143,
+        "externalId": 453,
+        "nameBg": "Фото и видео аксесоари",
+        "nameEn": "Photo and video accessories",
+        "slug": "photo-and-video-accessories",
+        "sortOrder": 158,
+        "parent": null,
+        "createdAt": "2025-09-16T09:34:04.905549",
+        "updatedAt": "2025-09-16T09:34:04.905549",
+        "isParentCategory": true,
+        "show": true
+    },
+    {
+        "id": 144,
+        "externalId": 454,
+        "nameBg": "Фотоалбуми",
+        "nameEn": "Photo albums",
+        "slug": "photo-albums",
+        "sortOrder": 159,
+        "parent": {
+            "id": 143,
+            "nameEn": "Photo and video accessories",
+            "nameBg": "Фото и видео аксесоари",
+            "slug": "photo-and-video-accessories",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.908328",
+        "updatedAt": "2025-09-16T09:34:05.393859",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 145,
+        "externalId": 578,
+        "nameBg": "Фото рамки",
+        "nameEn": "Picture frames",
+        "slug": "picture-frames",
+        "sortOrder": 160,
+        "parent": {
+            "id": 143,
+            "nameEn": "Photo and video accessories",
+            "nameBg": "Фото и видео аксесоари",
+            "slug": "photo-and-video-accessories",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.911075",
+        "updatedAt": "2025-09-16T09:34:05.393993",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 146,
+        "externalId": 455,
+        "nameBg": "Стативи /Триподи/",
+        "nameEn": "Tripods",
+        "slug": "tripods",
+        "sortOrder": 162,
+        "parent": {
+            "id": 143,
+            "nameEn": "Photo and video accessories",
+            "nameBg": "Фото и видео аксесоари",
+            "slug": "photo-and-video-accessories",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.913619",
+        "updatedAt": "2025-09-16T09:34:05.394102",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 147,
+        "externalId": 602,
+        "nameBg": "Селфи стикове",
+        "nameEn": "Selfie sticks",
+        "slug": "selfie-sticks",
+        "sortOrder": 163,
+        "parent": {
+            "id": 143,
+            "nameEn": "Photo and video accessories",
+            "nameBg": "Фото и видео аксесоари",
+            "slug": "photo-and-video-accessories",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.916327",
+        "updatedAt": "2025-09-16T09:34:05.394209",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 148,
+        "externalId": 456,
+        "nameBg": "Чанти за камери и камкордери ",
+        "nameEn": "Backs for digital cameras end camcorders",
+        "slug": "backs-for-digital-cameras-end-camcorders",
+        "sortOrder": 164,
+        "parent": {
+            "id": 143,
+            "nameEn": "Photo and video accessories",
+            "nameBg": "Фото и видео аксесоари",
+            "slug": "photo-and-video-accessories",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.920395",
+        "updatedAt": "2025-09-16T09:34:05.394324",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 149,
+        "externalId": 403,
+        "nameBg": "Карти памет",
+        "nameEn": "Memory cards",
+        "slug": "memory-cards",
+        "sortOrder": 165,
+        "parent": {
+            "id": 143,
+            "nameEn": "Photo and video accessories",
+            "nameBg": "Фото и видео аксесоари",
+            "slug": "photo-and-video-accessories",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.923138",
+        "updatedAt": "2025-09-16T09:34:05.394516",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 150,
+        "externalId": 601,
+        "nameBg": "Аксесоари за обективи",
+        "nameEn": "Accessories for Lenses",
+        "slug": "accessories-for-lenses",
+        "sortOrder": 166,
+        "parent": {
+            "id": 143,
+            "nameEn": "Photo and video accessories",
+            "nameBg": "Фото и видео аксесоари",
+            "slug": "photo-and-video-accessories",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.925628",
+        "updatedAt": "2025-09-16T09:34:05.394633",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 151,
+        "externalId": 458,
+        "nameBg": "Други фото и видео аксесоари",
+        "nameEn": "Others",
+        "slug": "others",
+        "sortOrder": 167,
+        "parent": {
+            "id": 143,
+            "nameEn": "Photo and video accessories",
+            "nameBg": "Фото и видео аксесоари",
+            "slug": "photo-and-video-accessories",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.928127",
+        "updatedAt": "2025-09-16T09:34:05.394797",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 152,
+        "externalId": 459,
+        "nameBg": "Мобилни телефони и аксесоари",
+        "nameEn": "Mobile phones and accessories",
+        "slug": "mobile-phones-and-accessories",
+        "sortOrder": 168,
+        "parent": null,
+        "createdAt": "2025-09-16T09:34:04.930611",
+        "updatedAt": "2025-09-16T09:34:04.930611",
+        "isParentCategory": true,
+        "show": true
+    },
+    {
+        "id": 153,
+        "externalId": 639,
+        "nameBg": "Мобилни телефони",
+        "nameEn": "Mobile phones",
+        "slug": "mobile-phones",
+        "sortOrder": 169,
+        "parent": {
+            "id": 152,
+            "nameEn": "Mobile phones and accessories",
+            "nameBg": "Мобилни телефони и аксесоари",
+            "slug": "mobile-phones-and-accessories",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.933501",
+        "updatedAt": "2025-09-16T09:34:05.394999",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 154,
+        "externalId": 484,
+        "nameBg": "Смартчасовници",
+        "nameEn": "Smartwatches",
+        "slug": "smartwatches",
+        "sortOrder": 170,
+        "parent": {
+            "id": 152,
+            "nameEn": "Mobile phones and accessories",
+            "nameBg": "Мобилни телефони и аксесоари",
+            "slug": "mobile-phones-and-accessories",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.93804",
+        "updatedAt": "2025-09-16T09:34:05.395303",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 155,
+        "externalId": 616,
+        "nameBg": "Фитнес гривни",
+        "nameEn": "Activity tracker",
+        "slug": "activity-tracker",
+        "sortOrder": 171,
+        "parent": {
+            "id": 152,
+            "nameEn": "Mobile phones and accessories",
+            "nameBg": "Мобилни телефони и аксесоари",
+            "slug": "mobile-phones-and-accessories",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.941203",
+        "updatedAt": "2025-09-16T09:34:05.395453",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 156,
+        "externalId": 572,
+        "nameBg": "Каишки за смартчасовници",
+        "nameEn": "Wristbands",
+        "slug": "wristbands",
+        "sortOrder": 172,
+        "parent": {
+            "id": 152,
+            "nameEn": "Mobile phones and accessories",
+            "nameBg": "Мобилни телефони и аксесоари",
+            "slug": "mobile-phones-and-accessories",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.943778",
+        "updatedAt": "2025-09-16T09:34:05.395565",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 157,
+        "externalId": 467,
+        "nameBg": "Bluetooth слушалки",
+        "nameEn": "Hands Free Systems",
+        "slug": "hands-free-systems",
+        "sortOrder": 173,
+        "parent": {
+            "id": 152,
+            "nameEn": "Mobile phones and accessories",
+            "nameBg": "Мобилни телефони и аксесоари",
+            "slug": "mobile-phones-and-accessories",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.946475",
+        "updatedAt": "2025-09-16T09:34:05.395677",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 158,
+        "externalId": 461,
+        "nameBg": "Външни батерии",
+        "nameEn": "Power bank",
+        "slug": "power-bank",
+        "sortOrder": 174,
+        "parent": {
+            "id": 152,
+            "nameEn": "Mobile phones and accessories",
+            "nameBg": "Мобилни телефони и аксесоари",
+            "slug": "mobile-phones-and-accessories",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.950032",
+        "updatedAt": "2025-09-16T09:34:05.395959",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 159,
+        "externalId": 462,
+        "nameBg": "Зарядни за телефони ",
+        "nameEn": "Chargers for phones",
+        "slug": "chargers-for-phones",
+        "sortOrder": 175,
+        "parent": {
+            "id": 152,
+            "nameEn": "Mobile phones and accessories",
+            "nameBg": "Мобилни телефони и аксесоари",
+            "slug": "mobile-phones-and-accessories",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.95407",
+        "updatedAt": "2025-09-16T09:34:05.396443",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 160,
+        "externalId": 466,
+        "nameBg": "Стилус - химикалки за телефони",
+        "nameEn": "Stylus pens for phones",
+        "slug": "stylus-pens-for-phones",
+        "sortOrder": 177,
+        "parent": {
+            "id": 152,
+            "nameEn": "Mobile phones and accessories",
+            "nameBg": "Мобилни телефони и аксесоари",
+            "slug": "mobile-phones-and-accessories",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.957565",
+        "updatedAt": "2025-09-16T09:34:05.396779",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 161,
+        "externalId": 463,
+        "nameBg": "Калъфи за телефони",
+        "nameEn": "Cases",
+        "slug": "cases",
+        "sortOrder": 178,
+        "parent": {
+            "id": 152,
+            "nameEn": "Mobile phones and accessories",
+            "nameBg": "Мобилни телефони и аксесоари",
+            "slug": "mobile-phones-and-accessories",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.960299",
+        "updatedAt": "2025-09-16T09:34:05.396945",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 162,
+        "externalId": 468,
+        "nameBg": "Поставки за мобилни телефони",
+        "nameEn": "Holder",
+        "slug": "holder",
+        "sortOrder": 179,
+        "parent": {
+            "id": 152,
+            "nameEn": "Mobile phones and accessories",
+            "nameBg": "Мобилни телефони и аксесоари",
+            "slug": "mobile-phones-and-accessories",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.963195",
+        "updatedAt": "2025-09-16T09:34:05.397064",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 163,
+        "externalId": 566,
+        "nameBg": "Защитни фолиа / стъкла за телефони",
+        "nameEn": "Screen protector for mobile phone",
+        "slug": "screen-protector-for-mobile-phone",
+        "sortOrder": 180,
+        "parent": {
+            "id": 152,
+            "nameEn": "Mobile phones and accessories",
+            "nameBg": "Мобилни телефони и аксесоари",
+            "slug": "mobile-phones-and-accessories",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.966286",
+        "updatedAt": "2025-09-16T09:34:05.397175",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 164,
+        "externalId": 619,
+        "nameBg": "Други мобилни аксесоари",
+        "nameEn": "Others",
+        "slug": "others",
+        "sortOrder": 181,
+        "parent": {
+            "id": 152,
+            "nameEn": "Mobile phones and accessories",
+            "nameBg": "Мобилни телефони и аксесоари",
+            "slug": "mobile-phones-and-accessories",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.970108",
+        "updatedAt": "2025-09-16T09:34:05.397308",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 165,
+        "externalId": 554,
+        "nameBg": "Геймърска периферия",
+        "nameEn": "Gaming peripheral devices",
+        "slug": "gaming-peripheral-devices",
+        "sortOrder": 182,
+        "parent": null,
+        "createdAt": "2025-09-16T09:34:04.973007",
+        "updatedAt": "2025-09-16T09:34:04.973007",
+        "isParentCategory": true,
+        "show": true
+    },
+    {
+        "id": 166,
+        "externalId": 668,
+        "nameBg": "Гейминг конзоли",
+        "nameEn": "Gaming Consoles",
+        "slug": "gaming-consoles",
+        "sortOrder": 183,
+        "parent": {
+            "id": 165,
+            "nameEn": "Gaming peripheral devices",
+            "nameBg": "Геймърска периферия",
+            "slug": "gaming-peripheral-devices",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.975482",
+        "updatedAt": "2025-09-16T09:34:05.397531",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 167,
+        "externalId": 493,
+        "nameBg": "Геймърски столове",
+        "nameEn": "Gaming seats",
+        "slug": "gaming-seats",
+        "sortOrder": 184,
+        "parent": {
+            "id": 165,
+            "nameEn": "Gaming peripheral devices",
+            "nameBg": "Геймърска периферия",
+            "slug": "gaming-peripheral-devices",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.977935",
+        "updatedAt": "2025-09-16T09:34:05.397702",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 168,
+        "externalId": 587,
+        "nameBg": "Геймърски бюра",
+        "nameEn": "Gaming desks",
+        "slug": "gaming-desks",
+        "sortOrder": 185,
+        "parent": {
+            "id": 165,
+            "nameEn": "Gaming peripheral devices",
+            "nameBg": "Геймърска периферия",
+            "slug": "gaming-peripheral-devices",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.982037",
+        "updatedAt": "2025-09-16T09:34:05.397883",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 169,
+        "externalId": 502,
+        "nameBg": "Геймърски слушалки",
+        "nameEn": "Gaming headset",
+        "slug": "gaming-headset",
+        "sortOrder": 186,
+        "parent": {
+            "id": 165,
+            "nameEn": "Gaming peripheral devices",
+            "nameBg": "Геймърска периферия",
+            "slug": "gaming-peripheral-devices",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.987303",
+        "updatedAt": "2025-09-16T09:34:05.39804",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 170,
+        "externalId": 404,
+        "nameBg": "Геймърски клавиатури",
+        "nameEn": "Gaming Keyboards",
+        "slug": "gaming-keyboards",
+        "sortOrder": 187,
+        "parent": {
+            "id": 165,
+            "nameEn": "Gaming peripheral devices",
+            "nameBg": "Геймърска периферия",
+            "slug": "gaming-peripheral-devices",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.991688",
+        "updatedAt": "2025-09-16T09:34:05.398162",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 171,
+        "externalId": 524,
+        "nameBg": "Геймърски падове",
+        "nameEn": "Gaming pads",
+        "slug": "gaming-pads",
+        "sortOrder": 188,
+        "parent": {
+            "id": 165,
+            "nameEn": "Gaming peripheral devices",
+            "nameBg": "Геймърска периферия",
+            "slug": "gaming-peripheral-devices",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.994446",
+        "updatedAt": "2025-09-16T09:34:05.398291",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 172,
+        "externalId": 511,
+        "nameBg": "Геймърски мишки",
+        "nameEn": "Gaming mouse",
+        "slug": "gaming-mouse",
+        "sortOrder": 189,
+        "parent": {
+            "id": 165,
+            "nameEn": "Gaming peripheral devices",
+            "nameBg": "Геймърска периферия",
+            "slug": "gaming-peripheral-devices",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.997021",
+        "updatedAt": "2025-09-16T09:34:05.398411",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 173,
+        "externalId": 710,
+        "nameBg": "Волани и педали",
+        "nameEn": "Wheels and Pedals",
+        "slug": "wheels-and-pedals",
+        "sortOrder": 190,
+        "parent": {
+            "id": 165,
+            "nameEn": "Gaming peripheral devices",
+            "nameBg": "Геймърска периферия",
+            "slug": "gaming-peripheral-devices",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:04.999703",
+        "updatedAt": "2025-09-16T09:34:05.398573",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 174,
+        "externalId": 712,
+        "nameBg": "Аксесоари за Волани",
+        "nameEn": "Wheel Accesories",
+        "slug": "wheel-accesories",
+        "sortOrder": 191,
+        "parent": {
+            "id": 165,
+            "nameEn": "Gaming peripheral devices",
+            "nameBg": "Геймърска периферия",
+            "slug": "gaming-peripheral-devices",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.003244",
+        "updatedAt": "2025-09-16T09:34:05.39869",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 175,
+        "externalId": 546,
+        "nameBg": "Геймпадове",
+        "nameEn": "Gamepads",
+        "slug": "gamepads",
+        "sortOrder": 192,
+        "parent": {
+            "id": 165,
+            "nameEn": "Gaming peripheral devices",
+            "nameBg": "Геймърска периферия",
+            "slug": "gaming-peripheral-devices",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.006125",
+        "updatedAt": "2025-09-16T09:34:05.39881",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 176,
+        "externalId": 540,
+        "nameBg": "Компютърни и геймърски очила",
+        "nameEn": "Gaming eyewear",
+        "slug": "gaming-eyewear",
+        "sortOrder": 193,
+        "parent": {
+            "id": 165,
+            "nameEn": "Gaming peripheral devices",
+            "nameBg": "Геймърска периферия",
+            "slug": "gaming-peripheral-devices",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.008722",
+        "updatedAt": "2025-09-16T09:34:05.39902",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 177,
+        "externalId": 569,
+        "nameBg": "Геймърски аксесоари",
+        "nameEn": "Gaming accessories",
+        "slug": "gaming-accessories",
+        "sortOrder": 194,
+        "parent": {
+            "id": 165,
+            "nameEn": "Gaming peripheral devices",
+            "nameBg": "Геймърска периферия",
+            "slug": "gaming-peripheral-devices",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.01125",
+        "updatedAt": "2025-09-16T09:34:05.399162",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 178,
+        "externalId": 598,
+        "nameBg": "Дрехи и аксесоари",
+        "nameEn": "Clothing and accessories",
+        "slug": "clothing-and-accessories",
+        "sortOrder": 195,
+        "parent": {
+            "id": 165,
+            "nameEn": "Gaming peripheral devices",
+            "nameBg": "Геймърска периферия",
+            "slug": "gaming-peripheral-devices",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.013854",
+        "updatedAt": "2025-09-16T09:34:05.399272",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 179,
+        "externalId": 666,
+        "nameBg": "Фигурки",
+        "nameEn": "Figures",
+        "slug": "figures",
+        "sortOrder": 196,
+        "parent": {
+            "id": 165,
+            "nameEn": "Gaming peripheral devices",
+            "nameBg": "Геймърска периферия",
+            "slug": "gaming-peripheral-devices",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.016724",
+        "updatedAt": "2025-09-16T09:34:05.399388",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 180,
+        "externalId": 469,
+        "nameBg": "Навигации, камери и аксесоари за коли",
+        "nameEn": "Navigation systems, dashcam",
+        "slug": "navigation-systems-dashcam",
+        "sortOrder": 197,
+        "parent": null,
+        "createdAt": "2025-09-16T09:34:05.021455",
+        "updatedAt": "2025-09-16T09:34:05.021455",
+        "isParentCategory": true,
+        "show": true
+    },
+    {
+        "id": 181,
+        "externalId": 475,
+        "nameBg": "Аксесоари за автомобили",
+        "nameEn": "Car accessories",
+        "slug": "car-accessories",
+        "sortOrder": 205,
+        "parent": {
+            "id": 180,
+            "nameEn": "Navigation systems, dashcam",
+            "nameBg": "Навигации, камери и аксесоари за коли",
+            "slug": "navigation-systems-dashcam",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.024737",
+        "updatedAt": "2025-09-16T09:34:05.399537",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 182,
+        "externalId": 621,
+        "nameBg": "Оптика",
+        "nameEn": "Optics",
+        "slug": "optics",
+        "sortOrder": 206,
+        "parent": null,
+        "createdAt": "2025-09-16T09:34:05.027989",
+        "updatedAt": "2025-09-16T09:34:05.027989",
+        "isParentCategory": true,
+        "show": true
+    },
+    {
+        "id": 183,
+        "externalId": 528,
+        "nameBg": "Телескопи",
+        "nameEn": "Telescopes",
+        "slug": "telescopes",
+        "sortOrder": 207,
+        "parent": {
+            "id": 182,
+            "nameEn": "Optics",
+            "nameBg": "Оптика",
+            "slug": "optics",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.03107",
+        "updatedAt": "2025-09-16T09:34:05.399672",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 184,
+        "externalId": 538,
+        "nameBg": "Бинокли",
+        "nameEn": "Binoculars",
+        "slug": "binoculars",
+        "sortOrder": 208,
+        "parent": {
+            "id": 182,
+            "nameEn": "Optics",
+            "nameBg": "Оптика",
+            "slug": "optics",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.034499",
+        "updatedAt": "2025-09-16T09:34:05.399996",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 185,
+        "externalId": 552,
+        "nameBg": "Микроскопи",
+        "nameEn": "Microscopes",
+        "slug": "microscopes",
+        "sortOrder": 209,
+        "parent": {
+            "id": 182,
+            "nameEn": "Optics",
+            "nameBg": "Оптика",
+            "slug": "optics",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.03839",
+        "updatedAt": "2025-09-16T09:34:05.400365",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 186,
+        "externalId": 622,
+        "nameBg": "Аксесоари оптика",
+        "nameEn": "Accessories optics",
+        "slug": "accessories-optics",
+        "sortOrder": 210,
+        "parent": {
+            "id": 182,
+            "nameEn": "Optics",
+            "nameBg": "Оптика",
+            "slug": "optics",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.041367",
+        "updatedAt": "2025-09-16T09:34:05.40067",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 187,
+        "externalId": 513,
+        "nameBg": "Офис продукти",
+        "nameEn": "Office products",
+        "slug": "office-products",
+        "sortOrder": 211,
+        "parent": null,
+        "createdAt": "2025-09-16T09:34:05.044391",
+        "updatedAt": "2025-09-16T09:34:05.044391",
+        "isParentCategory": true,
+        "show": true
+    },
+    {
+        "id": 188,
+        "externalId": 514,
+        "nameBg": "Шредери",
+        "nameEn": "Shredders",
+        "slug": "shredders",
+        "sortOrder": 212,
+        "parent": {
+            "id": 187,
+            "nameEn": "Office products",
+            "nameBg": "Офис продукти",
+            "slug": "office-products",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.046897",
+        "updatedAt": "2025-09-16T09:34:05.400959",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 189,
+        "externalId": 515,
+        "nameBg": "Ламинатори",
+        "nameEn": "Laminators",
+        "slug": "laminators",
+        "sortOrder": 213,
+        "parent": {
+            "id": 187,
+            "nameEn": "Office products",
+            "nameBg": "Офис продукти",
+            "slug": "office-products",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.04945",
+        "updatedAt": "2025-09-16T09:34:05.401288",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 190,
+        "externalId": 516,
+        "nameBg": "Класьори за CD, DVD",
+        "nameEn": "CD, DVD boxes",
+        "slug": "cd-dvd-boxes",
+        "sortOrder": 214,
+        "parent": {
+            "id": 187,
+            "nameEn": "Office products",
+            "nameBg": "Офис продукти",
+            "slug": "office-products",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.053545",
+        "updatedAt": "2025-09-16T09:34:05.401602",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 191,
+        "externalId": 518,
+        "nameBg": "Ламиниращо фолио",
+        "nameEn": "Laminating Film",
+        "slug": "laminating-film",
+        "sortOrder": 215,
+        "parent": {
+            "id": 187,
+            "nameEn": "Office products",
+            "nameBg": "Офис продукти",
+            "slug": "office-products",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.057547",
+        "updatedAt": "2025-09-16T09:34:05.402194",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 192,
+        "externalId": 520,
+        "nameBg": "Почистващи материали",
+        "nameEn": "Cleaning kits",
+        "slug": "cleaning-kits",
+        "sortOrder": 216,
+        "parent": {
+            "id": 187,
+            "nameEn": "Office products",
+            "nameBg": "Офис продукти",
+            "slug": "office-products",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.061159",
+        "updatedAt": "2025-09-16T09:34:05.402619",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 193,
+        "externalId": 537,
+        "nameBg": "Гилотини",
+        "nameEn": "Guillotines",
+        "slug": "guillotines",
+        "sortOrder": 217,
+        "parent": {
+            "id": 187,
+            "nameEn": "Office products",
+            "nameBg": "Офис продукти",
+            "slug": "office-products",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.064058",
+        "updatedAt": "2025-09-16T09:34:05.402989",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 194,
+        "externalId": 555,
+        "nameBg": "Носители CD, DVD, Blu-Ray",
+        "nameEn": "CD, DVD, Blu-Ray",
+        "slug": "cd-dvd-blu-ray",
+        "sortOrder": 219,
+        "parent": {
+            "id": 187,
+            "nameEn": "Office products",
+            "nameBg": "Офис продукти",
+            "slug": "office-products",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.067106",
+        "updatedAt": "2025-09-16T09:34:05.403233",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 195,
+        "externalId": 497,
+        "nameBg": "Софтуер",
+        "nameEn": "Software",
+        "slug": "software",
+        "sortOrder": 225,
+        "parent": null,
+        "createdAt": "2025-09-16T09:34:05.071565",
+        "updatedAt": "2025-09-16T09:34:05.071565",
+        "isParentCategory": true,
+        "show": true
+    },
+    {
+        "id": 196,
+        "externalId": 498,
+        "nameBg": "Антивирусни програми",
+        "nameEn": "Antivirus software",
+        "slug": "antivirus-software",
+        "sortOrder": 226,
+        "parent": {
+            "id": 195,
+            "nameEn": "Software",
+            "nameBg": "Софтуер",
+            "slug": "software",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.07517",
+        "updatedAt": "2025-09-16T09:34:05.403517",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 197,
+        "externalId": 499,
+        "nameBg": "Office & Desktop & Bussiness приложения ",
+        "nameEn": "Office & Desktop & Bussiness Applications",
+        "slug": "office-desktop-bussiness-applications",
+        "sortOrder": 227,
+        "parent": {
+            "id": 195,
+            "nameEn": "Software",
+            "nameBg": "Софтуер",
+            "slug": "software",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.078549",
+        "updatedAt": "2025-09-16T09:34:05.40366",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 198,
+        "externalId": 707,
+        "nameBg": "Софтуер за управление на печата",
+        "nameEn": "Print management software",
+        "slug": "print-management-software",
+        "sortOrder": 228,
+        "parent": {
+            "id": 195,
+            "nameEn": "Software",
+            "nameBg": "Софтуер",
+            "slug": "software",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.081696",
+        "updatedAt": "2025-09-16T09:34:05.403828",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 199,
+        "externalId": 682,
+        "nameBg": "Творчество и дизайн",
+        "nameEn": "Creativity and design",
+        "slug": "creativity-and-design",
+        "sortOrder": 229,
+        "parent": {
+            "id": 195,
+            "nameEn": "Software",
+            "nameBg": "Софтуер",
+            "slug": "software",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.08573",
+        "updatedAt": "2025-09-16T09:34:05.403964",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 200,
+        "externalId": 627,
+        "nameBg": "Софтуер за образованието",
+        "nameEn": "Software solutions for education",
+        "slug": "software-solutions-for-education",
+        "sortOrder": 230,
+        "parent": {
+            "id": 195,
+            "nameEn": "Software",
+            "nameBg": "Софтуер",
+            "slug": "software",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.089026",
+        "updatedAt": "2025-09-16T09:34:05.404087",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 201,
+        "externalId": 481,
+        "nameBg": "Батерии и зарядни у-ва",
+        "nameEn": "Batteries and Chargers",
+        "slug": "batteries-and-chargers",
+        "sortOrder": 231,
+        "parent": null,
+        "createdAt": "2025-09-16T09:34:05.091515",
+        "updatedAt": "2025-09-16T09:34:05.091515",
+        "isParentCategory": true,
+        "show": true
+    },
+    {
+        "id": 202,
+        "externalId": 494,
+        "nameBg": "Батерии",
+        "nameEn": "Batteries",
+        "slug": "batteries",
+        "sortOrder": 232,
+        "parent": {
+            "id": 201,
+            "nameEn": "Batteries and Chargers",
+            "nameBg": "Батерии и зарядни у-ва",
+            "slug": "batteries-and-chargers",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.09399",
+        "updatedAt": "2025-09-16T09:34:05.404377",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 203,
+        "externalId": 635,
+        "nameBg": "Батерии за мобилни телефони",
+        "nameEn": "Cell Phone Batteries",
+        "slug": "cell-phone-batteries",
+        "sortOrder": 233,
+        "parent": {
+            "id": 201,
+            "nameEn": "Batteries and Chargers",
+            "nameBg": "Батерии и зарядни у-ва",
+            "slug": "batteries-and-chargers",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.096759",
+        "updatedAt": "2025-09-16T09:34:05.404686",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 204,
+        "externalId": 532,
+        "nameBg": "Батерии за лаптопи",
+        "nameEn": "Batteries for notebooks",
+        "slug": "batteries-for-notebooks",
+        "sortOrder": 234,
+        "parent": {
+            "id": 201,
+            "nameEn": "Batteries and Chargers",
+            "nameBg": "Батерии и зарядни у-ва",
+            "slug": "batteries-and-chargers",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.09958",
+        "updatedAt": "2025-09-16T09:34:05.404904",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 205,
+        "externalId": 595,
+        "nameBg": "Батерии за фотоапарати и камкордери",
+        "nameEn": "Battery for digital cameras end camcorders",
+        "slug": "battery-for-digital-cameras-end-camcorders",
+        "sortOrder": 235,
+        "parent": {
+            "id": 201,
+            "nameEn": "Batteries and Chargers",
+            "nameBg": "Батерии и зарядни у-ва",
+            "slug": "batteries-and-chargers",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.103657",
+        "updatedAt": "2025-09-16T09:34:05.405287",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 206,
+        "externalId": 507,
+        "nameBg": "Батерии за UPS и СОТ-аларми",
+        "nameEn": "UPS batteries and security alarms",
+        "slug": "ups-batteries-and-security-alarms",
+        "sortOrder": 236,
+        "parent": {
+            "id": 201,
+            "nameEn": "Batteries and Chargers",
+            "nameBg": "Батерии и зарядни у-ва",
+            "slug": "batteries-and-chargers",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.106526",
+        "updatedAt": "2025-09-16T09:34:05.405716",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 207,
+        "externalId": 522,
+        "nameBg": "Батерии за безжични телефони",
+        "nameEn": "Batteries for phones",
+        "slug": "batteries-for-phones",
+        "sortOrder": 237,
+        "parent": {
+            "id": 201,
+            "nameEn": "Batteries and Chargers",
+            "nameBg": "Батерии и зарядни у-ва",
+            "slug": "batteries-and-chargers",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.109197",
+        "updatedAt": "2025-09-16T09:34:05.406046",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 208,
+        "externalId": 642,
+        "nameBg": "Батерии за радиостанции",
+        "nameEn": "Batteries two way radio",
+        "slug": "batteries-two-way-radio",
+        "sortOrder": 238,
+        "parent": {
+            "id": 201,
+            "nameEn": "Batteries and Chargers",
+            "nameBg": "Батерии и зарядни у-ва",
+            "slug": "batteries-and-chargers",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.111909",
+        "updatedAt": "2025-09-16T09:34:05.406456",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 209,
+        "externalId": 643,
+        "nameBg": "Батерии за баркод скенери",
+        "nameEn": "Batteries for Barcode Scanner",
+        "slug": "batteries-for-barcode-scanner",
+        "sortOrder": 239,
+        "parent": {
+            "id": 201,
+            "nameEn": "Batteries and Chargers",
+            "nameBg": "Батерии и зарядни у-ва",
+            "slug": "batteries-and-chargers",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.114731",
+        "updatedAt": "2025-09-16T09:34:05.406834",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 210,
+        "externalId": 529,
+        "nameBg": "Зарядни устройства и адаптери",
+        "nameEn": "Chargers and adapters",
+        "slug": "chargers-and-adapters",
+        "sortOrder": 240,
+        "parent": {
+            "id": 201,
+            "nameEn": "Batteries and Chargers",
+            "nameBg": "Батерии и зарядни у-ва",
+            "slug": "batteries-and-chargers",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.118512",
+        "updatedAt": "2025-09-16T09:34:05.407121",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 211,
+        "externalId": 711,
+        "nameBg": "Батерии за дистанционни за кран",
+        "nameEn": "Batteries for Crane Remote Control",
+        "slug": "batteries-for-crane-remote-control",
+        "sortOrder": 241,
+        "parent": {
+            "id": 201,
+            "nameEn": "Batteries and Chargers",
+            "nameBg": "Батерии и зарядни у-ва",
+            "slug": "batteries-and-chargers",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.121434",
+        "updatedAt": "2025-09-16T09:34:05.407501",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 212,
+        "externalId": 716,
+        "nameBg": "Батерии за прахосмукачки",
+        "nameEn": "Batteries for vacuum cleaners",
+        "slug": "batteries-for-vacuum-cleaners",
+        "sortOrder": 242,
+        "parent": {
+            "id": 201,
+            "nameEn": "Batteries and Chargers",
+            "nameBg": "Батерии и зарядни у-ва",
+            "slug": "batteries-and-chargers",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.124525",
+        "updatedAt": "2025-09-16T09:34:05.40782",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 213,
+        "externalId": 717,
+        "nameBg": "Батерии за косачки роботи",
+        "nameEn": "Batteries for robot lawnmowers",
+        "slug": "batteries-for-robot-lawnmowers",
+        "sortOrder": 243,
+        "parent": {
+            "id": 201,
+            "nameEn": "Batteries and Chargers",
+            "nameBg": "Батерии и зарядни у-ва",
+            "slug": "batteries-and-chargers",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.127575",
+        "updatedAt": "2025-09-16T09:34:05.408077",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 214,
+        "externalId": 491,
+        "nameBg": "Продукти за дома",
+        "nameEn": "Household products",
+        "slug": "household-products",
+        "sortOrder": 244,
+        "parent": null,
+        "createdAt": "2025-09-16T09:34:05.130316",
+        "updatedAt": "2025-09-16T09:34:05.130316",
+        "isParentCategory": true,
+        "show": true
+    },
+    {
+        "id": 215,
+        "externalId": 645,
+        "nameBg": "Комплекти за сервиране",
+        "nameEn": "Serving sets",
+        "slug": "serving-sets",
+        "sortOrder": 246,
+        "parent": {
+            "id": 214,
+            "nameEn": "Household products",
+            "nameBg": "Продукти за дома",
+            "slug": "household-products",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.133445",
+        "updatedAt": "2025-09-16T09:34:05.408355",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 216,
+        "externalId": 590,
+        "nameBg": "Аксесоари за микровълнови фурни",
+        "nameEn": "Microwave Brackets",
+        "slug": "microwave-brackets",
+        "sortOrder": 247,
+        "parent": {
+            "id": 214,
+            "nameEn": "Household products",
+            "nameBg": "Продукти за дома",
+            "slug": "household-products",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.137111",
+        "updatedAt": "2025-09-16T09:34:05.408541",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 217,
+        "externalId": 638,
+        "nameBg": "Аксесоари за кафе машини",
+        "nameEn": "Accessories for coffee machines",
+        "slug": "accessories-for-coffee-machines",
+        "sortOrder": 248,
+        "parent": {
+            "id": 214,
+            "nameEn": "Household products",
+            "nameBg": "Продукти за дома",
+            "slug": "household-products",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.139952",
+        "updatedAt": "2025-09-16T09:34:05.408698",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 218,
+        "externalId": 646,
+        "nameBg": "Аксесоари за перални машини",
+        "nameEn": "Washing machine accessories",
+        "slug": "washing-machine-accessories",
+        "sortOrder": 249,
+        "parent": {
+            "id": 214,
+            "nameEn": "Household products",
+            "nameBg": "Продукти за дома",
+            "slug": "household-products",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.142707",
+        "updatedAt": "2025-09-16T09:34:05.408841",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 219,
+        "externalId": 644,
+        "nameBg": "Аксесоари за контакти",
+        "nameEn": "Wall socket accessoryes",
+        "slug": "wall-socket-accessoryes",
+        "sortOrder": 250,
+        "parent": {
+            "id": 214,
+            "nameEn": "Household products",
+            "nameBg": "Продукти за дома",
+            "slug": "household-products",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.145525",
+        "updatedAt": "2025-09-16T09:34:05.408979",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 220,
+        "externalId": 695,
+        "nameBg": "Кутии за храна",
+        "nameEn": "Lunch Box",
+        "slug": "lunch-box",
+        "sortOrder": 251,
+        "parent": {
+            "id": 214,
+            "nameEn": "Household products",
+            "nameBg": "Продукти за дома",
+            "slug": "household-products",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.148797",
+        "updatedAt": "2025-09-16T09:34:05.409128",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 221,
+        "externalId": 696,
+        "nameBg": "Бутилки",
+        "nameEn": "Bottles",
+        "slug": "bottles",
+        "sortOrder": 252,
+        "parent": {
+            "id": 214,
+            "nameEn": "Household products",
+            "nameBg": "Продукти за дома",
+            "slug": "household-products",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.152087",
+        "updatedAt": "2025-09-16T09:34:05.409342",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 222,
+        "externalId": 558,
+        "nameBg": "Кухненски везни",
+        "nameEn": "Kitchen Scales",
+        "slug": "kitchen-scales",
+        "sortOrder": 254,
+        "parent": {
+            "id": 214,
+            "nameEn": "Household products",
+            "nameBg": "Продукти за дома",
+            "slug": "household-products",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.155457",
+        "updatedAt": "2025-09-16T09:34:05.409663",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 223,
+        "externalId": 647,
+        "nameBg": "Кухненски таймери",
+        "nameEn": "Kitchen Timer",
+        "slug": "kitchen-timer",
+        "sortOrder": 255,
+        "parent": {
+            "id": 214,
+            "nameEn": "Household products",
+            "nameBg": "Продукти за дома",
+            "slug": "household-products",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.15839",
+        "updatedAt": "2025-09-16T09:34:05.409935",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 224,
+        "externalId": 574,
+        "nameBg": "Домашни потреби",
+        "nameEn": "Household goods",
+        "slug": "household-goods",
+        "sortOrder": 256,
+        "parent": {
+            "id": 214,
+            "nameEn": "Household products",
+            "nameBg": "Продукти за дома",
+            "slug": "household-products",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.160779",
+        "updatedAt": "2025-09-16T09:34:05.410326",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 225,
+        "externalId": 628,
+        "nameBg": "Универсални почистващи препарати",
+        "nameEn": "Cleaning products",
+        "slug": "cleaning-products",
+        "sortOrder": 257,
+        "parent": {
+            "id": 214,
+            "nameEn": "Household products",
+            "nameBg": "Продукти за дома",
+            "slug": "household-products",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.163123",
+        "updatedAt": "2025-09-16T09:34:05.410517",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 226,
+        "externalId": 547,
+        "nameBg": "Алармени системи за дома и офиса",
+        "nameEn": "Security alarm system",
+        "slug": "security-alarm-system",
+        "sortOrder": 258,
+        "parent": {
+            "id": 214,
+            "nameEn": "Household products",
+            "nameBg": "Продукти за дома",
+            "slug": "household-products",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.1659",
+        "updatedAt": "2025-09-16T09:34:05.410743",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 227,
+        "externalId": 492,
+        "nameBg": "Фенери",
+        "nameEn": "Torches",
+        "slug": "torches",
+        "sortOrder": 259,
+        "parent": {
+            "id": 214,
+            "nameEn": "Household products",
+            "nameBg": "Продукти за дома",
+            "slug": "household-products",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.169827",
+        "updatedAt": "2025-09-16T09:34:05.410988",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 228,
+        "externalId": 607,
+        "nameBg": "Уреди за измерване и контрол",
+        "nameEn": "Test & Measure",
+        "slug": "test-measure",
+        "sortOrder": 260,
+        "parent": {
+            "id": 214,
+            "nameEn": "Household products",
+            "nameBg": "Продукти за дома",
+            "slug": "household-products",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.172921",
+        "updatedAt": "2025-09-16T09:34:05.411132",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 229,
+        "externalId": 519,
+        "nameBg": "Инструменти",
+        "nameEn": "Tools",
+        "slug": "tools",
+        "sortOrder": 261,
+        "parent": {
+            "id": 214,
+            "nameEn": "Household products",
+            "nameBg": "Продукти за дома",
+            "slug": "household-products",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.176717",
+        "updatedAt": "2025-09-16T09:34:05.411272",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 230,
+        "externalId": 606,
+        "nameBg": "Отвертки",
+        "nameEn": "Screwdrivers",
+        "slug": "screwdrivers",
+        "sortOrder": 262,
+        "parent": {
+            "id": 214,
+            "nameEn": "Household products",
+            "nameBg": "Продукти за дома",
+            "slug": "household-products",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.179753",
+        "updatedAt": "2025-09-16T09:34:05.411458",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 231,
+        "externalId": 531,
+        "nameBg": "Метео - станции и термометри ",
+        "nameEn": "Weather Station, Thermometers",
+        "slug": "weather-station-thermometers",
+        "sortOrder": 263,
+        "parent": {
+            "id": 214,
+            "nameEn": "Household products",
+            "nameBg": "Продукти за дома",
+            "slug": "household-products",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.182553",
+        "updatedAt": "2025-09-16T09:34:05.41166",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 232,
+        "externalId": 533,
+        "nameBg": "Разклонители",
+        "nameEn": "Distribution panel",
+        "slug": "distribution-panel",
+        "sortOrder": 264,
+        "parent": {
+            "id": 214,
+            "nameEn": "Household products",
+            "nameBg": "Продукти за дома",
+            "slug": "household-products",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.18646",
+        "updatedAt": "2025-09-16T09:34:05.411902",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 233,
+        "externalId": 562,
+        "nameBg": "Таймери",
+        "nameEn": "Timers",
+        "slug": "timers",
+        "sortOrder": 265,
+        "parent": {
+            "id": 214,
+            "nameEn": "Household products",
+            "nameBg": "Продукти за дома",
+            "slug": "household-products",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.190126",
+        "updatedAt": "2025-09-16T09:34:05.412134",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 234,
+        "externalId": 596,
+        "nameBg": "Смарт контакти",
+        "nameEn": "Smart contacts",
+        "slug": "smart-contacts",
+        "sortOrder": 266,
+        "parent": {
+            "id": 214,
+            "nameEn": "Household products",
+            "nameBg": "Продукти за дома",
+            "slug": "household-products",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.192828",
+        "updatedAt": "2025-09-16T09:34:05.412452",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 235,
+        "externalId": 539,
+        "nameBg": "Часовници",
+        "nameEn": "Watches",
+        "slug": "watches",
+        "sortOrder": 267,
+        "parent": {
+            "id": 214,
+            "nameEn": "Household products",
+            "nameBg": "Продукти за дома",
+            "slug": "household-products",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.195277",
+        "updatedAt": "2025-09-16T09:34:05.41262",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 236,
+        "externalId": 556,
+        "nameBg": "Цифрови кантари",
+        "nameEn": "Scales",
+        "slug": "scales",
+        "sortOrder": 268,
+        "parent": {
+            "id": 214,
+            "nameEn": "Household products",
+            "nameBg": "Продукти за дома",
+            "slug": "household-products",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.197907",
+        "updatedAt": "2025-09-16T09:34:05.412858",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 237,
+        "externalId": 582,
+        "nameBg": "Крушки",
+        "nameEn": "Bulbs",
+        "slug": "bulbs",
+        "sortOrder": 269,
+        "parent": {
+            "id": 214,
+            "nameEn": "Household products",
+            "nameBg": "Продукти за дома",
+            "slug": "household-products",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.200939",
+        "updatedAt": "2025-09-16T09:34:05.413512",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 238,
+        "externalId": 588,
+        "nameBg": "Лампи",
+        "nameEn": "Lamps",
+        "slug": "lamps",
+        "sortOrder": 270,
+        "parent": {
+            "id": 214,
+            "nameEn": "Household products",
+            "nameBg": "Продукти за дома",
+            "slug": "household-products",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.205821",
+        "updatedAt": "2025-09-16T09:34:05.41378",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 239,
+        "externalId": 592,
+        "nameBg": "Смарт термоглави за радиатори",
+        "nameEn": "Radiators Control",
+        "slug": "radiators-control",
+        "sortOrder": 271,
+        "parent": {
+            "id": 214,
+            "nameEn": "Household products",
+            "nameBg": "Продукти за дома",
+            "slug": "household-products",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.20954",
+        "updatedAt": "2025-09-16T09:34:05.413902",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 240,
+        "externalId": 594,
+        "nameBg": "Баркод скенери",
+        "nameEn": "Barcode scanners",
+        "slug": "barcode-scanners",
+        "sortOrder": 273,
+        "parent": null,
+        "createdAt": "2025-09-16T09:34:05.212475",
+        "updatedAt": "2025-09-16T09:34:05.212475",
+        "isParentCategory": true,
+        "show": true
+    },
+    {
+        "id": 241,
+        "externalId": 648,
+        "nameBg": "Аксесоари за велосипеди",
+        "nameEn": "Bicycle",
+        "slug": "bicycle",
+        "sortOrder": 274,
+        "parent": null,
+        "createdAt": "2025-09-16T09:34:05.215108",
+        "updatedAt": "2025-09-16T09:34:05.215108",
+        "isParentCategory": true,
+        "show": true
+    },
+    {
+        "id": 242,
+        "externalId": 649,
+        "nameBg": "Заключващи устройства за велосипед",
+        "nameEn": "Cable Locks",
+        "slug": "cable-locks",
+        "sortOrder": 275,
+        "parent": {
+            "id": 241,
+            "nameEn": "Bicycle",
+            "nameBg": "Аксесоари за велосипеди",
+            "slug": "bicycle",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.21838",
+        "updatedAt": "2025-09-16T09:34:05.414027",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 243,
+        "externalId": 650,
+        "nameBg": "Звънци за велосипед",
+        "nameEn": "Bells",
+        "slug": "bells",
+        "sortOrder": 276,
+        "parent": {
+            "id": 241,
+            "nameEn": "Bicycle",
+            "nameBg": "Аксесоари за велосипеди",
+            "slug": "bicycle",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.222733",
+        "updatedAt": "2025-09-16T09:34:05.414118",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 244,
+        "externalId": 651,
+        "nameBg": "Помпи за велосипеди",
+        "nameEn": "Bicycle pumps",
+        "slug": "bicycle-pumps",
+        "sortOrder": 277,
+        "parent": {
+            "id": 241,
+            "nameEn": "Bicycle",
+            "nameBg": "Аксесоари за велосипеди",
+            "slug": "bicycle",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.225414",
+        "updatedAt": "2025-09-16T09:34:05.414205",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 245,
+        "externalId": 664,
+        "nameBg": "Битова техника",
+        "nameEn": "Home Appliances",
+        "slug": "home-appliances",
+        "sortOrder": 279,
+        "parent": null,
+        "createdAt": "2025-09-16T09:34:05.228108",
+        "updatedAt": "2025-09-16T09:34:05.228108",
+        "isParentCategory": true,
+        "show": true
+    },
+    {
+        "id": 246,
+        "externalId": 665,
+        "nameBg": "Прахосмукачки и аксесоари",
+        "nameEn": "Vacuum Cleaners",
+        "slug": "vacuum-cleaners",
+        "sortOrder": 280,
+        "parent": {
+            "id": 245,
+            "nameEn": "Home Appliances",
+            "nameBg": "Битова техника",
+            "slug": "home-appliances",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.230552",
+        "updatedAt": "2025-09-16T09:34:05.414774",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 247,
+        "externalId": 667,
+        "nameBg": "Пречистватели за въздух / вентилатори",
+        "nameEn": "Air Purifiers",
+        "slug": "air-purifiers",
+        "sortOrder": 282,
+        "parent": {
+            "id": 245,
+            "nameEn": "Home Appliances",
+            "nameBg": "Битова техника",
+            "slug": "home-appliances",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.233084",
+        "updatedAt": "2025-09-16T09:34:05.414984",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 248,
+        "externalId": 708,
+        "nameBg": "Услуги",
+        "nameEn": "Service",
+        "slug": "service",
+        "sortOrder": 285,
+        "parent": null,
+        "createdAt": "2025-09-16T09:34:05.236953",
+        "updatedAt": "2025-09-16T09:34:05.236953",
+        "isParentCategory": true,
+        "show": true
+    },
+    {
+        "id": 249,
+        "externalId": 698,
+        "nameBg": "STEM",
+        "nameEn": "STEM",
+        "slug": "stem",
+        "sortOrder": 286,
+        "parent": null,
+        "createdAt": "2025-09-16T09:34:05.240901",
+        "updatedAt": "2025-09-16T09:34:05.240901",
+        "isParentCategory": true,
+        "show": true
+    },
+    {
+        "id": 250,
+        "externalId": 699,
+        "nameBg": "Роботика и кибер-физични системи",
+        "nameEn": "",
+        "slug": "",
+        "sortOrder": 287,
+        "parent": {
+            "id": 249,
+            "nameEn": "STEM",
+            "nameBg": "STEM",
+            "slug": "stem",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.244483",
+        "updatedAt": "2025-09-16T09:34:05.415166",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 251,
+        "externalId": 700,
+        "nameBg": "Дизайн и 3D прототипиране",
+        "nameEn": "",
+        "slug": "",
+        "sortOrder": 288,
+        "parent": {
+            "id": 249,
+            "nameEn": "STEM",
+            "nameBg": "STEM",
+            "slug": "stem",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.247722",
+        "updatedAt": "2025-09-16T09:34:05.415276",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 252,
+        "externalId": 701,
+        "nameBg": "Природни науки",
+        "nameEn": "",
+        "slug": "",
+        "sortOrder": 289,
+        "parent": {
+            "id": 249,
+            "nameEn": "STEM",
+            "nameBg": "STEM",
+            "slug": "stem",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.251269",
+        "updatedAt": "2025-09-16T09:34:05.415455",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 253,
+        "externalId": 702,
+        "nameBg": "Зелени технологии",
+        "nameEn": "",
+        "slug": "",
+        "sortOrder": 290,
+        "parent": {
+            "id": 249,
+            "nameEn": "STEM",
+            "nameBg": "STEM",
+            "slug": "stem",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.254945",
+        "updatedAt": "2025-09-16T09:34:05.415579",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 254,
+        "externalId": 703,
+        "nameBg": "Математика и информатика",
+        "nameEn": "",
+        "slug": "",
+        "sortOrder": 291,
+        "parent": {
+            "id": 249,
+            "nameEn": "STEM",
+            "nameBg": "STEM",
+            "slug": "stem",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.258645",
+        "updatedAt": "2025-09-16T09:34:05.416161",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 255,
+        "externalId": 704,
+        "nameBg": "ВОСКС",
+        "nameEn": "",
+        "slug": "",
+        "sortOrder": 292,
+        "parent": {
+            "id": 249,
+            "nameEn": "STEM",
+            "nameBg": "STEM",
+            "slug": "stem",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.262035",
+        "updatedAt": "2025-09-16T09:34:05.41677",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 256,
+        "externalId": 705,
+        "nameBg": "Специализирано оборудване",
+        "nameEn": "",
+        "slug": "",
+        "sortOrder": 293,
+        "parent": {
+            "id": 249,
+            "nameEn": "STEM",
+            "nameBg": "STEM",
+            "slug": "stem",
+            "show": true
+        },
+        "createdAt": "2025-09-16T09:34:05.265851",
+        "updatedAt": "2025-09-16T09:34:05.417289",
+        "isParentCategory": false,
+        "show": true
+    },
+    {
+        "id": 257,
+        "externalId": 715,
+        "nameBg": "Разопаковани продукти",
+        "nameEn": "unboxed products",
+        "slug": "unboxed-products",
+        "sortOrder": 294,
+        "parent": null,
+        "createdAt": "2025-09-16T09:34:05.270167",
+        "updatedAt": "2025-09-16T09:34:05.270167",
+        "isParentCategory": true,
+        "show": true
+    },
+    {
+        "id": 258,
+        "externalId": 663,
+        "nameBg": "Дигитален ваучер за подарък",
+        "nameEn": "",
+        "slug": "",
+        "sortOrder": 295,
+        "parent": null,
+        "createdAt": "2025-09-16T09:34:05.273365",
+        "updatedAt": "2025-09-16T09:34:05.273365",
+        "isParentCategory": true,
+        "show": true
+    }
+]
