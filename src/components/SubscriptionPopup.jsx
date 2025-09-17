@@ -8,7 +8,7 @@ const panelVariants = {
   exit: { y: "100%", opacity: 0, transition: { duration: 0.3 } }
 };
 
-const SubscriptionPopup = ({ delay = 1000 }) => {
+const SubscriptionPopup = ({ delay = 15000 }) => {
   const [visible, setVisible] = useState(false);
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);

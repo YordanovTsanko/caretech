@@ -1,13 +1,13 @@
 import React, { useRef, useState, useEffect } from "react";
-import { newProducts } from "../../utils/utils";
 import { useNavigate } from "react-router-dom";
 import ProductCard from "./ProductCard";
+import laptops from "../../utils/laptops.json";
 
 const NewProductsSection = () => {
   const euroRate = 1.96;
   const navigate = useNavigate();
   const defaultVisible = 10;
-  const products = newProducts || [];
+  const products = laptops?.content || [];
   const initialVisible = Math.min(defaultVisible, products.length);
   const [isExpanded, setIsExpanded] = useState(false);
   const [addedIds, setAddedIds] = useState(new Set());

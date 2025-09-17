@@ -1,13 +1,12 @@
 import React, { useRef, useState, useEffect } from "react";
-import { promoProducts } from "../../utils/utils";
 import { useNavigate } from "react-router-dom";
 import ProductCard from "./ProductCard";
+import laptops from "../../utils/laptops.json";
 
 const PromoProductsSection = () => {
-  const euroRate = 1.96;
   const navigate = useNavigate();
   const defaultVisible = 10;
-  const products = promoProducts || [];
+  const products = laptops?.content || [];
   const initialVisible = Math.min(defaultVisible, products.length);
   const [isExpanded, setIsExpanded] = useState(false);
   const [addedIds, setAddedIds] = useState(new Set());
@@ -59,7 +58,6 @@ const PromoProductsSection = () => {
           <ProductCard
             key={p.id}
             p={p}
-            euroRate={euroRate}
             onBuy={handleBuy}
             onToggleCart={handleToggleCart}
             inCart={addedIds.has(p.id)}
@@ -81,7 +79,6 @@ const PromoProductsSection = () => {
               <ProductCard
                 key={p.id}
                 p={p}
-                euroRate={euroRate}
                 onBuy={handleBuy}
                 onToggleCart={handleToggleCart}
                 inCart={addedIds.has(p.id)}
