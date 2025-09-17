@@ -1,3 +1,5 @@
+import { BsFillBinocularsFill } from "react-icons/bs";
+import { CgTag } from "react-icons/cg";
 import {
   FaLaptop,
   FaMobileAlt,
@@ -14,15 +16,21 @@ import {
   FaPumpSoap,
   FaBroom,
   FaFan,
-  FaCogs
+  FaCogs,
+  FaProjectDiagram,
+  FaMicroscope
 } from "react-icons/fa";
 import { GiDisc } from "react-icons/gi";
+import { GrSystem } from "react-icons/gr";
+import { IoTelescopeSharp } from "react-icons/io5";
 import { MdDevicesOther, MdCable } from "react-icons/md";
+import { RiGpsFill, RiWaterFlashFill } from "react-icons/ri";
 import { SiPcgamingwiki } from "react-icons/si";
 
 export const iconCategories = {
   "computer-components": SiPcgamingwiki,
-  "computer-systems": FaLaptop,
+  "water-liquid-cooling": RiWaterFlashFill,
+  "computer-systems": GrSystem,
   "laptops-tablets-and-accessories": FaLaptop,
   "monitors-and-displays": FaTv,
   "computer-peripherals": MdDevicesOther,
@@ -31,17 +39,18 @@ export const iconCategories = {
   "power-protection": FaChargingStation,
   "printers-scanners-and-consumables": FaTools,
   "network-equipment": FaNetworkWired,
+  "projectors-interactive-floor-accessories":FaProjectDiagram,
   "electronics": FaCogs,
   "cables": MdCable,
   "tv-video-and-accessories": FaTv,
   "photo-and-video-accessories": FaCamera,
   "mobile-phones-and-accessories": FaMobileAlt,
   "gaming-peripheral-devices": FaGamepad,
-  "navigation-systems-dashcam": FaCamera,
-  "telescopes": FaCamera,
-  "binoculars": FaCamera,
-  "microscopes": FaCamera,
-  "accessories-optics": FaCamera,
+  "navigation-systems-dashcam": RiGpsFill,
+  "telescopes": IoTelescopeSharp,
+  "binoculars": BsFillBinocularsFill,
+  "microscopes": FaMicroscope,
+  "accessories-optics": CgTag,
   "office-products": FaHouseUser,
   "software": GiDisc,
   "batteries-and-chargers": FaChargingStation,

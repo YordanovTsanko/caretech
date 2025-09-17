@@ -1,0 +1,178 @@
+import React, { useEffect, useRef, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { FiX, FiMail, FiCheck } from "react-icons/fi";
+
+const panelVariants = {
+  hidden: { y: "100%", opacity: 0 },
+  show: { y: 0, opacity: 1, transition: { type: "spring", stiffness: 110, damping: 18 } },
+  exit: { y: "100%", opacity: 0, transition: { duration: 0.3 } }
+};
+
+const SubscriptionPopup = ({ delay = 1000 }) => {
+  const [visible, setVisible] = useState(false);
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [error, setError] = useState("");
+  const [tempChoice, setTempChoice] = useState(false); // избрано в чекбокса, но не потвърдено
+  const [dontShowAgain, setDontShowAgain] = useState(false); // финално решение след Х
+  const intervalRef = useRef(null);
+  const showTimeout = useRef(null);
+
+  // първо показване
+  useEffect(() => {
+    showTimeout.current = setTimeout(() => setVisible(true), delay);
+    return () => clearTimeout(showTimeout.current);
+  }, [delay]);
+
+  // показване на всеки 5 сек., ако е разрешено
+  useEffect(() => {
+    if (dontShowAgain) {
+      clearInterval(intervalRef.current);
+      return;
+    }
+    intervalRef.current = setInterval(() => {
+      setVisible(true);
+    }, 5000);
+    return () => clearInterval(intervalRef.current);
+  }, [dontShowAgain]);
+
+  // блокиране на скрола
+  useEffect(() => {
+    if (!visible) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = prev || "";
+    };
+  }, [visible]);
+
+  const validateEmail = (val) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
+
+  const handleSubscribe = (e) => {
+    e?.preventDefault();
+    setError("");
+    if (!validateEmail(email)) {
+      setError("Моля въведете валиден имейл.");
+      return;
+    }
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      setSuccess(true);
+    }, 900);
+  };
+
+  const handleCloseWithX = () => {
+    setDontShowAgain(tempChoice); // при затваряне запазваме избора
+    setVisible(false);
+  };
+
+  return (
+    <AnimatePresence>
+      {visible && (
+        <motion.div
+          className="fixed inset-x-0 bottom-0 z-[60] flex items-end justify-center pointer-events-none"
+          initial="hidden"
+          animate="show"
+          exit="exit"
+          variants={{ show: { transition: { when: "beforeChildren" } } }}
+        >
+          <motion.div
+            role="dialog"
+            aria-modal="true"
+            aria-label="Абонамент за бюлетин"
+            variants={panelVariants}
+            className="pointer-events-auto w-full bg-gradient-to-r from-primary to-primary-dark text-white shadow-2xl p-4 md:p-6 max-h-[70vh] overflow-auto"
+            style={{ boxShadow: "0 -8px 30px rgba(0,0,0,0.25)" }}
+          >
+            <div className="flex items-start justify-between gap-4">
+              <div className="flex items-center gap-4">
+                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-white/10">
+                  <FiMail className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-lg md:text-xl font-semibold">Абонирай се за нашия бюлетин</h3>
+                  <p className="text-sm md:text-base text-white/90 mt-1">
+                    Получавай полезни статии, нови продукти и специални оферти директно на имейла си.
+                  </p>
+                </div>
+              </div>
+              <button
+                onClick={handleCloseWithX}
+                aria-label="Затвори"
+                className="ml-auto p-2 rounded-md bg-white/10 hover:bg-white/20 transition"
+              >
+                <FiX className="w-5 h-5 text-white" />
+              </button>
+            </div>
+            <form
+              onSubmit={handleSubscribe}
+              className="mt-4 md:mt-6 grid grid-cols-1 md:grid-cols-[1fr_160px] gap-3 items-center"
+            >
+              <label htmlFor="sub-email" className="sr-only">Имейл</label>
+              <input
+                id="sub-email"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Въведи имейл адрес"
+                className="w-full rounded-lg border border-white/20 bg-white/5 px-4 py-3 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/30"
+              />
+              <div className="flex items-center gap-2">
+                <button
+                  type="submit"
+                  disabled={loading || success}
+                  className="w-full rounded-lg bg-white text-primary font-semibold px-4 py-3 shadow hover:scale-[0.997] active:scale-100 transition disabled:opacity-70 flex items-center justify-center gap-2"
+                >
+                  {loading ? (
+                    <svg className="w-4 h-4 animate-spin" viewBox="0 0 24 24">
+                      <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="3" strokeDasharray="31.4 31.4" strokeLinecap="round" fill="none" />
+                    </svg>
+                  ) : success ? (
+                    <>
+                      <FiCheck className="w-4 h-4 text-primary" />
+                      <span className="text-sm">Готово</span>
+                    </>
+                  ) : (
+                    <span className="text-sm text-primary">Абонирай се</span>
+                  )}
+                </button>
+              </div>
+            </form>
+            {error && <p className="mt-3 text-sm text-yellow-200">{error}</p>}
+            {success && <p className="mt-3 text-sm text-white/90">Благодарим! Вие ще получавате нашите новини на посочения имейл.</p>}
+            <div className="mt-4 flex items-center justify-between">
+              <label className="relative inline-flex items-center cursor-pointer select-none">
+                <input
+                  type="checkbox"
+                  checked={tempChoice}
+                  onChange={(e) => setTempChoice(e.target.checked)}
+                  className="sr-only"
+                />
+                <span className="w-11 h-6 bg-white/10 rounded-full flex items-center px-[3px] transition-all">
+                  <motion.span
+                    layout
+                    initial={false}
+                    animate={{ x: tempChoice ? 20 : 0 }}
+                    transition={{ type: "spring", stiffness: 700, damping: 30 }}
+                    className="w-5 h-5 rounded-full bg-white shadow-md flex items-center justify-center"
+                  >
+                    {tempChoice ? (
+                      <FiCheck className="w-3 h-3 text-primary" />
+                    ) : (
+                      <FiX className="w-3 h-3 text-red-500" />
+                    )}
+                  </motion.span>
+                </span>
+                <span className="ml-3 text-sm text-white/90">Не показвай отново</span>
+              </label>
+            </div>
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+};
+
+export default SubscriptionPopup;
