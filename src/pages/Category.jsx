@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import categories from "../utils/categories.json";
-import laptopsParms from "../utils/laptopsParms.json";
 import CustomCheckbox from "../components/CustomCheckbox";
 import CustomDropdown from "../components/CustomDropdown";
-import { newProducts } from "../utils/utils";
 import ProductCard from "../components/home/ProductCard";
+import laptops from "../utils/laptops.json";
 
 const filtersList = [
   { id: "new", label: "Нови" },
@@ -16,8 +15,7 @@ const filtersList = [
 
 const Category = () => {
   const [addedIds, setAddedIds] = useState(new Set());
-
-  const euroRate = 1.96;
+  const [products, setProducts] = useState([]);
 
   const handleToggleCart = (id) => {
     setAddedIds((prev) => {
@@ -41,7 +39,6 @@ const Category = () => {
   const navigate = useNavigate();
   const [match, setMatch] = useState(null);
   const [selectedFilters, setSelectedFilters] = useState({});
-  const [categoryParams, setCategoryParams] = useState([]);
   const [limit, setLimit] = useState(20);
 
   // Проверка за съществуваща категория
@@ -57,14 +54,11 @@ const Category = () => {
   // Филтриране на laptopsParms за текущата категория
   useEffect(() => {
     if (!match) return;
-
-    const filteredParams = laptopsParms.filter(
-      (item) => item.categoryName === match.nameEn
-    );
-
-    setCategoryParams(filteredParams);
-    console.log("Filtered params:", filteredParams);
-  }, [match]);
+    if (match.nameEn === "Laptops") {
+      setProducts(laptops);
+    }
+    console.log(products);
+  }, [match, products]);
 
   if (!match) return null;
 
@@ -90,7 +84,7 @@ const Category = () => {
         </div>
 
         {/* grid */}
-        <div className="grid grid-cols-7 mt-4 gap-4">
+        <div className="grid grid-cols-7 my-4 gap-4">
           {/* Sidebar filter */}
           <div className="hidden md:block col-span-2 xl:col-span-1 bg-gray-50 border-r p-2">
             <div className="flex flex-col gap-3">
@@ -122,32 +116,40 @@ const Category = () => {
           <h2 className="sm:hidden col-span-7 whitespace-pre-wrap block text-center font-semibold text-lg">
             {match?.nameBg?.toUpperCase()}
           </h2>
-          {/* Products area */}
           <div className="col-span-7 md:col-span-5 xl:col-span-6 p-4">
-            <div className="flex items-center justify-between">
+            <div className="relative flex items-center justify-between">
               <h2 className="text-center text-[10px] sm:text-sm">
-                {newProducts.length} ПРОДУКТА
+                {products?.content?.length || 0} ПРОДУКТА
               </h2>
-              <h2 className="hidden sm:block text-center font-semibold text-lg">
+              <h2
+                className="hidden sm:block absolute left-1/2 -translate-x-1/2 text-center font-semibold text-lg
+               truncate max-w-[50%] sm:max-w-[40%]"
+                title={match?.nameBg}
+              >
                 {match?.nameBg?.toUpperCase()}
               </h2>
+
               <div className="flex items-center gap-2">
                 <h4 className="text-xs text-gray-500">Покажи:</h4>
                 <CustomDropdown value={limit} onChange={setLimit} />
               </div>
             </div>
-            {/* products map */}
             <div className="mt-4 grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-              {newProducts.map((p) => (
-                <ProductCard
-                  key={p.id}
-                  p={p}
-                  euroRate={euroRate}
-                  onBuy={handleBuy}
-                  onToggleCart={handleToggleCart}
-                  inCart={addedIds.has(p.id)}
-                />
-              ))}
+              {products?.content?.length > 0 ? (
+                products.content.map((p) => (
+                  <ProductCard
+                    key={p.id}
+                    p={p}
+                    onBuy={handleBuy}
+                    onToggleCart={handleToggleCart}
+                    inCart={addedIds.has(p.id)}
+                  />
+                ))
+              ) : (
+                <p className="text-center col-span-5 mt-10">
+                  Няма продукти за тази категория
+                </p>
+              )}
             </div>
           </div>
         </div>

@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { newProducts } from "../utils/utils";
 import SimilarProducts from "../components/products/SimilarProducts";
 import laptopsParms from "../utils/laptopsParms.json";
+
 const translations = {
   Type: "Тип",
   CPU: "Процесор",

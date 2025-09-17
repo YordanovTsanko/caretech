@@ -33,7 +33,7 @@ const SubscriptionPopup = ({ delay = 1000 }) => {
     }
     intervalRef.current = setInterval(() => {
       setVisible(true);
-    }, 5000);
+    }, 15000);
     return () => clearInterval(intervalRef.current);
   }, [dontShowAgain]);
 
@@ -60,7 +60,7 @@ const SubscriptionPopup = ({ delay = 1000 }) => {
     setTimeout(() => {
       setLoading(false);
       setSuccess(true);
-    }, 900);
+    }, 15000);
   };
 
   const handleCloseWithX = () => {
