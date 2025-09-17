@@ -15,7 +15,7 @@ const AppContent = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/category/:category" element={<Category />} />
-          <Route path="/product/:id" element={<ProductsPage />} />
+          <Route path="/category/:category/:id" element={<ProductsPage />} />
           <Route path="/*" element={<ErrorPage />} />
         </Routes>
       </main>

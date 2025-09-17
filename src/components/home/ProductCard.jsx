@@ -7,7 +7,7 @@ const ProductCard = ({ p, onBuy, onToggleCart, inCart }) => {
 
   return (
     <article className="p-3 bg-white/5 rounded-lg hover:shadow-lg flex flex-col">
-      <div onClick={() => navigate(`product/${p.id}`)} className="relative cursor-pointer">
+      <div onClick={() => navigate(`${p.id}`)} className="relative cursor-pointer">
         {/* {p.new && (
           <span className="absolute top-2 left-2 bg-blue-600 text-white text-xs px-2 py-1 rounded font-semibold">
             НОВО

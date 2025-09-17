@@ -43,6 +43,7 @@ const Category = () => {
 
   // Проверка за съществуваща категория
   useEffect(() => {
+      setProducts([]);
     const found = categories.find((c) => c.slug === categoryParam);
     if (!found) {
       navigate("/");
@@ -56,7 +57,7 @@ const Category = () => {
     if (!match) return;
     if (match.nameEn === "Laptops") {
       setProducts(laptops);
-    }
+    } 
     console.log(products);
   }, [match, products]);
 
