@@ -6,6 +6,7 @@ import NavBar from "./components/navbar/NavBar";
 import ProductsPage from "./pages/ProductsPage";
 import SubscriptionPopup from "./components/SubscriptionPopup";
 import Category from "./pages/Category";
+import CookieConsentPopup from "./components/CookieConsentPopup";
 
 const AppContent = () => {
   return (
@@ -20,6 +21,7 @@ const AppContent = () => {
         </Routes>
       </main>
       <Footer />
+      <CookieConsentPopup />
       <SubscriptionPopup />
     </div>
   );

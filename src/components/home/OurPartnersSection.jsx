@@ -10,7 +10,7 @@ const PrevArrow = ({ onClick }) => (
   <button
     onClick={onClick}
     aria-label="Previous partners"
-    className="hidden sm:inline-flex absolute left-2 top-1/2 -translate-y-1/2 z-10 p-2 bg-black/40 rounded-full text-white hover:bg-primary transition"
+    className="hidden sm:inline-flex absolute left-2 top-1/2 -translate-y-1/2 z-[1] p-2 bg-black/40 rounded-full text-white hover:bg-primary transition"
     type="button"
   >
     <FaChevronLeft size={16} />
@@ -21,7 +21,7 @@ const NextArrow = ({ onClick }) => (
   <button
     onClick={onClick}
     aria-label="Next partners"
-    className="hidden sm:inline-flex absolute right-2 top-1/2 -translate-y-1/2 z-10 p-2 bg-black/40 rounded-full text-white hover:bg-primary transition"
+    className="hidden sm:inline-flex absolute right-2 z-0 top-1/2 -translate-y-1/2 p-2 bg-black/40 rounded-full text-white hover:bg-primary transition"
     type="button"
   >
     <FaChevronRight size={16} />

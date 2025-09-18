@@ -83,7 +83,7 @@ const SubscriptionPopup = ({ delay = 15000 }) => {
             aria-modal="true"
             aria-label="Абонамент за бюлетин"
             variants={panelVariants}
-            className="pointer-events-auto w-full bg-gradient-to-r from-primary to-primary-dark text-white shadow-2xl p-4 md:p-6 max-h-[70vh] overflow-auto"
+            className="pointer-events-auto w-full sm:w-[50%] bg-gradient-to-r from-primary to-primary-dark text-white shadow-2xl p-4 md:p-6 max-h-[70vh] overflow-auto"
             style={{ boxShadow: "0 -8px 30px rgba(0,0,0,0.25)" }}
           >
             <div className="flex items-start justify-between gap-4">
@@ -92,9 +92,7 @@ const SubscriptionPopup = ({ delay = 15000 }) => {
                   <FiMail className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-lg md:text-xl font-semibold">Абонирай се за нашия бюлетин</h3>
-                  <p className="text-sm md:text-base text-white/90 mt-1">
-                    Получавай полезни статии, нови продукти и специални оферти директно на имейла си.
+                  <p className="text-sm text-white/90 mt-1">Абонирай се за нашият бюлетин и вземи отстъпка за първата си поръчка.
                   </p>
                 </div>
               </div>
@@ -108,7 +106,7 @@ const SubscriptionPopup = ({ delay = 15000 }) => {
             </div>
             <form
               onSubmit={handleSubscribe}
-              className="mt-4 md:mt-6 grid grid-cols-1 md:grid-cols-[1fr_160px] gap-3 items-center"
+              className="mt-4 grid grid-cols-1 md:grid-cols-[1fr_160px] gap-3 items-center"
             >
               <label htmlFor="sub-email" className="sr-only">Имейл</label>
               <input
@@ -117,13 +115,13 @@ const SubscriptionPopup = ({ delay = 15000 }) => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Въведи имейл адрес"
-                className="w-full rounded-lg border border-white/20 bg-white/5 px-4 py-3 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/30"
+                className="w-full rounded-lg border border-white/20 bg-white/5 px-4 py-1 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/30"
               />
               <div className="flex items-center gap-2">
                 <button
                   type="submit"
                   disabled={loading || success}
-                  className="w-full rounded-lg bg-white text-primary font-semibold px-4 py-3 shadow hover:scale-[0.997] active:scale-100 transition disabled:opacity-70 flex items-center justify-center gap-2"
+                  className="w-full rounded-lg bg-white text-primary font-semibold px-4 py-[9px] shadow hover:scale-[0.997] active:scale-100 transition disabled:opacity-70 flex items-center justify-center gap-2"
                 >
                   {loading ? (
                     <svg className="w-4 h-4 animate-spin" viewBox="0 0 24 24">
@@ -132,16 +130,16 @@ const SubscriptionPopup = ({ delay = 15000 }) => {
                   ) : success ? (
                     <>
                       <FiCheck className="w-4 h-4 text-primary" />
-                      <span className="text-sm">Готово</span>
+                      <span className="text-xs  ">Готово</span>
                     </>
                   ) : (
-                    <span className="text-sm text-primary">Абонирай се</span>
+                    <span className="text-xs text-primary">Абонирай се</span>
                   )}
                 </button>
               </div>
             </form>
-            {error && <p className="mt-3 text-sm text-yellow-200">{error}</p>}
-            {success && <p className="mt-3 text-sm text-white/90">Благодарим! Вие ще получавате нашите новини на посочения имейл.</p>}
+            {error && <p className="mt-3 text-xs text-yellow-200">{error}</p>}
+            {success && <p className="mt-3 text-xs text-white/90">Благодарим! Вие ще получавате нашите новини на посочения имейл.</p>}
             <div className="mt-4 flex items-center justify-between">
               <label className="relative inline-flex items-center cursor-pointer select-none">
                 <input
@@ -165,7 +163,7 @@ const SubscriptionPopup = ({ delay = 15000 }) => {
                     )}
                   </motion.span>
                 </span>
-                <span className="ml-3 text-sm text-white/90">Не показвай отново</span>
+                <span className="ml-3 text-xs text-white/90">Не показвай отново</span>
               </label>
             </div>
           </motion.div>
