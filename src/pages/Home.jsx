@@ -5,7 +5,7 @@ import PromoProductsSection from "../components/home/PromoProductsSection";
 import AdImageSectionTwo from "../components/home/AdImageSectionTwo";
 import NewProductsSection from "../components/home/NewProductsSection";
 import OurPartnersSection from "../components/home/OurPartnersSection";
-import TestimonialsSlider from "../components/home/TestimonialsSlider";
+import ReviewsSlider from "../components/home/ReviewsSlider";
 
 const Home = () => {
   return (
@@ -15,7 +15,7 @@ const Home = () => {
       <PromoProductsSection />
       <OurPartnersSection />
       <NewProductsSection />
-      <TestimonialsSlider />
+      <ReviewsSlider />
       <AdImageSectionTwo />
     </div>
   );
