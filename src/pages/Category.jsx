@@ -5,6 +5,8 @@ import CustomCheckbox from "../components/CustomCheckbox";
 import CustomDropdown from "../components/CustomDropdown";
 import ProductCard from "../components/home/ProductCard";
 import laptops from "../utils/laptops.json";
+import ManufacturerFilter from "../components/products/ManufacturerFilter";
+import ProcessorFilter from "../components/products/ProcessorFilter";
 
 const filtersList = [
   { id: "new", label: "Нови" },
@@ -16,6 +18,13 @@ const filtersList = [
 const Category = () => {
   const [addedIds, setAddedIds] = useState(new Set());
   const [products, setProducts] = useState([]);
+  const [selected, setSelected] = useState([]);
+
+  const handleChangeFilter = (name) => {
+    setSelected((prev) =>
+      prev.includes(name) ? prev.filter((n) => n !== name) : [...prev, name]
+    );
+  };
 
   const handleToggleCart = (id) => {
     setAddedIds((prev) => {
@@ -43,7 +52,7 @@ const Category = () => {
 
   // Проверка за съществуваща категория
   useEffect(() => {
-      setProducts([]);
+    setProducts([]);
     const found = categories.find((c) => c.slug === categoryParam);
     if (!found) {
       navigate("/");
@@ -57,8 +66,8 @@ const Category = () => {
     if (!match) return;
     if (match.nameEn === "Laptops") {
       setProducts(laptops);
-    } 
-    console.log(products);
+    }
+    console.log(products.content);
   }, [match, products]);
 
   if (!match) return null;
@@ -100,18 +109,16 @@ const Category = () => {
                   onChange={(checked) => handleFilterChange(filter.id, checked)}
                 />
               ))}
-              {/* <h4 className="font-semibold mb-2 mt-4 underline decoration-primary underline-offset-2">
-                ПРОИЗВОДИТЕЛИ
-              </h4> */}
-              {/* Ако искаш можеш да мапнеш производители от categoryParams */}
-              {/* {categoryParams.map((param) => (
-                <CustomCheckbox
-                  key={param.id}
-                  label={param.name}
-                  checked={!!selectedFilters[param.id]}
-                  onChange={(checked) => handleFilterChange(param.id, checked)}
-                />
-              ))} */}
+              <ManufacturerFilter
+                products={products?.content}
+                selected={selected}
+                onChange={handleChangeFilter}
+              />
+              <ProcessorFilter
+                products={products?.content}
+                selected={selected}
+                onChange={handleChangeFilter}
+              />
             </div>
           </div>
           <h2 className="sm:hidden col-span-7 whitespace-pre-wrap block text-center font-semibold text-lg">

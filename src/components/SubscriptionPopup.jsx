@@ -25,7 +25,6 @@ const SubscriptionPopup = ({ delay = 15000 }) => {
     return () => clearTimeout(showTimeout.current);
   }, [delay]);
 
-  // показване на всеки 5 сек., ако е разрешено
   useEffect(() => {
     if (dontShowAgain) {
       clearInterval(intervalRef.current);
@@ -33,7 +32,7 @@ const SubscriptionPopup = ({ delay = 15000 }) => {
     }
     intervalRef.current = setInterval(() => {
       setVisible(true);
-    }, 15000);
+    }, 60000);
     return () => clearInterval(intervalRef.current);
   }, [dontShowAgain]);
 
