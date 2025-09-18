@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React from "react";
 import Slider from "react-slick";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import laptops from "../../utils/laptops.json";
@@ -10,18 +10,17 @@ const PrevArrow = ({ onClick }) => (
   <button
     onClick={onClick}
     aria-label="Prev"
-    className="hidden sm:inline-flex absolute  left-2 top-1/2 -translate-y-1/2 z-[1] p-2 bg-black/40 rounded-full text-white hover:bg-black/60"
+    className="absolute left-1 top-1/2 -translate-y-1/2 z-10 p-2 bg-black/40 rounded-full text-white hover:bg-black/60 sm:flex hidden"
   >
     <FaChevronLeft />
   </button>
 );
 
-
 const NextArrow = ({ onClick }) => (
   <button
     onClick={onClick}
     aria-label="Next"
-    className="hidden sm:inline-flex absolute right-2 top-1/2 -translate-y-1/2 z-0 p-2 bg-black/40 rounded-full text-white hover:bg-black/60"
+    className="absolute right-1 top-1/2 -translate-y-1/2 z-10 p-2 bg-black/40 rounded-full text-white hover:bg-black/60 sm:flex hidden"
   >
     <FaChevronRight />
   </button>
@@ -29,52 +28,40 @@ const NextArrow = ({ onClick }) => (
 
 const SimilarProducts = () => {
   const euroRate = 1.96;
-  const sliderRef = useRef(null);
-  const [slidesToShow, setSlidesToShow] = useState(3);
-  const navigate = useNavigate()
-
-  const handleResize = () => {
-    const width = window.innerWidth;
-    if (width > 1280) setSlidesToShow(4);
-    else if (width >= 768) setSlidesToShow(3);
-    else if (width >= 640) setSlidesToShow(2);
-    else setSlidesToShow(1);
-  };
-
-  useEffect(() => {
-    handleResize(); 
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const navigate = useNavigate();
 
   const settings = {
-    dots: slidesToShow === 1,
+    dots: true,
     infinite: false,
-    speed: 450,
-    slidesToShow: slidesToShow,
+    speed: 500,
+    slidesToShow: 4,
     slidesToScroll: 1,
     prevArrow: <PrevArrow />,
     nextArrow: <NextArrow />,
+    responsive: [
+      {
+        breakpoint: 1280,
+        settings: { slidesToShow: 3 },
+      },
+      {
+        breakpoint: 1024,
+        settings: { slidesToShow: 2 },
+      },
+      {
+        breakpoint: 640,
+        settings: { slidesToShow: 1 },
+      },
+    ],
   };
 
   return (
     <section className="max-w-[1280px] w-full mx-auto px-4 py-8">
-      <style jsx global>{`
-        .slick-dots {
-          bottom: -30px;
-        }
-        .slick-dots li button:before {
-          font-size: 10px;
-          color: rgba(0, 0, 0, 0.3);
-        }
-        .slick-dots li.slick-active button:before {
-          color: rgba(0, 0, 0, 0.75);
-        }
-      `}</style>
-      <h2 className="text-xl font-semibold mb-4">ПОДОБНИ ПРОДУКТИ</h2>
-      <div className="relative pb-8 sm:pb-0">
-        <Slider ref={sliderRef} {...settings}>
-          {laptops?.content.map((product) => {
+      <h2 className="text-xl md:text-2xl font-semibold mb-6 text-center md:text-left">
+        ПОДОБНИ ПРОДУКТИ
+      </h2>
+      <div className="relative">
+        <Slider {...settings}>
+          {laptops.content.map((product) => {
             const discounted = product.discount ?? 0;
             const price = Number(product.price ?? 0);
             const finalPrice = discounted
@@ -82,8 +69,13 @@ const SimilarProducts = () => {
               : price;
 
             return (
-              <div onClick={() => navigate(`/product/${product.id}`)} key={product.id} className="p-2 h-full w-full">
-                <div className="relative p-4 bg-white/5 rounded-lg cursor-pointer hover:bg-primary/20 flex flex-col w-full h-full">
+              <div
+                key={product.id}
+                className="px-2"
+                onClick={() => navigate(`/product/${product.id}`)}
+              >
+                <div className="bg-white rounded-lg shadow-sm p-4 flex flex-col h-full cursor-pointer hover:bg-primary/10">
+                  {/* Badges */}
                   {product.new && (
                     <span className="absolute top-2 left-2 bg-blue-600 text-white text-xs px-2 py-1 rounded font-semibold">
                       НОВО
@@ -103,12 +95,14 @@ const SimilarProducts = () => {
                       </span>
                     </>
                   )}
-                  <div className="w-32 h-32 mx-auto mb-2 flex items-center justify-center">
+
+                  {/* Image */}
+                  <div className="w-full h-40 sm:h-48 md:h-56 flex items-center justify-center mb-3">
                     {product.image ? (
                       <img
                         src={product.image}
                         alt={product.name}
-                        className="w-full h-full object-fit-contain"
+                        className="max-h-full max-w-full object-contain"
                         draggable={false}
                       />
                     ) : (
@@ -117,9 +111,13 @@ const SimilarProducts = () => {
                       </div>
                     )}
                   </div>
-                  <h3 className="text-sm font-semibold mb-2 min-h-[3.6rem] line-clamp-3 text-center">
+
+                  {/* Title */}
+                  <h3 className="text-sm md:text-base font-semibold text-center break-words mb-2 min-h-[3rem]">
                     {product.name}
                   </h3>
+
+                  {/* Price */}
                   <div className="text-center mt-auto">
                     {discounted > 0 ? (
                       <p className="text-black/60 line-through text-sm">
@@ -128,8 +126,9 @@ const SimilarProducts = () => {
                     ) : (
                       <p className="text-transparent text-sm">–</p>
                     )}
-                    <p className="text-black font-semibold">
-                      {finalPrice.toFixed(2)} лв. / {(finalPrice / euroRate).toFixed(2)} €
+                    <p className="text-black font-semibold text-sm md:text-base">
+                      {finalPrice.toFixed(2)} лв. /{" "}
+                      {(finalPrice / euroRate).toFixed(2)} €
                     </p>
                   </div>
                 </div>

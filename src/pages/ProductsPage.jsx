@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import laptops from "../utils/laptops.json";
 import SimilarProducts from "../components/products/SimilarProducts";
 import laptopsParms from "../utils/laptopsParms.json";
+import ImageDisplaying from "../components/products/ImageDisplaying";
 
 const translations = {
   Type: "Тип",
@@ -59,9 +60,7 @@ const ProductsPage = () => {
     ? laptops?.content.find((product) => product.id === parseInt(id, 10))
     : null;
 
-  const translateTehnicalKey = (key) => {
-    return translations[key] || key;
-  };
+  const translateTehnicalKey = (key) => translations[key] || key;
 
   if (!currentProduct) {
     return (
@@ -72,26 +71,24 @@ const ProductsPage = () => {
   }
 
   const price = Number(currentProduct.finalPrice ?? 0);
-  // const discount = Number(currentProduct.discount ?? 0);
-  // const finalPrice = discount ? price * (1 - discount / 100) : price;
 
   return (
     <div className="max-w-[1280px] mx-auto px-4 my-14">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="flex items-center justify-center bg-white/5 p-6 rounded-lg">
-          <img
-            src={currentProduct?.primaryImageUrl}
-            alt={currentProduct?.nameBg}
-            className="rounded-lg shadow-lg max-h-[600px] object-contain"
-          />
-        </div>
+      {/* Main product section */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <ImageDisplaying
+          primaryImageUrl={currentProduct?.primaryImageUrl}
+          additionalImages={currentProduct?.additionalImages}
+          nameBg={currentProduct?.nameBg}
+        />
 
         <div className="flex flex-col">
-          <h1 className="text-2xl font-bold mb-3 drop-shadow-sm">
-            {currentProduct?.nameBg}
-          </h1>
+         <h1 className="text-2xl md:text-3xl font-bold mb-3 drop-shadow-sm whitespace-normal break-words">
+  {currentProduct?.nameBg}
+</h1>
 
-          <div className="flex items-center gap-4 mb-3">
+
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4 mb-3">
             <span className="text-sm">
               Код: <span className="font-medium">{currentProduct.code}</span>
             </span>
@@ -112,9 +109,8 @@ const ProductsPage = () => {
           </div>
 
           <div className="mb-4">
-            <p className="text-2xl font-semibold drop-shadow-sm">
-              {price.toFixed(2)} лв. / {(price / euroRate).toFixed(2)}{" "}
-              €
+            <p className="text-2xl md:text-3xl font-semibold drop-shadow-sm">
+              {price.toFixed(2)} лв. / {(price / euroRate).toFixed(2)} €
             </p>
           </div>
 
@@ -122,31 +118,33 @@ const ProductsPage = () => {
             <h2 className="text-lg font-semibold mb-2 drop-shadow-sm">
               Основни характеристики:
             </h2>
-            <ul className="space-y-2">
-             
-            </ul>
+            <ul className="space-y-2"></ul>
           </div>
         </div>
       </div>
-      <div>
-        <h2 className="text-lg font-semibold text-center my-10">
+
+      {/* Technical specifications */}
+      <div className="mt-10">
+        <h2 className="text-lg md:text-xl font-semibold text-center my-6">
           ТЕХНИЧЕСКИ ХАРАКТЕРИСТИКИ:
         </h2>
-        <div className="flex flex-col px-4 w-full">
+        <div className="flex flex-col px-2 md:px-4 w-full">
           {laptopsParms.map((item, index) => (
             <div
               key={item.key}
-              className={`p-2 mb-1 ${
-                index % 2 === 0 ? "bg-gray-200" : "bg-white"
+              className={`p-2 md:p-3 mb-1 rounded ${
+                index % 2 === 0 ? "bg-gray-100" : "bg-white"
               }`}
             >
-              <h3 className="text-md font-semibold">
+              <h3 className="text-sm md:text-md font-medium">
                 {item.name !== "" && translateTehnicalKey(item.name)}
               </h3>
             </div>
           ))}
         </div>
       </div>
+
+      {/* Similar products */}
       <SimilarProducts />
     </div>
   );
