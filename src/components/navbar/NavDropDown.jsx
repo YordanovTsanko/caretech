@@ -2,9 +2,10 @@ import React, { useEffect, useMemo, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, useNavigate } from "react-router-dom";
 import { BsDot } from "react-icons/bs";
-import categories from "../../utils/categories.json";
 import { iconCategories } from "../../utils/navIcons";
 import { FaRegFolder } from "react-icons/fa";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchCategories } from "../../redux/categorySlice";
 
 const container = {
   hidden: {
@@ -47,8 +48,11 @@ const rightItem = { hidden: { opacity: 0, y: -6 }, show: { opacity: 1, y: 0 } };
 const NavDropDown = ({ isOpen, onClose, buttonRef }) => {
   const ref = useRef(null);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [activeIdx, setActiveIdx] = useState(0);
   const [showWhitePanel, setShowWhitePanel] = useState(false);
+
+  const { status, categories } = useSelector((state) => state.categories);
 
   const parentCategories = useMemo(
     () =>
@@ -58,7 +62,7 @@ const NavDropDown = ({ isOpen, onClose, buttonRef }) => {
           ...c,
           Icon: iconCategories[c.slug] || FaRegFolder,
         })),
-    []
+    [categories]
   );
 
   const navLinks = useMemo(() => {
@@ -81,7 +85,11 @@ const NavDropDown = ({ isOpen, onClose, buttonRef }) => {
         link: si.slug ? `/category/${si.slug}` : `/category/id/${si.id}`,
       })),
     }));
-  }, [parentCategories]);
+  }, [parentCategories,categories]);
+
+  useEffect(() => {
+    dispatch(fetchCategories());
+  }, [dispatch, categories]);
 
   useEffect(() => {
     if (!isOpen) {

@@ -1,29 +1,31 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import categories from "../utils/categories.json";
-import CustomCheckbox from "../components/CustomCheckbox";
 import CustomDropdown from "../components/CustomDropdown";
 import ProductCard from "../components/home/ProductCard";
-import laptops from "../utils/laptops.json";
 import ManufacturerFilter from "../components/products/ManufacturerFilter";
 import ProcessorFilter from "../components/products/ProcessorFilter";
-
-const filtersList = [
-  { id: "new", label: "Нови" },
-  { id: "promo", label: "Промоционални" },
-  { id: "sale", label: "Разпродажба" },
-  { id: "available", label: "Налични" },
-];
+import MainFilter from "../components/products/MainFilter";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchProducts } from "../redux/productSlice";
+import { fetchCategories } from "../redux/categorySlice";
 
 const Category = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const { items: products } = useSelector((state) => state.products);
+
+  const { category: categoryParam } = useParams();
+  const [match, setMatch] = useState(null);
+  const [limit, setLimit] = useState(20);
   const [addedIds, setAddedIds] = useState(new Set());
-  const [products, setProducts] = useState([]);
-  const [selected, setSelected] = useState([]);
+  const [selectedFilters, setSelectedFilters] = useState([]);
 
   const handleChangeFilter = (name) => {
-    setSelected((prev) =>
+    setSelectedFilters((prev) =>
       prev.includes(name) ? prev.filter((n) => n !== name) : [...prev, name]
     );
+    console.log(selectedFilters);
   };
 
   const handleToggleCart = (id) => {
@@ -44,44 +46,34 @@ const Category = () => {
 
   const handleBuy = (id) => navigate(`/product/${id}?buyNow=1`);
 
-  const { category: categoryParam } = useParams();
-  const navigate = useNavigate();
-  const [match, setMatch] = useState(null);
-  const [selectedFilters, setSelectedFilters] = useState({});
-  const [limit, setLimit] = useState(20);
-
   // Проверка за съществуваща категория
   useEffect(() => {
-    setProducts([]);
-    const found = categories.find((c) => c.slug === categoryParam);
-    if (!found) {
-      navigate("/");
-    } else {
-      setMatch(found);
-    }
-  }, [categoryParam, navigate]);
+    setMatch(null);
+    const getCategory = async () => {
+      try {
+        const res = await dispatch(fetchCategories()).unwrap();
 
-  // Филтриране на laptopsParms за текущата категория
+        const foundCategory = res.find((c) => c.slug === categoryParam);
+        if (!foundCategory) {
+          navigate("/");
+        } else {
+          setMatch(foundCategory);
+        }
+      } catch (error) {
+        console.error("Failed to fetch categories:", error);
+      }
+    };
+
+    getCategory();
+  }, [dispatch, categoryParam, navigate]);
+
+  // Продукти за текущата категория
   useEffect(() => {
     if (!match) return;
-    if (match.nameEn === "Laptops") {
-      setProducts(laptops);
-    }
-    console.log(products.content);
-  }, [match, products]);
+    match && dispatch(fetchProducts(match));
+  }, [match, dispatch]);
 
   if (!match) return null;
-
-  const sendAPI = (filters) => {
-    console.log("API call with filters:", filters);
-    // fetch("/api/products", { method: "POST", body: JSON.stringify(filters) })
-  };
-
-  const handleFilterChange = (id, checked) => {
-    const updated = { ...selectedFilters, [id]: checked };
-    setSelectedFilters(updated);
-    sendAPI(updated);
-  };
 
   return (
     <div className="pt-14 flex flex-col items-center w-full md:px-20 max-w-[2000px] mx-auto">
@@ -96,38 +88,33 @@ const Category = () => {
         {/* grid */}
         <div className="grid grid-cols-7 my-4 gap-4">
           {/* Sidebar filter */}
-          <div className="hidden md:block col-span-2 xl:col-span-1 bg-gray-50 border-r p-2">
-            <div className="flex flex-col gap-3">
-              <h4 className="font-semibold mb-2 underline decoration-primary underline-offset-2">
-                ФИЛТЪР
-              </h4>
-              {filtersList.map((filter) => (
-                <CustomCheckbox
-                  key={filter.id}
-                  label={filter.label}
-                  checked={!!selectedFilters[filter.id]}
-                  onChange={(checked) => handleFilterChange(filter.id, checked)}
+    {products?.length >0 && (       <div className="hidden md:block col-span-2 xl:col-span-1 bg-gray-50 border-r p-2">
+           
+              <div className="flex flex-col gap-3">
+                <MainFilter
+                  selected={selectedFilters}
+                  onChange={handleChangeFilter}
                 />
-              ))}
-              <ManufacturerFilter
-                products={products?.content}
-                selected={selected}
-                onChange={handleChangeFilter}
-              />
-              <ProcessorFilter
-                products={products?.content}
-                selected={selected}
-                onChange={handleChangeFilter}
-              />
-            </div>
-          </div>
+                <ManufacturerFilter
+                  products={products}
+                  selected={selectedFilters}
+                  onChange={handleChangeFilter}
+                />{" "}
+                <ProcessorFilter
+                  products={products}
+                  selected={selectedFilters}
+                  onChange={handleChangeFilter}
+                />
+              </div>
+          
+          </div>  )}
           <h2 className="sm:hidden col-span-7 whitespace-pre-wrap block text-center font-semibold text-lg">
             {match?.nameBg?.toUpperCase()}
           </h2>
-          <div className="col-span-7 md:col-span-5 xl:col-span-6 p-4">
+          <div className={`${products?.length > 0 ? "col-span-7 md:col-span-5 xl:col-span-6" : "col-span-7"}  p-4`}>
             <div className="relative flex items-center justify-between">
               <h2 className="text-center text-[10px] sm:text-sm">
-                {products?.content?.length || 0} ПРОДУКТА
+                {products?.length || 0} ПРОДУКТА
               </h2>
               <h2
                 className="hidden sm:block absolute left-1/2 -translate-x-1/2 text-center font-semibold text-lg
@@ -142,9 +129,9 @@ const Category = () => {
                 <CustomDropdown value={limit} onChange={setLimit} />
               </div>
             </div>
-            <div className="mt-4 grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-              {products?.content?.length > 0 ? (
-                products.content.map((p) => (
+            <div className={`mt-4 grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5`}>
+              {products?.length > 0 ? (
+                products.map((p) => (
                   <ProductCard
                     key={p.id}
                     p={p}
