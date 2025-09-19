@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import CustomDropdown from "../components/CustomDropdown";
-import ProductCard from "../components/home/ProductCard";
+import ProductCard from "../components/products/ProductCard";
 import ManufacturerFilter from "../components/products/ManufacturerFilter";
 import ProcessorFilter from "../components/products/ProcessorFilter";
 import MainFilter from "../components/products/MainFilter";

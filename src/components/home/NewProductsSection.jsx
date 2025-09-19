@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import ProductCard from "./ProductCard";
+import ProductCard from "../products/ProductCard";
 import laptops from "../../utils/laptops.json";
 
 const NewProductsSection = () => {

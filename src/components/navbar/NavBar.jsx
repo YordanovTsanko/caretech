@@ -11,9 +11,9 @@ import {
   FaHeart,
 } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import { BiMenuAltRight } from "react-icons/bi";
 import AuthDropDown from "../profile/AuthDropDown";
 import NavDropDown from "./NavDropDown";
+import { IoMenu } from "react-icons/io5";
 
 const NavBar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -192,7 +192,7 @@ const NavBar = () => {
               onClick={() => setMenuOpen((prev) => !prev)}
             >
               <div className="text-md text-white hover:scale-105 relative flex items-center gap-1 hover:underline transition-all duration-500">
-                <BiMenuAltRight size={24} />
+                <IoMenu size={24} />
                 <span className="text-white/90">МЕНЮ</span>
               </div>
             </button>

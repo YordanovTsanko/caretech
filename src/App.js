@@ -7,6 +7,7 @@ import ProductsPage from "./pages/ProductsPage";
 import SubscriptionPopup from "./components/SubscriptionPopup";
 import Category from "./pages/Category";
 import CookieConsentPopup from "./components/CookieConsentPopup";
+import Cart from "./pages/Cart";
 
 const AppContent = () => {
   return (
@@ -17,6 +18,7 @@ const AppContent = () => {
           <Route path="/" element={<Home />} />
           <Route path="/category/:category" element={<Category />} />
           <Route path="/category/:category/:id" element={<ProductsPage />} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="/*" element={<ErrorPage />} />
         </Routes>
       </main>
