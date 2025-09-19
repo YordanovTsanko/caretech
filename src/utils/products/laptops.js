@@ -1,0 +1,66 @@
+export const laptopSpecifications = (spec) => {
+  return spec.map(item => ({
+    parameterNameBg: item.parameterNameBg,
+    options: item.options.map(opt => opt.name)
+  }));
+};
+
+export const laptopTranslation = {
+  Type: "Тип",
+  CPU: "Процесор",
+  "CPU model": "Модел процесор",
+  "Number of cores": "Брой ядра",
+  "Number of Threads": "Брой нишки",
+  Frequency: "Честота",
+  Cache: "Кеш памет",
+  "Display type": "Тип дисплей",
+  "Screen Size": "Размер на екрана",
+  "Format display": "Формат на дисплея",
+  Resolution: "Резолюция",
+  "Aspect Ratio": "Съотношение на страните",
+  RAM: "Оперативна памет",
+  "Memory type": "Тип памет",
+  "Frequency Memory": "Честота на паметта",
+  "Max. capacity memory": "Максимален капацитет памет",
+  "Number of slots": "Брой слотове",
+  "Hard disk type": "Тип твърд диск",
+  "Hard disk capacity": "Капацитет твърд диск",
+  "Video chipset": "Видео чипсет",
+  Series: "Серия",
+  "Type Video Memory": "Тип видео памет",
+  "Memory card type": "Тип карта памет",
+  "Capacity Video Memory": "Капацитет видео памет",
+  Audio: "Аудио",
+  "Card readers": "Четци за карти",
+  "Supported cards": "Поддържани карти",
+  Ports: "Портове",
+  "Audio output": "Аудио изход",
+  Microphone: "Микрофон",
+  LAN: "Локална мрежа (LAN)",
+  Wireless: "Безжична връзка (Wi-Fi)",
+  Bluetooth: "Bluetooth",
+  "Web Camera": "Уеб камера",
+  "Readers / writers": "Устройства за четене/запис",
+  Battery: "Батерия",
+  Security: "Сигурност",
+  Keyboard: "Клавиатура",
+  OS: "Операционна система",
+  Dimension: "Размери",
+  Colour: "Цвят",
+  "Line-up": "Моделна линия",
+  "Additional extras": "Допълнителни екстри",
+  "Battery warranty": "Гаранция батерия",
+};
+
+export const mainParams = [
+  "Предназначение",
+  "Производител процесор",
+  "Модел процесор",
+  "Брой ядра",
+  "Честота CPU",
+  "RAM памет",
+  "Тип съхранение",
+  "Капацитет за съхраненние",
+  "Размер на екрана",
+  "Резолюция"
+];

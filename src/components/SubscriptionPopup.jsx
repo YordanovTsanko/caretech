@@ -2,24 +2,17 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiX, FiMail, FiCheck } from "react-icons/fi";
 
-const panelVariants = {
-  hidden: { y: "100%", opacity: 0 },
-  show: { y: 0, opacity: 1, transition: { type: "spring", stiffness: 110, damping: 18 } },
-  exit: { y: "100%", opacity: 0, transition: { duration: 0.3 } }
-};
-
 const SubscriptionPopup = ({ delay = 15000 }) => {
   const [visible, setVisible] = useState(false);
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
-  const [tempChoice, setTempChoice] = useState(false); // избрано в чекбокса, но не потвърдено
-  const [dontShowAgain, setDontShowAgain] = useState(false); // финално решение след Х
+  const [tempChoice, setTempChoice] = useState(false);
+  const [dontShowAgain, setDontShowAgain] = useState(false);
   const intervalRef = useRef(null);
   const showTimeout = useRef(null);
 
-  // първо показване
   useEffect(() => {
     showTimeout.current = setTimeout(() => setVisible(true), delay);
     return () => clearTimeout(showTimeout.current);
@@ -36,7 +29,6 @@ const SubscriptionPopup = ({ delay = 15000 }) => {
     return () => clearInterval(intervalRef.current);
   }, [dontShowAgain]);
 
-  // блокиране на скрола
   useEffect(() => {
     if (!visible) return;
     const prev = document.body.style.overflow;
@@ -59,11 +51,11 @@ const SubscriptionPopup = ({ delay = 15000 }) => {
     setTimeout(() => {
       setLoading(false);
       setSuccess(true);
-    }, 15000);
+    }, 1500);
   };
 
   const handleCloseWithX = () => {
-    setDontShowAgain(tempChoice); // при затваряне запазваме избора
+    setDontShowAgain(tempChoice);
     setVisible(false);
   };
 
@@ -71,19 +63,20 @@ const SubscriptionPopup = ({ delay = 15000 }) => {
     <AnimatePresence>
       {visible && (
         <motion.div
-          className="fixed inset-x-0 bottom-0 z-[60] flex items-end justify-center pointer-events-none"
-          initial="hidden"
-          animate="show"
-          exit="exit"
-          variants={{ show: { transition: { when: "beforeChildren" } } }}
+          className="fixed inset-0 z-[60] flex items-center justify-center bg-black/40"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
         >
           <motion.div
             role="dialog"
             aria-modal="true"
             aria-label="Абонамент за бюлетин"
-            variants={panelVariants}
-            className="pointer-events-auto w-full sm:w-[50%] bg-gradient-to-r from-primary to-primary-dark text-white shadow-2xl p-4 md:p-6 max-h-[70vh] overflow-auto"
-            style={{ boxShadow: "0 -8px 30px rgba(0,0,0,0.25)" }}
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.5 }}
+            transition={{ duration: 0.5 }}
+            className="pointer-events-auto w-full sm:w-[50%] bg-gradient-to-r from-primary to-primary-dark text-white shadow-2xl p-4 md:p-6 max-h-[80vh] overflow-auto rounded-2xl"
           >
             <div className="flex items-start justify-between gap-4">
               <div className="flex items-center gap-4">
@@ -91,7 +84,9 @@ const SubscriptionPopup = ({ delay = 15000 }) => {
                   <FiMail className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <p className="text-sm text-white/90 mt-1">Абонирай се за нашият бюлетин и вземи отстъпка за първата си поръчка.
+                  <p className="text-sm text-white/90 mt-1">
+                    Абонирай се за нашият бюлетин и вземи отстъпка за първата си
+                    поръчка.
                   </p>
                 </div>
               </div>
@@ -107,7 +102,9 @@ const SubscriptionPopup = ({ delay = 15000 }) => {
               onSubmit={handleSubscribe}
               className="mt-4 grid grid-cols-1 md:grid-cols-[1fr_160px] gap-3 items-center"
             >
-              <label htmlFor="sub-email" className="sr-only">Имейл</label>
+              <label htmlFor="sub-email" className="sr-only">
+                Имейл
+              </label>
               <input
                 id="sub-email"
                 type="email"
@@ -123,13 +120,25 @@ const SubscriptionPopup = ({ delay = 15000 }) => {
                   className="w-full rounded-lg bg-white text-primary font-semibold px-4 py-[9px] shadow hover:scale-[0.997] active:scale-100 transition disabled:opacity-70 flex items-center justify-center gap-2"
                 >
                   {loading ? (
-                    <svg className="w-4 h-4 animate-spin" viewBox="0 0 24 24">
-                      <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="3" strokeDasharray="31.4 31.4" strokeLinecap="round" fill="none" />
+                    <svg
+                      className="w-4 h-4 animate-spin"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="3"
+                        strokeDasharray="31.4 31.4"
+                        strokeLinecap="round"
+                        fill="none"
+                      />
                     </svg>
                   ) : success ? (
                     <>
                       <FiCheck className="w-4 h-4 text-primary" />
-                      <span className="text-xs  ">Готово</span>
+                      <span className="text-xs">Готово</span>
                     </>
                   ) : (
                     <span className="text-xs text-primary">Абонирай се</span>
@@ -137,8 +146,14 @@ const SubscriptionPopup = ({ delay = 15000 }) => {
                 </button>
               </div>
             </form>
-            {error && <p className="mt-3 text-xs text-yellow-200">{error}</p>}
-            {success && <p className="mt-3 text-xs text-white/90">Благодарим! Вие ще получавате нашите новини на посочения имейл.</p>}
+            {error && (
+              <p className="mt-3 text-xs text-yellow-200">{error}</p>
+            )}
+            {success && (
+              <p className="mt-3 text-xs text-white/90">
+                Благодарим! Вие ще получавате нашите новини на посочения имейл.
+              </p>
+            )}
             <div className="mt-4 flex items-center justify-between">
               <label className="relative inline-flex items-center cursor-pointer select-none">
                 <input
@@ -162,7 +177,9 @@ const SubscriptionPopup = ({ delay = 15000 }) => {
                     )}
                   </motion.span>
                 </span>
-                <span className="ml-3 text-xs text-white/90">Не показвай отново</span>
+                <span className="ml-3 text-xs text-white/90">
+                  Не показвай отново
+                </span>
               </label>
             </div>
           </motion.div>

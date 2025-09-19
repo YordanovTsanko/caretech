@@ -2,55 +2,8 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import laptops from "../utils/laptops.json";
 import SimilarProducts from "../components/products/SimilarProducts";
-import laptopsParms from "../utils/laptopsParms.json";
 import ImageDisplaying from "../components/products/ImageDisplaying";
-
-const translations = {
-  Type: "Тип",
-  CPU: "Процесор",
-  "CPU model": "Модел процесор",
-  "Number of cores": "Брой ядра",
-  "Number of Threads": "Брой нишки",
-  Frequency: "Честота",
-  Cache: "Кеш памет",
-  "Display type": "Тип дисплей",
-  "Screen Size": "Размер на екрана",
-  "Format display": "Формат на дисплея",
-  Resolution: "Резолюция",
-  "Aspect Ratio": "Съотношение на страните",
-  RAM: "Оперативна памет",
-  "Memory type": "Тип памет",
-  "Frequency Memory": "Честота на паметта",
-  "Max. capacity memory": "Максимален капацитет памет",
-  "Number of slots": "Брой слотове",
-  "Hard disk type": "Тип твърд диск",
-  "Hard disk capacity": "Капацитет твърд диск",
-  "Video chipset": "Видео чипсет",
-  Series: "Серия",
-  "Type Video Memory": "Тип видео памет",
-  "Memory card type": "Тип карта памет",
-  "Capacity Video Memory": "Капацитет видео памет",
-  Audio: "Аудио",
-  "Card readers": "Четци за карти",
-  "Supported cards": "Поддържани карти",
-  Ports: "Портове",
-  "Audio output": "Аудио изход",
-  Microphone: "Микрофон",
-  LAN: "Локална мрежа (LAN)",
-  Wireless: "Безжична връзка (Wi-Fi)",
-  Bluetooth: "Bluetooth",
-  "Web Camera": "Уеб камера",
-  "Readers / writers": "Устройства за четене/запис",
-  Battery: "Батерия",
-  Security: "Сигурност",
-  Keyboard: "Клавиатура",
-  OS: "Операционна система",
-  Dimension: "Размери",
-  Colour: "Цвят",
-  "Line-up": "Моделна линия",
-  "Additional extras": "Допълнителни екстри",
-  "Battery warranty": "Гаранция батерия",
-};
+import { laptopSpecifications, mainParams } from "../utils/products/laptops";
 
 const ProductsPage = () => {
   const { id } = useParams();
@@ -59,8 +12,6 @@ const ProductsPage = () => {
   const currentProduct = id
     ? laptops?.content.find((product) => product.id === parseInt(id, 10))
     : null;
-
-  const translateTehnicalKey = (key) => translations[key] || key;
 
   if (!currentProduct) {
     return (
@@ -83,10 +34,9 @@ const ProductsPage = () => {
         />
 
         <div className="flex flex-col">
-         <h1 className="text-2xl md:text-3xl font-bold mb-3 drop-shadow-sm whitespace-normal break-words">
-  {currentProduct?.nameBg}
-</h1>
-
+          <h1 className="text-2xl md:text-3xl font-bold mb-3 drop-shadow-sm whitespace-normal break-words">
+            {currentProduct?.nameBg}
+          </h1>
 
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4 mb-3">
             <span className="text-sm">
@@ -114,11 +64,39 @@ const ProductsPage = () => {
             </p>
           </div>
 
+          <div className="flex gap-2 items-center">
+            <button
+              className="w-full px-3 py-1 rounded-md bg-primary text-white text-sm hover:opacity-90"
+            >
+              КУПИ СЕГА
+            </button>
+            <button
+              className={`w-full px-3 py-1 rounded-md border text-sm ${
+                false
+                  ? "bg-red-900 text-white border-red-900"
+                  : "bg-white/10 text-black border-gray-300"
+              }`}
+            >
+              {false ? "ДОБАВЕНО" : "ДОБАВИ В КОШНИЦАТА"}
+            </button>
+          </div>
+
           <div className="mt-4">
             <h2 className="text-lg font-semibold mb-2 drop-shadow-sm">
               Основни характеристики:
             </h2>
-            <ul className="space-y-2"></ul>
+            <ul className="space-y-2">
+              {currentProduct?.specifications
+                .filter((item) => mainParams.includes(item.parameterNameBg))
+                .map((item, index) => (
+                  <li key={index} className="text-xs text-gray-500">
+                    <span className="font-medium text-sm text-black">
+                      {item.parameterNameBg}:
+                    </span>{" "}
+                    {item.options.map((opt) => opt.name).join(", ")}
+                  </li>
+                ))}
+            </ul>
           </div>
         </div>
       </div>
@@ -128,24 +106,30 @@ const ProductsPage = () => {
         <h2 className="text-lg md:text-xl font-semibold text-center my-6">
           ТЕХНИЧЕСКИ ХАРАКТЕРИСТИКИ:
         </h2>
-        <div className="flex flex-col px-2 md:px-4 w-full">
-          {laptopsParms.map((item, index) => (
-            <div
-              key={item.key}
-              className={`p-2 md:p-3 mb-1 rounded ${
-                index % 2 === 0 ? "bg-gray-100" : "bg-white"
-              }`}
-            >
-              <h3 className="text-sm md:text-md font-medium">
-                {item.name !== "" && translateTehnicalKey(item.name)}
-              </h3>
-            </div>
-          ))}
+        <div className="flex flex-col px-2 md:px-4 w-full max-w-[1000px] mx-auto">
+          {currentProduct &&
+            laptopSpecifications(currentProduct?.specifications).map(
+              (item, index) => (
+                <div
+                  key={item.parameterId}
+                  className={`p-2 md:p-3 mb-1 rounded flex items-center justify-between ${
+                    index % 2 === 0 ? "bg-gray-100" : "bg-white"
+                  }`}
+                >
+                  <h3 className="text-sm md:text-md font-medium">
+                    {item.parameterNameBg}
+                  </h3>
+                  <h3 className="text-sm md:text-md font-medium">
+                    {item.options}
+                  </h3>
+                </div>
+              )
+            )}
         </div>
       </div>
 
       {/* Similar products */}
-      <SimilarProducts />
+      {/* <SimilarProducts /> */}
     </div>
   );
 };
