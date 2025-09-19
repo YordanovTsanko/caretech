@@ -30,7 +30,7 @@ const ProductCard = ({ p, onBuy, onToggleCart, inCart }) => {
         <div className="w-full h-40 flex items-center justify-center mb-3">
           {p.primaryImageUrl ? (
             <img
-              src={p.primaryImageUrl}
+              src={`http://localhost:8080${p.primaryImageUrl}`}
               alt={p.name}
               className="max-h-40 object-contain"
               draggable={false}
